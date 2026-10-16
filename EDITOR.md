@@ -1,6 +1,6 @@
 # Editor en vivo (textos) — Grupo CISA
 
-Permite que personas autorizadas editen títulos, párrafos, listas y botones **directamente sobre la página publicada**. Cada envío abre un **Pull Request** en `abalderasdev/cisa`. Vercel genera la vista previa y **nada se publica sin el merge** de Alberto.
+Permite que personas autorizadas editen títulos, párrafos, listas y botones **directamente sobre la página publicada**. Cada envío abre un **Pull Request** en `Capitalta-web/cisa` (antes `abalderasdev/cisa`; GitHub redirige). Vercel genera la vista previa y **nada se publica sin el merge** de Alberto.
 
 ## Cómo funciona
 
@@ -30,9 +30,9 @@ Márcalas como **Sensitive** y ponlas en Production y Preview.
 | `RESEND_API_KEY` | Sí | API key de https://resend.com (permiso *Sending access*) |
 | `EDITOR_EMAIL_FROM` | Sí | Remitente de un dominio verificado en Resend, p. ej. `Editor CISA <editor@grupocisa.mx>` |
 | `GITHUB_APP_ID` | Sí | App ID de la GitHub App |
-| `GITHUB_APP_INSTALLATION_ID` | Sí | Id de la instalación en `abalderasdev/cisa` |
+| `GITHUB_APP_INSTALLATION_ID` | Sí | Id de la instalación en `Capitalta-web/cisa` (antes `abalderasdev/cisa`; GitHub redirige) |
 | `GITHUB_APP_PRIVATE_KEY` | Sí | Contenido del `.pem`. Se acepta con saltos reales o con `\n` |
-| `GITHUB_REPO` | No | Por defecto `abalderasdev/cisa` |
+| `GITHUB_REPO` | No | Por defecto `Capitalta-web/cisa` (antes `abalderasdev/cisa`; GitHub redirige) |
 | `GITHUB_BASE_BRANCH` | No | Por defecto `main` |
 | `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN` | Recomendado | Rate limit global y enlaces de **un solo uso** entre instancias. Sin ellas, ambos funcionan por instancia, en memoria, como mejor esfuerzo |
 
@@ -41,9 +41,9 @@ Márcalas como **Sensitive** y ponlas en Production y Preview.
 1. GitHub → Settings → Developer settings → **GitHub Apps → New GitHub App**.
    - Nombre: `cisa-editor`. Homepage: la URL del sitio. **Webhook: desactivado**.
    - **Repository permissions:** *Contents: Read and write* y *Pull requests: Read and write*. *Metadata: Read* se agrega solo. Ningún otro permiso: sin Workflows, sin Administration.
-   - "Where can this app be installed": **Only on this account**.
+   - "Where can this app be installed": **Only on this account** (créala en la organización Capitalta-web, o hazla instalable ahí).
 2. Copia el **App ID** y genera una **private key** (.pem) desde *Private keys → Generate*.
-3. **Install App** → solo el repositorio `abalderasdev/cisa`. El número final de la URL de la instalación (`/settings/installations/<ID>`) es `GITHUB_APP_INSTALLATION_ID`.
+3. **Install App** → solo el repositorio `Capitalta-web/cisa` (antes `abalderasdev/cisa`; GitHub redirige). El número final de la URL de la instalación (`/settings/installations/<ID>`) es `GITHUB_APP_INSTALLATION_ID`.
 4. Recomendado: protege `main` con PR obligatorio para que nadie, incluida la App, pueda escribir directo.
 
 ## Resend (correo del enlace)

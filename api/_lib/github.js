@@ -10,7 +10,7 @@ function cfg() {
   const appId = process.env.GITHUB_APP_ID;
   const key = String(process.env.GITHUB_APP_PRIVATE_KEY || '').replace(/\\n/g, '\n');
   const installationId = process.env.GITHUB_APP_INSTALLATION_ID;
-  const repo = process.env.GITHUB_REPO || 'abalderasdev/cisa';
+  const repo = process.env.GITHUB_REPO || 'Capitalta-web/cisa';
   const base = process.env.GITHUB_BASE_BRANCH || 'main';
   if (!appId || !key.includes('PRIVATE KEY') || !installationId) {
     throw Object.assign(new Error('GitHub App no configurada (GITHUB_APP_ID / GITHUB_APP_PRIVATE_KEY / GITHUB_APP_INSTALLATION_ID)'), { status: 500 });
