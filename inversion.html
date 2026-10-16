@@ -462,7 +462,7 @@
        ================================================================ */
     .revelation {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 48px;
       align-items: start;
       margin-top: 32px;
@@ -949,7 +949,7 @@
       gap: 24px;
       margin-top: 56px;
     }
-    @media (min-width: 768px) { .closing__grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 768px) { .closing__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
     .closing__col {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.10);
@@ -960,7 +960,7 @@
     }
     .closing__col:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.20); }
     .closing__col h4 { color: white; font-size: 15px; margin-bottom: 20px; }
-    .closing__col .btn { width: 100%; }
+    .closing__col .btn { width: 100%; white-space: normal; }
     .closing__contact {
       display: grid;
       gap: 32px;
@@ -1062,6 +1062,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css" />
 <script>/*cisa-editor-loader*/(function(){try{if(/(?:^|; )cisa_ed=1/.test(document.cookie)||/[?&]editar=1(?:&|$)/.test(location.search)){var s=document.createElement("script");s.src="/assets/editor.js";s.defer=true;document.head.appendChild(s)}}catch(e){}})();</script>
 </head>
 <body>
@@ -1074,7 +1075,7 @@
       <a href="/" class="site-header__brand" aria-label="Grupo CISA · Inicio">
         <img src="assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
-      <nav class="site-header__nav" aria-label="Navegación principal">
+      <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <a data-edit="global.header.modalidades" href="su-terreno.html">Modalidades</a>
         <a data-edit="global.header.metodo" href="nosotros.html#metodo">Método</a>
         <a data-edit="global.header.obra" href="desarrollos.html">Obra</a>
@@ -1084,6 +1085,9 @@
       <div class="site-header__actions">
         <a data-edit="global.header.precalificar-mi-terreno" href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
+      <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
@@ -1245,14 +1249,12 @@
             <div class="dev-card__body">
               <div class="dev-card__meta">
                 <span class="mono">EDOMEX-002</span>
-                <span class="mono">·</span>
-                <span class="mono">2025-Q4</span>
               </div>
               <h3 data-edit="inversion.dev-card.h3-1">Residencial Fraile</h3>
               <p data-edit="inversion.dev-card.p-1" class="dev-card__loc-name">Jilotzingo · Estado de México</p>
-              <p data-edit="inversion.dev-card.p-2" class="dev-card__desc">Torre de departamentos en zona con gran plusvalía. Listo para entrega.</p>
+              <p data-edit="inversion.dev-card.p-1-2" class="dev-card__desc">Torre de departamentos en zona con gran plusvalía. Entregada en 2025 y vendida.</p>
               <dl class="dev-card__stats">
-                <div><dt data-edit="inversion.dev-card.dt-1">Producto</dt><dd data-edit="inversion.dev-card.dd-1">48 departamentos</dd></div>
+                <div><dt data-edit="inversion.dev-card.dt-1">Producto</dt><dd data-edit="inversion.dev-card.dd-1">28 departamentos</dd></div>
                 <div><dt data-edit="inversion.dev-card.dt-2">Niveles</dt><dd data-edit="inversion.dev-card.dd-2">8</dd></div>
                 <div><dt data-edit="inversion.dev-card.dt-3">Entrega</dt><dd data-edit="inversion.dev-card.dd-3">2025 · entregada</dd></div>
               </dl>
@@ -1266,21 +1268,16 @@
 
           <article class="dev-card">
             <div class="dev-card__media" aria-hidden="true">
-              <span class="dev-card__chip dev-card__chip--info">
-                <span class="dev-card__dot"></span> Preventa
-              </span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
               <span class="dev-card__loc">QROO · TULUM</span>
             </div>
             <div class="dev-card__body">
               <div class="dev-card__meta">
                 <span class="mono">QROO-003</span>
-                <span class="mono">·</span>
-                <span class="mono">2026-Q2</span>
               </div>
               <h3 data-edit="inversion.dev-card.h3-2">Itzaé</h3>
               <p data-edit="inversion.dev-card.p-4" class="dev-card__loc-name">Tulum · Quintana Roo</p>
-              <p data-edit="inversion.dev-card.p-5" class="dev-card__desc">Torre de departamentos. Diseño enfocado en privacidad, confort y entorno natural. Preventa abierta.</p>
+              <p data-edit="inversion.dev-card.p-2" class="dev-card__desc">Torre de departamentos. Diseño enfocado en privacidad, confort y entorno natural.</p>
               <dl class="dev-card__stats">
                 <div><dt data-edit="inversion.dev-card.dt-4">Producto</dt><dd data-edit="inversion.dev-card.dd-4">32 departamentos</dd></div>
                 <div><dt data-edit="inversion.dev-card.dt-5">Niveles</dt><dd data-edit="inversion.dev-card.dd-5">6</dd></div>
@@ -1488,5 +1485,6 @@
 
 <link rel="stylesheet" href="/assets/agent-cisa-fab.css">
 <script src="/assets/agent-cisa-fab.js" defer></script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>
