@@ -8,10 +8,14 @@
     "impeccable": "node .impeccable/scripts/live-server.mjs",
     "impeccable:doctor": "node .impeccable/scripts/doctor.mjs",
     "impeccable:stop": "node .impeccable/scripts/live-server.mjs stop",
-    "impeccable:audit": "node .impeccable/scripts/live-server.mjs --audit"
+    "impeccable:audit": "node .impeccable/scripts/live-server.mjs --audit",
+    "test": "node --test tests/",
+    "mark-editable": "node scripts/mark_editable.js"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20.19"
   },
-  "dependencies": {}
+  "dependencies": {
+    "parse5": "^8.0.1"
+  }
 }

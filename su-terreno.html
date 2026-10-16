@@ -1324,6 +1324,7 @@
       }
     }
   </style>
+<script>/*cisa-editor-loader*/(function(){try{if(/(?:^|; )cisa_ed=1/.test(document.cookie)||/[?&]editar=1(?:&|$)/.test(location.search)){var s=document.createElement("script");s.src="/assets/editor.js";s.defer=true;document.head.appendChild(s)}}catch(e){}})();</script>
 </head>
 <body>
 
@@ -1336,14 +1337,14 @@
         <img src="assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
       <nav class="site-header__nav" aria-label="Navegación principal">
-        <a href="su-terreno.html">Modalidades</a>
-        <a href="nosotros.html#metodo">Método</a>
-        <a href="desarrollos.html">Obra</a>
-        <a href="contenido.html">Contenido</a>
-        <a href="nosotros.html">Nosotros</a>
+        <a data-edit="global.header.modalidades" href="su-terreno.html">Modalidades</a>
+        <a data-edit="global.header.metodo" href="nosotros.html#metodo">Método</a>
+        <a data-edit="global.header.obra" href="desarrollos.html">Obra</a>
+        <a data-edit="global.header.contenido" href="contenido.html">Contenido</a>
+        <a data-edit="global.header.nosotros" href="nosotros.html">Nosotros</a>
       </nav>
       <div class="site-header__actions">
-        <a href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
+        <a data-edit="global.header.precalificar-mi-terreno" href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
     </div>
   </header>
@@ -1367,15 +1368,15 @@
 
         <div class="hero__main">
           <div class="hero__copy">
-            <h1 id="hero-title" class="hero__title">
+            <h1 data-edit="su-terreno.hero.h1-1" id="hero-title" class="hero__title">
               Su terreno no tiene que venderse para <span class="underline accent">empezar a producir</span>.
             </h1>
-            <p class="hero__bajada">
+            <p data-edit="su-terreno.hero.p-1" class="hero__bajada">
               Aportarlo a un desarrollo le puede dejar metros construidos en lugar de una sola venta. El primer paso es saber qué se puede construir ahí.
             </p>
             <div class="hero__ctas">
-              <a href="#precalificar" class="btn btn--primary btn--lg">Precalificar mi terreno</a>
-              <a href="#metodo" class="btn btn--secondary--green btn--lg">Conocer el proceso ↓</a>
+              <a data-edit="su-terreno.hero.a-1" href="#precalificar" class="btn btn--primary btn--lg">Precalificar mi terreno</a>
+              <a data-edit="su-terreno.hero.a-2" href="#metodo" class="btn btn--secondary--green btn--lg">Conocer el proceso ↓</a>
             </div>
 
             </div>
@@ -1461,29 +1462,29 @@
     <section class="section section--alt" aria-labelledby="dolor-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="dolor-title">Si tiene un terreno detenido, seguramente ya vivió alguna de estas escenas.</h2>
-          <p>Ninguna de estas escenas significa que el terreno sea malo. Casi siempre significa que le han ofrecido la salida equivocada.</p>
+          <h2 data-edit="su-terreno.dolor.h2-1" id="dolor-title">Si tiene un terreno detenido, seguramente ya vivió alguna de estas escenas.</h2>
+          <p data-edit="su-terreno.dolor.p-1">Ninguna de estas escenas significa que el terreno sea malo. Casi siempre significa que le han ofrecido la salida equivocada.</p>
         </header>
         <ol class="dolor__list" role="list">
           <li class="dolor__item">
             <span class="dolor__num" aria-hidden="true">01</span>
-            <p>Llega el predial cada año por algo que no genera un peso.</p>
+            <p data-edit="su-terreno.dolor.p-2">Llega el predial cada año por algo que no genera un peso.</p>
           </li>
           <li class="dolor__item">
             <span class="dolor__num" aria-hidden="true">02</span>
-            <p>Un corredor le ofreció una cifra que se sintió como la mitad de lo que vale, y aun así estuvo tentado a aceptarla.</p>
+            <p data-edit="su-terreno.dolor.p-3">Un corredor le ofreció una cifra que se sintió como la mitad de lo que vale, y aun así estuvo tentado a aceptarla.</p>
           </li>
           <li class="dolor__item">
             <span class="dolor__num" aria-hidden="true">03</span>
-            <p>Lo heredaron entre varios y la conversación termina siempre igual: en nada, o en discusión.</p>
+            <p data-edit="su-terreno.dolor.p-4">Lo heredaron entre varios y la conversación termina siempre igual: en nada, o en discusión.</p>
           </li>
           <li class="dolor__item">
             <span class="dolor__num" aria-hidden="true">04</span>
-            <p>El letrero de "se vende" lleva tanto tiempo puesto que ya se decoloró.</p>
+            <p data-edit="su-terreno.dolor.p-5">El letrero de "se vende" lleva tanto tiempo puesto que ya se decoloró.</p>
           </li>
           <li class="dolor__item">
             <span class="dolor__num" aria-hidden="true">05</span>
-            <p>Tiene la carpeta con las escrituras, pero nadie ha revisado qué permite construir el uso de suelo.</p>
+            <p data-edit="su-terreno.dolor.p-6">Tiene la carpeta con las escrituras, pero nadie ha revisado qué permite construir el uso de suelo.</p>
           </li>
         </ol>
       </div>
@@ -1495,8 +1496,8 @@
     <section class="section" aria-labelledby="star-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="star-title">Una historia que ya ocurrió.</h2>
-          <p>Residencial Fraile, en Jilotzingo. Un predio que en lugar de venderse entró a un desarrollo.</p>
+          <h2 data-edit="su-terreno.star.h2-1" id="star-title">Una historia que ya ocurrió.</h2>
+          <p data-edit="su-terreno.star.p-1">Residencial Fraile, en Jilotzingo. Un predio que en lugar de venderse entró a un desarrollo.</p>
         </header>
         <article class="star">
           <div class="star__media">
@@ -1505,12 +1506,12 @@
           </div>
           <div class="star__body">
             <blockquote class="star__quote">
-              <p>«Residencial Fraile empezó como lo que empieza casi todo aquí: un terreno parado y una familia decidiendo qué hacer con él.»</p>
+              <p data-edit="su-terreno.star.p-2">«Residencial Fraile empezó como lo que empieza casi todo aquí: un terreno parado y una familia decidiendo qué hacer con él.»</p>
             </blockquote>
-            <p class="star__alt">Ese es el punto del modelo. El predio no se vendió: entró al proyecto. Grupo CISA se hizo cargo de la factibilidad, el proyecto arquitectónico, los permisos, el esquema financiero, la obra y la comercialización. Quien aportó el terreno no cobró el precio de un lote, sino la parte del desarrollo que se acordó por escrito antes de mover una sola piedra.</p>
-            <p class="star__alt">Es el mismo camino que puede recorrer su terreno. La diferencia entre uno y otro caso está en la ubicación, el uso de suelo, la superficie aprovechable y la situación jurídica, que es justo lo que revisa la precalificación.</p>
-            <p class="star__alt"><strong>Pendiente:</strong> el testimonio firmado del propietario que aportó el predio. Es el insumo que más convierte de todo el sitio y el único que no podemos escribir nosotros.</p>
-            <a href="/desarrollos/residencial-fraile.html" class="btn btn--secondary--green">Ver Residencial Fraile</a>
+            <p data-edit="su-terreno.star.p-3" class="star__alt">Ese es el punto del modelo. El predio no se vendió: entró al proyecto. Grupo CISA se hizo cargo de la factibilidad, el proyecto arquitectónico, los permisos, el esquema financiero, la obra y la comercialización. Quien aportó el terreno no cobró el precio de un lote, sino la parte del desarrollo que se acordó por escrito antes de mover una sola piedra.</p>
+            <p data-edit="su-terreno.star.p-4" class="star__alt">Es el mismo camino que puede recorrer su terreno. La diferencia entre uno y otro caso está en la ubicación, el uso de suelo, la superficie aprovechable y la situación jurídica, que es justo lo que revisa la precalificación.</p>
+            <p data-edit="su-terreno.star.p-5" class="star__alt"><strong>Pendiente:</strong> el testimonio firmado del propietario que aportó el predio. Es el insumo que más convierte de todo el sitio y el único que no podemos escribir nosotros.</p>
+            <a data-edit="su-terreno.star.a-1" href="/desarrollos/residencial-fraile.html" class="btn btn--secondary--green">Ver Residencial Fraile</a>
           </div>
         </article>
       </div>
@@ -1522,8 +1523,8 @@
     <section class="section section--alt" aria-labelledby="opciones-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="opciones-title">Las dos opciones que le han dado no son las únicas.</h2>
-          <p>Una es la rápida, otra es la que parece segura. Hay una tercera que casi nadie le ofrece, porque exige que del otro lado haya quien sepa desarrollar, no solo comprar.</p>
+          <h2 data-edit="su-terreno.opciones.h2-1" id="opciones-title">Las dos opciones que le han dado no son las únicas.</h2>
+          <p data-edit="su-terreno.opciones.p-1">Una es la rápida, otra es la que parece segura. Hay una tercera que casi nadie le ofrece, porque exige que del otro lado haya quien sepa desarrollar, no solo comprar.</p>
         </header>
         <div class="opciones__grid">
           <article class="opcion opcion--vender">
@@ -1534,11 +1535,11 @@
               <path d="M14 14 V10 a2 2 0 0 1 2-2 H32 a2 2 0 0 1 2 2 V14"/>
               <path d="M19 38 V42 M29 38 V42"/>
             </svg>
-            <h3>Vender.</h3>
-            <p>Recibe dinero una vez, y el valor que se genere después ya no es suyo. Es la opción rápida y casi siempre la más cara en el largo plazo.</p>
+            <h3 data-edit="su-terreno.opcion.h3-1">Vender.</h3>
+            <p data-edit="su-terreno.opcion.p-1">Recibe dinero una vez, y el valor que se genere después ya no es suyo. Es la opción rápida y casi siempre la más cara en el largo plazo.</p>
             <dl class="opcion__out">
-              <dt>Termina en</dt>
-              <dd>Un pago único.</dd>
+              <dt data-edit="su-terreno.opcion.dt-1">Termina en</dt>
+              <dd data-edit="su-terreno.opcion.dd-1">Un pago único.</dd>
             </dl>
           </article>
           <article class="opcion opcion--esperar">
@@ -1548,11 +1549,11 @@
               <path d="M24 12 V24 L 32 28"/>
               <path d="M24 6 V8 M24 40 V42 M6 24 H8 M40 24 H42"/>
             </svg>
-            <h3>Esperar.</h3>
-            <p>Conserva el activo, paga predial cada año y apuesta a que la zona mejore sola. Puede funcionar. También puede tardar una generación.</p>
+            <h3 data-edit="su-terreno.opcion.h3-2">Esperar.</h3>
+            <p data-edit="su-terreno.opcion.p-2">Conserva el activo, paga predial cada año y apuesta a que la zona mejore sola. Puede funcionar. También puede tardar una generación.</p>
             <dl class="opcion__out">
-              <dt>Termina en</dt>
-              <dd>El mismo terreno, más predial.</dd>
+              <dt data-edit="su-terreno.opcion.dt-2">Termina en</dt>
+              <dd data-edit="su-terreno.opcion.dd-2">El mismo terreno, más predial.</dd>
             </dl>
           </article>
           <article class="opcion opcion--aportar opcion--primary">
@@ -1564,11 +1565,11 @@
               <rect x="22" y="32" width="4" height="10"/>
               <path d="M14 20 H18 M30 20 H34 M14 24 H18 M30 24 H34"/>
             </svg>
-            <h3>Aportar.</h3>
-            <p>No vende el terreno: lo integra a un desarrollo. Alguien más pone el capital, el proyecto y la ejecución, y usted recibe metros construidos y participación en el resultado.</p>
+            <h3 data-edit="su-terreno.opcion.h3-3">Aportar.</h3>
+            <p data-edit="su-terreno.opcion.p-3">No vende el terreno: lo integra a un desarrollo. Alguien más pone el capital, el proyecto y la ejecución, y usted recibe metros construidos y participación en el resultado.</p>
             <dl class="opcion__out">
-              <dt>Termina en</dt>
-              <dd>Metros construidos y participación.</dd>
+              <dt data-edit="su-terreno.opcion.dt-3">Termina en</dt>
+              <dd data-edit="su-terreno.opcion.dd-3">Metros construidos y participación.</dd>
             </dl>
           </article>
         </div>
@@ -1581,17 +1582,17 @@
     <section class="section" aria-labelledby="aportar-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="aportar-title">Qué significa aportar su terreno.</h2>
-          <p>En una palabra: su predio entra al proyecto como parte del capital, en lugar de venderse.</p>
+          <h2 data-edit="su-terreno.aportar.h2-1" id="aportar-title">Qué significa aportar su terreno.</h2>
+          <p data-edit="su-terreno.aportar.p-1">En una palabra: su predio entra al proyecto como parte del capital, en lugar de venderse.</p>
         </header>
         <div class="aportar__copy">
-          <p>
+          <p data-edit="su-terreno.aportar.p-2">
             Aportar significa que su predio entra al proyecto como parte del capital, en lugar de venderse. Se formaliza bajo una figura jurídica que deja por escrito, <strong>antes de mover una sola piedra</strong>, qué aporta cada parte, qué recibe cada parte y bajo qué condiciones.
           </p>
-          <p>
+          <p data-edit="su-terreno.aportar.p-3">
             A partir de ahí, Grupo CISA se encarga de todo el desarrollo: estudia qué se puede construir, diseña el proyecto, gestiona permisos y licencias, arma el esquema financiero, construye y comercializa.
           </p>
-          <p>
+          <p data-edit="su-terreno.aportar.p-4">
             Cuando el desarrollo se termina, usted no recibe el precio de un terreno. Recibe la parte del proyecto que se acordó desde el principio: departamentos, locales o la participación que se haya definido.
           </p>
         </div>
@@ -1604,25 +1605,25 @@
     <section class="section section--alt" aria-labelledby="factores-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="factores-title">Cómo se define lo que le corresponde.</h2>
-          <p>No hay una fórmula única, y desconfíe de quien le dé un porcentaje sin haber visto el predio. Lo que sí es fijo son los cuatro factores que lo determinan.</p>
+          <h2 data-edit="su-terreno.factores.h2-1" id="factores-title">Cómo se define lo que le corresponde.</h2>
+          <p data-edit="su-terreno.factores.p-1">No hay una fórmula única, y desconfíe de quien le dé un porcentaje sin haber visto el predio. Lo que sí es fijo son los cuatro factores que lo determinan.</p>
         </header>
         <div class="factores__grid">
           <article class="factor">
-            <h3>Ubicación.</h3>
-            <p>Define el precio de venta por metro cuadrado del producto final, y por lo tanto todo lo demás.</p>
+            <h3 data-edit="su-terreno.factor.h3-1">Ubicación.</h3>
+            <p data-edit="su-terreno.factor.p-1">Define el precio de venta por metro cuadrado del producto final, y por lo tanto todo lo demás.</p>
           </article>
           <article class="factor">
-            <h3>Uso de suelo.</h3>
-            <p>Cuántos niveles y cuánta superficie permite construir. Dos terrenos idénticos con usos distintos valen cosas muy distintas.</p>
+            <h3 data-edit="su-terreno.factor.h3-2">Uso de suelo.</h3>
+            <p data-edit="su-terreno.factor.p-2">Cuántos niveles y cuánta superficie permite construir. Dos terrenos idénticos con usos distintos valen cosas muy distintas.</p>
           </article>
           <article class="factor">
-            <h3>Superficie aprovechable.</h3>
-            <p>No es lo mismo la superficie del predio que la que realmente se puede construir, después de restricciones, retiros y accesos.</p>
+            <h3 data-edit="su-terreno.factor.h3-3">Superficie aprovechable.</h3>
+            <p data-edit="su-terreno.factor.p-3">No es lo mismo la superficie del predio que la que realmente se puede construir, después de restricciones, retiros y accesos.</p>
           </article>
           <article class="factor">
-            <h3>Situación jurídica.</h3>
-            <p>Un predio escriturado y libre de gravamen avanza; uno en sucesión o en copropiedad primero se regulariza.</p>
+            <h3 data-edit="su-terreno.factor.h3-4">Situación jurídica.</h3>
+            <p data-edit="su-terreno.factor.p-4">Un predio escriturado y libre de gravamen avanza; uno en sucesión o en copropiedad primero se regulariza.</p>
           </article>
         </div>
       </div>
@@ -1634,8 +1635,8 @@
     <section class="section" id="metodo" aria-labelledby="etapas-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="etapas-title">Siete etapas. Le entregamos el rango de tiempo en la primera entrevista.</h2>
-          <p>Publicamos cuánto dura cada etapa porque la opacidad es lo que más cuesta. Los rangos son indicativos y se afinan proyecto por proyecto.</p>
+          <h2 data-edit="su-terreno.metodo.h2-1" id="etapas-title">Siete etapas. Le entregamos el rango de tiempo en la primera entrevista.</h2>
+          <p data-edit="su-terreno.metodo.p-1">Publicamos cuánto dura cada etapa porque la opacidad es lo que más cuesta. Los rangos son indicativos y se afinan proyecto por proyecto.</p>
         </header>
         <div class="etapas">
           <div class="etapas__head" aria-hidden="true">
@@ -1661,8 +1662,8 @@
               <path d="M17 42 H34"/>
             </svg>
             <div class="etapa__name">
-              <h4>Aportación del terreno</h4>
-              <p>Se define qué aporta cada parte y bajo qué figura.</p>
+              <h4 data-edit="su-terreno.metodo.h4-1">Aportación del terreno</h4>
+              <p data-edit="su-terreno.metodo.p-2">Se define qué aporta cada parte y bajo qué figura.</p>
             </div>
             <div class="etapa__bar">
               <div class="etapa__track" role="img" aria-label="Duración de la etapa: 2–4 semanas">
@@ -1680,8 +1681,8 @@
               <path d="M20 28 C20 26 22 24 24 24 C26 24 28 26 28 28"/>
             </svg>
             <div class="etapa__name">
-              <h4>Conceptualización y factibilidad</h4>
-              <p>Qué se puede construir ahí y si tiene sentido económico.</p>
+              <h4 data-edit="su-terreno.metodo.h4-2">Conceptualización y factibilidad</h4>
+              <p data-edit="su-terreno.metodo.p-3">Qué se puede construir ahí y si tiene sentido económico.</p>
             </div>
             <div class="etapa__bar">
               <div class="etapa__track" role="img" aria-label="Duración de la etapa: 4–8 semanas">
@@ -1702,8 +1703,8 @@
               <path d="M8 16 H40" stroke-dasharray="2 2"/>
             </svg>
             <div class="etapa__name">
-              <h4>Proyecto arquitectónico</h4>
-              <p>El desarrollo toma forma y superficie vendible.</p>
+              <h4 data-edit="su-terreno.metodo.h4-3">Proyecto arquitectónico</h4>
+              <p data-edit="su-terreno.metodo.p-4">El desarrollo toma forma y superficie vendible.</p>
             </div>
             <div class="etapa__bar">
               <div class="etapa__track" role="img" aria-label="Duración de la etapa: 2–4 meses">
@@ -1720,8 +1721,8 @@
               <path d="M18 24 L22 28 L30 20"/>
             </svg>
             <div class="etapa__name">
-              <h4>Esquema legal</h4>
-              <p>Contratos, permisos y licencias.</p>
+              <h4 data-edit="su-terreno.metodo.h4-4">Esquema legal</h4>
+              <p data-edit="su-terreno.metodo.p-5">Contratos, permisos y licencias.</p>
             </div>
             <div class="etapa__bar">
               <div class="etapa__track" role="img" aria-label="Duración de la etapa: 3–6 meses">
@@ -1740,8 +1741,8 @@
               <circle cx="24" cy="24" r="3"/>
             </svg>
             <div class="etapa__name">
-              <h4>Esquema financiero</h4>
-              <p>Cómo se financia la obra y cómo se reparte el resultado.</p>
+              <h4 data-edit="su-terreno.metodo.h4-5">Esquema financiero</h4>
+              <p data-edit="su-terreno.metodo.p-6">Cómo se financia la obra y cómo se reparte el resultado.</p>
             </div>
             <div class="etapa__bar">
               <div class="etapa__track" role="img" aria-label="Duración de la etapa: 2–3 meses">
@@ -1760,8 +1761,8 @@
               <path d="M24 4 L20 8 H28 Z" fill="currentColor"/>
             </svg>
             <div class="etapa__name">
-              <h4>Construcción</h4>
-              <p>Obra con avance documentado y fechado.</p>
+              <h4 data-edit="su-terreno.metodo.h4-6">Construcción</h4>
+              <p data-edit="su-terreno.metodo.p-7">Obra con avance documentado y fechado.</p>
             </div>
             <div class="etapa__bar">
               <div class="etapa__track" role="img" aria-label="Duración de la etapa: 12–24 meses">
@@ -1780,8 +1781,8 @@
               <path d="M28 24 V27"/>
             </svg>
             <div class="etapa__name">
-              <h4>Preventa y entrega</h4>
-              <p>Comercialización y escrituración.</p>
+              <h4 data-edit="su-terreno.metodo.h4-7">Preventa y entrega</h4>
+              <p data-edit="su-terreno.metodo.p-8">Comercialización y escrituración.</p>
             </div>
             <div class="etapa__bar">
               <div class="etapa__track" role="img" aria-label="Duración de la etapa: 3–6 meses">
@@ -1807,26 +1808,26 @@
     <section class="section section--alt" aria-labelledby="aplican-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="aplican-title">Qué terrenos sí podemos trabajar, y cuáles hoy no.</h2>
-          <p>Decir a quién no le sirve genera más confianza que prometer que sirve para todos. Si su terreno no aplica, se lo decimos en la primera revisión.</p>
+          <h2 data-edit="su-terreno.aplican.h2-1" id="aplican-title">Qué terrenos sí podemos trabajar, y cuáles hoy no.</h2>
+          <p data-edit="su-terreno.aplican.p-1">Decir a quién no le sirve genera más confianza que prometer que sirve para todos. Si su terreno no aplica, se lo decimos en la primera revisión.</p>
         </header>
         <div class="aplican__grid">
           <article class="aplican aplican--si">
-            <h3>Sí trabajamos con predios que</h3>
+            <h3 data-edit="su-terreno.aplican.h3-1">Sí trabajamos con predios que</h3>
             <ul>
-              <li>Estén en zonas donde Grupo CISA opera (CDMX, EdoMex, QRO, QROO, GDL, MID, CUN).</li>
-              <li>Tengan al menos la superficie mínima que el proyecto requiere.</li>
-              <li>Cuenten con uso de suelo que permita usos habitacionales o mixtos.</li>
-              <li>Tengan situación jurídica clara o regularizable.</li>
+              <li data-edit="su-terreno.aplican.li-1">Estén en zonas donde Grupo CISA opera (CDMX, EdoMex, QRO, QROO, GDL, MID, CUN).</li>
+              <li data-edit="su-terreno.aplican.li-2">Tengan al menos la superficie mínima que el proyecto requiere.</li>
+              <li data-edit="su-terreno.aplican.li-3">Cuenten con uso de suelo que permita usos habitacionales o mixtos.</li>
+              <li data-edit="su-terreno.aplican.li-4">Tengan situación jurídica clara o regularizable.</li>
             </ul>
           </article>
           <article class="aplican aplican--no">
-            <h3>Hoy no podemos avanzar con predios</h3>
+            <h3 data-edit="su-terreno.aplican.h3-2">Hoy no podemos avanzar con predios</h3>
             <ul>
-              <li>En litigio activo o con gravámenes no regularizables.</li>
-              <li>En régimen de propiedad que no permita aportación.</li>
-              <li>Con superficie muy por debajo del mínimo viable del proyecto.</li>
-              <li>Sin acceso a servicios o sin uso de suelo compatible.</li>
+              <li data-edit="su-terreno.aplican.li-5">En litigio activo o con gravámenes no regularizables.</li>
+              <li data-edit="su-terreno.aplican.li-6">En régimen de propiedad que no permita aportación.</li>
+              <li data-edit="su-terreno.aplican.li-7">Con superficie muy por debajo del mínimo viable del proyecto.</li>
+              <li data-edit="su-terreno.aplican.li-8">Sin acceso a servicios o sin uso de suelo compatible.</li>
             </ul>
           </article>
         </div>
@@ -1841,26 +1842,26 @@
         <div class="revelation">
           <div class="revelation__copy">
             <h2 id="form-title">Una <em class="accent">tercera opción</em> que pocos le explican.</h2>
-            <p>Si tiene un terreno urbano o periurbano, ha visto las mismas dos opciones una y otra vez: venderlo de golpe, casi siempre por debajo de lo que vale, o conservarlo pagando predial mientras algo llega.</p>
-            <p>Hay una <strong>tercera vía que pocos le explican</strong>: aportarlo a un desarrollo, conservar participación y cobrar en metros construidos. La revisión inicial es preliminar.</p>
+            <p data-edit="su-terreno.form.p-1">Si tiene un terreno urbano o periurbano, ha visto las mismas dos opciones una y otra vez: venderlo de golpe, casi siempre por debajo de lo que vale, o conservarlo pagando predial mientras algo llega.</p>
+            <p data-edit="su-terreno.form.p-2">Hay una <strong>tercera vía que pocos le explican</strong>: aportarlo a un desarrollo, conservar participación y cobrar en metros construidos. La revisión inicial es preliminar.</p>
           </div>
           <aside class="revelation__form" id="precalificar" aria-label="Formulario de precalificación de terreno">
-            <h3>Cuéntenos sobre su terreno</h3>
-            <p class="form__microcopy">Revisión preliminar</p>
+            <h3 data-edit="su-terreno.form.h3-1">Cuéntenos sobre su terreno</h3>
+            <p data-edit="su-terreno.form.p-3" class="form__microcopy">Revisión preliminar</p>
             <form action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" novalidate>
               <input type="hidden" name="_subject" value="[CISA] Nuevo mensaje desde el sitio" />
               <input type="hidden" name="_next" value="#gracias" />
               <input type="text" name="_gotcha" style="display:none" tabIndex={-1} autoComplete="off" />
               <div class="form__field">
-                <label for="ubicacion">Ubicación del predio</label>
+                <label data-edit="su-terreno.form.label-1" for="ubicacion">Ubicación del predio</label>
                 <input type="text" id="ubicacion" name="ubicacion" placeholder="Municipio y estado" required />
               </div>
               <div class="form__field">
-                <label for="superficie">Superficie aproximada (m²)</label>
+                <label data-edit="su-terreno.form.label-2" for="superficie">Superficie aproximada (m²)</label>
                 <input type="text" id="superficie" name="superficie" placeholder="Ej. 480" inputmode="numeric" />
               </div>
               <div class="form__field">
-                <label for="uso">¿Conoce el uso de suelo?</label>
+                <label data-edit="su-terreno.form.label-3" for="uso">¿Conoce el uso de suelo?</label>
                 <select id="uso" name="uso">
                   <option value="">Seleccione una opción</option>
                   <option>Sí lo conozco</option>
@@ -1869,15 +1870,15 @@
                 </select>
               </div>
               <div class="form__field">
-                <label for="nombre">Su nombre</label>
+                <label data-edit="su-terreno.form.label-4" for="nombre">Su nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required />
               </div>
               <div class="form__field">
-                <label for="telefono">Teléfono con lada</label>
+                <label data-edit="su-terreno.form.label-5" for="telefono">Teléfono con lada</label>
                 <input type="tel" id="telefono" name="telefono" placeholder="55 1234 5678" required />
               </div>
-              <button type="submit" class="btn btn--primary btn--lg form__submit">Enviar y recibir escenarios</button>
-              <p class="form__legal">Al enviar, acepta nuestro <a href="aviso-de-privacidad.html">aviso de privacidad</a>. La evaluación inicial no sustituye un dictamen jurídico, financiero o técnico.</p>
+              <button data-edit="su-terreno.form.button-1" type="submit" class="btn btn--primary btn--lg form__submit">Enviar y recibir escenarios</button>
+              <p data-edit="su-terreno.form.p-4" class="form__legal">Al enviar, acepta nuestro <a href="aviso-de-privacidad.html">aviso de privacidad</a>. La evaluación inicial no sustituye un dictamen jurídico, financiero o técnico.</p>
             </form>
           </aside>
         </div>
@@ -1890,8 +1891,8 @@
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="faq-title">Lo que todos preguntan antes de dar el primer paso.</h2>
-          <p>Las objeciones del mensaje maestro, una por una, sin esconderlas.</p>
+          <h2 data-edit="su-terreno.faq.h2-1" id="faq-title">Lo que todos preguntan antes de dar el primer paso.</h2>
+          <p data-edit="su-terreno.faq.p-1">Las objeciones del mensaje maestro, una por una, sin esconderlas.</p>
         </header>
         <div class="faq__list">
           <details class="faq__item">
@@ -1952,41 +1953,41 @@
     <section class="section section--dark" aria-labelledby="closing-title">
       <div class="container">
         <header class="section-header section--center">
-          <h2 id="closing-title">No tiene que decidir hoy si lo aporta. Solo saber qué podría construirse en él.</h2>
-          <p>Si su terreno entra en el perfil que desarrollamos, le enviamos una revisión preliminar. Si no entra, también se lo decimos.</p>
+          <h2 data-edit="su-terreno.closing.h2-1" id="closing-title">No tiene que decidir hoy si lo aporta. Solo saber qué podría construirse en él.</h2>
+          <p data-edit="su-terreno.closing.p-1">Si su terreno entra en el perfil que desarrollamos, le enviamos una revisión preliminar. Si no entra, también se lo decimos.</p>
         </header>
         <div class="closing__grid">
           <div class="closing__col">
-            <h4>Si quiere empezar por el formulario</h4>
-            <a href="#" class="btn btn--primary-dark btn--lg">Precalificar mi terreno</a>
+            <h4 data-edit="su-terreno.closing.h4-1">Si quiere empezar por el formulario</h4>
+            <a data-edit="su-terreno.closing.a-1" href="#" class="btn btn--primary-dark btn--lg">Precalificar mi terreno</a>
           </div>
           <div class="closing__col">
-            <h4>Si prefiere hablar con alguien</h4>
-            <a href="https://wa.me/525517964940?text=Hola%2C%20quiero%20revisar%20el%20potencial%20de%20mi%20terreno." class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">Escríbanos por WhatsApp</a>
+            <h4 data-edit="su-terreno.closing.h4-2">Si prefiere hablar con alguien</h4>
+            <a data-edit="su-terreno.closing.a-2" href="https://wa.me/525517964940?text=Hola%2C%20quiero%20revisar%20el%20potencial%20de%20mi%20terreno." class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">Escríbanos por WhatsApp</a>
           </div>
           <div class="closing__col">
-            <h4>Si prefiere hablar por WhatsApp</h4>
-            <a href="#" class="btn btn--primary-dark btn--lg">Hablar con el agente</a>
+            <h4 data-edit="su-terreno.closing.h4-3">Si prefiere hablar por WhatsApp</h4>
+            <a data-edit="su-terreno.closing.a-3" href="#" class="btn btn--primary-dark btn--lg">Hablar con el agente</a>
           </div>
         </div>
 
         <div class="closing__contact">
           <div>
-            <h5>Oficinas</h5>
-            <p>Circuito Circunvalación Poniente No. 16, Local V-W<br>Ciudad Satélite, Naucalpan, Estado de México C.P. 53100</p>
-            <p><strong>Horario:</strong> Lunes a viernes, 9:00 a 18:00. WhatsApp en horario extendido.</p>
+            <h5 data-edit="su-terreno.closing.h5-1">Oficinas</h5>
+            <p data-edit="su-terreno.closing.p-2">Circuito Circunvalación Poniente No. 16, Local V-W<br>Ciudad Satélite, Naucalpan, Estado de México C.P. 53100</p>
+            <p data-edit="su-terreno.closing.p-3"><strong>Horario:</strong> Lunes a viernes, 9:00 a 18:00. WhatsApp en horario extendido.</p>
           </div>
           <div>
-            <h5>Teléfono</h5>
-            <p><a href="tel:+525517964940">55 1796 4940</a></p>
-            <p><a href="tel:+525553613771">55 5361 3771</a> ext. 251 o 237</p>
-            <p><strong>Correo:</strong> <a href="mailto:contacto@grupocisa.mx">contacto@grupocisa.mx</a></p>
+            <h5 data-edit="su-terreno.closing.h5-2">Teléfono</h5>
+            <p><a data-edit="su-terreno.closing.a-4" href="tel:+525517964940">55 1796 4940</a></p>
+            <p data-edit="su-terreno.closing.p-4"><a href="tel:+525553613771">55 5361 3771</a> ext. 251 o 237</p>
+            <p data-edit="su-terreno.closing.p-5"><strong>Correo:</strong> <a href="mailto:contacto@grupocisa.mx">contacto@grupocisa.mx</a></p>
           </div>
           <div>
-            <h5>Redes</h5>
-            <p><a href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></p>
-            <p><a href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></p>
-            <p><a href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+            <h5 data-edit="su-terreno.closing.h5-3">Redes</h5>
+            <p><a data-edit="su-terreno.closing.a-5" href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+            <p><a data-edit="su-terreno.closing.a-6" href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></p>
+            <p><a data-edit="su-terreno.closing.a-7" href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
           </div>
         </div>
       </div>
@@ -2002,39 +2003,39 @@
           <a href="index.html" aria-label="Grupo CISA · Inicio">
             <img src="assets/logo-grupo-cisa-dark.svg" alt="Grupo CISA" />
           </a>
-          <p>Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
+          <p data-edit="global.footer.desarrollo-e-inversion-inmobiliaria-sede">Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
         </div>
         <div>
-          <h5>Empresa</h5>
+          <h5 data-edit="global.footer.empresa">Empresa</h5>
           <ul>
             
-            <li><a href="nosotros.html#metodo">El proceso</a></li>
-            <li><a href="index.html#faq">Preguntas frecuentes</a></li>
+            <li><a data-edit="global.footer.el-proceso" href="nosotros.html#metodo">El proceso</a></li>
+            <li><a data-edit="global.footer.preguntas-frecuentes" href="index.html#faq">Preguntas frecuentes</a></li>
           </ul>
         </div>
         <div>
-          <h5>Servicios</h5>
+          <h5 data-edit="global.footer.servicios">Servicios</h5>
           <ul>
-            <li><a href="su-terreno.html">Aportar terreno</a></li>
-            <li><a href="su-terreno.html">Co-desarrollo</a></li>
-            <li><a href="su-terreno.html">Construcción</a></li>
-            <li><a href="inversion.html">Inversión</a></li>
+            <li><a data-edit="global.footer.aportar-terreno" href="su-terreno.html">Aportar terreno</a></li>
+            <li><a data-edit="global.footer.co-desarrollo" href="su-terreno.html">Co-desarrollo</a></li>
+            <li><a data-edit="global.footer.construccion" href="su-terreno.html">Construcción</a></li>
+            <li><a data-edit="global.footer.inversion" href="inversion.html">Inversión</a></li>
           </ul>
         </div>
         <div>
-          <h5>Contacto</h5>
+          <h5 data-edit="global.footer.contacto">Contacto</h5>
           <ul>
-            <li><a href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-            <li><a href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="aviso-de-privacidad.html">Aviso de privacidad</a></li>
+            <li><a data-edit="global.footer.whatsapp" href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a data-edit="global.footer.instagram" href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a data-edit="global.footer.facebook" href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a data-edit="global.footer.linkedin" href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a data-edit="global.footer.aviso-de-privacidad" href="aviso-de-privacidad.html">Aviso de privacidad</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
         <span>© 2026 Grupo CISA. Todos los derechos reservados.</span>
-        <span>Plataforma desarrollada por <a href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
+        <span>Plataforma desarrollada por <a data-edit="global.footer.abdev" href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
       </div>
     </div>
   </footer>

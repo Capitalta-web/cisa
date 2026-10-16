@@ -1334,6 +1334,7 @@
     }
 
   </style>
+<script>/*cisa-editor-loader*/(function(){try{if(/(?:^|; )cisa_ed=1/.test(document.cookie)||/[?&]editar=1(?:&|$)/.test(location.search)){var s=document.createElement("script");s.src="/assets/editor.js";s.defer=true;document.head.appendChild(s)}}catch(e){}})();</script>
 </head>
 <body>
 
@@ -1346,14 +1347,14 @@
         <img src="assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
       <nav class="site-header__nav" aria-label="Navegación principal">
-        <a href="su-terreno.html">Modalidades</a>
-        <a href="nosotros.html#metodo">Método</a>
-        <a href="desarrollos.html">Obra</a>
-        <a href="contenido.html">Contenido</a>
-        <a href="nosotros.html">Nosotros</a>
+        <a data-edit="global.header.modalidades" href="su-terreno.html">Modalidades</a>
+        <a data-edit="global.header.metodo" href="nosotros.html#metodo">Método</a>
+        <a data-edit="global.header.obra" href="desarrollos.html">Obra</a>
+        <a data-edit="global.header.contenido" href="contenido.html">Contenido</a>
+        <a data-edit="global.header.nosotros" href="nosotros.html">Nosotros</a>
       </nav>
       <div class="site-header__actions">
-        <a href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
+        <a data-edit="global.header.precalificar-mi-terreno" href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
     </div>
   </header>
@@ -1375,16 +1376,16 @@
 
         <div class="hero__main">
           <div class="hero__copy">
-            <h1 id="hero-title" class="hero__title">
+            <h1 data-edit="index.hero.h1-1" id="hero-title" class="hero__title">
               Vender un terreno es <span class="underline accent">una operación</span>.<br>
               <span class="accent">Desarrollarlo, un negocio.</span>
             </h1>
-            <p class="hero__bajada">
+            <p data-edit="index.hero.p-1" class="hero__bajada">
               Grupo CISA convierte terrenos con potencial en desarrollos rentables. Diseñamos, gestionamos, construimos y comercializamos. Y compartimos el resultado con quien aporta el predio o el capital.
             </p>
             <div class="hero__ctas">
-              <a href="su-terreno.html#precalificar" class="btn btn--primary btn--lg">Precalificar mi terreno</a>
-              <a href="#modalidades" class="btn btn--secondary--green btn--lg">Conocer la empresa ↓</a>
+              <a data-edit="index.hero.a-1" href="su-terreno.html#precalificar" class="btn btn--primary btn--lg">Precalificar mi terreno</a>
+              <a data-edit="index.hero.a-2" href="#modalidades" class="btn btn--secondary--green btn--lg">Conocer la empresa ↓</a>
             </div>
 
             <div class="hero__proof" role="list" aria-label="Prueba inmediata">
@@ -1443,8 +1444,8 @@
     <section class="section section--cream" id="modalidades" data-variant="a" aria-labelledby="mod-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="mod-title">Cuatro caminos para trabajar con Grupo CISA.</h2>
-          <p>No somos para todos. Somos para quien quiere hacer las cosas en serio, con un equipo que se hace responsable de principio a fin.</p>
+          <h2 data-edit="index.modalidades.h2-1" id="mod-title">Cuatro caminos para trabajar con Grupo CISA.</h2>
+          <p data-edit="index.modalidades.p-1">No somos para todos. Somos para quien quiere hacer las cosas en serio, con un equipo que se hace responsable de principio a fin.</p>
         </header>
         <div class="method">
           <article class="mod mod--primary">
@@ -1459,17 +1460,17 @@
                 </svg>
                 <span class="mod__label">Ruta principal</span>
               </div>
-              <h3>Aportación de terreno</h3>
-              <p>Si tiene un terreno urbano o periurbano, lo desarrollamos bajo una figura jurídica con reglas escritas. Usted conserva participación en el proyecto, no solo recibe efectivo.</p>
+              <h3 data-edit="index.mod.h3-1">Aportación de terreno</h3>
+              <p data-edit="index.mod.p-1">Si tiene un terreno urbano o periurbano, lo desarrollamos bajo una figura jurídica con reglas escritas. Usted conserva participación en el proyecto, no solo recibe efectivo.</p>
 
               <div class="mod__split" aria-label="Qué aporta cada parte">
                 <div class="mod__split-item">
-                  <h4>Lo que usted aporta</h4>
-                  <p>El terreno y la disposición a participar del resultado bajo una figura clara.</p>
+                  <h4 data-edit="index.mod.h4-1">Lo que usted aporta</h4>
+                  <p data-edit="index.mod.p-2">El terreno y la disposición a participar del resultado bajo una figura clara.</p>
                 </div>
                 <div class="mod__split-item">
-                  <h4>Lo que CISA pone</h4>
-                  <p>Capital, proyecto, permisos, construcción y comercialización. Todo bajo contrato.</p>
+                  <h4 data-edit="index.mod.h4-2">Lo que CISA pone</h4>
+                  <p data-edit="index.mod.p-3">Capital, proyecto, permisos, construcción y comercialización. Todo bajo contrato.</p>
                 </div>
               </div>
 
@@ -1484,8 +1485,8 @@
               </svg>
               <span class="mod__label">Terreno + capital</span>
             </div>
-            <h3>Co-desarrollo</h3>
-            <p>Buscamos un socio para estructurar el proyecto juntos, si tiene terreno y capital, o solo capital.</p>
+            <h3 data-edit="index.mod.h3-2">Co-desarrollo</h3>
+            <p data-edit="index.mod.p-4">Buscamos un socio para estructurar el proyecto juntos, si tiene terreno y capital, o solo capital.</p>
             <a data-agent-open role="button" tabindex="0" class="mod__cta">Hablar con el agente <span class="mod__cta-arrow">→</span></a>
           </article>
 
@@ -1496,8 +1497,8 @@
               </svg>
               <span class="mod__label">Si ya tiene el proyecto</span>
             </div>
-            <h3>Construcción por encargo</h3>
-            <p>Ya tiene proyecto, licencias y financiamiento. Construimos con orden y fecha cierta.</p>
+            <h3 data-edit="index.mod.h3-3">Construcción por encargo</h3>
+            <p data-edit="index.mod.p-5">Ya tiene proyecto, licencias y financiamiento. Construimos con orden y fecha cierta.</p>
             <a data-agent-open role="button" tabindex="0" class="mod__cta">Solicitar cotización <span class="mod__cta-arrow">→</span></a>
           </article>
 
@@ -1508,8 +1509,8 @@
               </svg>
               <span class="mod__label">Si tiene capital</span>
             </div>
-            <h3>Inversión en proyectos</h3>
-            <p>Quiere participar en un desarrollo sin operar. Evaluamos juntos proyecto, riesgo y figura.</p>
+            <h3 data-edit="index.mod.h3-4">Inversión en proyectos</h3>
+            <p data-edit="index.mod.p-6">Quiere participar en un desarrollo sin operar. Evaluamos juntos proyecto, riesgo y figura.</p>
             <a data-agent-open role="button" tabindex="0" class="mod__cta">Ver proyectos abiertos <span class="mod__cta-arrow">→</span></a>
           </article>
         </div>
@@ -1523,28 +1524,28 @@
       <div class="container">
         <div class="revelation">
           <div class="revelation__copy">
-            <h2 id="revelation-title">Una <em>tercera opción</em> que pocos le explican.</h2>
-            <p>
+            <h2 data-edit="index.revelacion.h2-1" id="revelation-title">Una <em>tercera opción</em> que pocos le explican.</h2>
+            <p data-edit="index.revelacion.p-1">
               Si tiene un terreno urbano o periurbano, ha visto las mismas dos opciones una y otra vez: venderlo de golpe, casi siempre por debajo de lo que vale, o conservarlo pagando predial mientras algo llega.
             </p>
-            <p>
+            <p data-edit="index.revelacion.p-2">
               Hay una <strong>tercera vía que pocos le explican</strong>: aportarlo a un desarrollo, conservar participación y cobrar en metros construidos. La revisión inicial es preliminar.
             </p>
           </div>
           <aside class="revelation__form" aria-label="Formulario de precalificación">
-            <h3>Cuéntenos sobre su terreno</h3>
-            <p class="form__microcopy">Revisión preliminar</p>
+            <h3 data-edit="index.revelacion.h3-1">Cuéntenos sobre su terreno</h3>
+            <p data-edit="index.revelacion.p-3" class="form__microcopy">Revisión preliminar</p>
             <form action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" novalidate>
               <div class="form__field">
-                <label for="ubicacion">Ubicación del predio</label>
+                <label data-edit="index.revelacion.label-1" for="ubicacion">Ubicación del predio</label>
                 <input type="text" id="ubicacion" name="ubicacion" placeholder="Municipio y estado" required />
               </div>
               <div class="form__field">
-                <label for="superficie">Superficie aproximada (m²)</label>
+                <label data-edit="index.revelacion.label-2" for="superficie">Superficie aproximada (m²)</label>
                 <input type="text" id="superficie" name="superficie" placeholder="Ej. 480" inputmode="numeric" />
               </div>
               <div class="form__field">
-                <label for="uso">¿Conoce el uso de suelo?</label>
+                <label data-edit="index.revelacion.label-3" for="uso">¿Conoce el uso de suelo?</label>
                 <select id="uso" name="uso">
                   <option value="">Seleccione una opción</option>
                   <option>Sí lo conozco</option>
@@ -1553,18 +1554,18 @@
                 </select>
               </div>
               <div class="form__field">
-                <label for="nombre">Su nombre</label>
+                <label data-edit="index.revelacion.label-4" for="nombre">Su nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required />
               </div>
               <div class="form__field">
-                <label for="telefono">Teléfono con lada</label>
+                <label data-edit="index.revelacion.label-5" for="telefono">Teléfono con lada</label>
                 <input type="tel" id="telefono" name="telefono" placeholder="55 1234 5678" required />
               </div>
               <input type="hidden" name="_subject" value="[CISA] Nuevo mensaje desde el sitio" />
               <input type="text" name="_gotcha" style="display:none" />
               <input type="hidden" name="_next" value="#gracias" />
-              <button type="submit" class="btn btn--primary btn--lg form__submit">Enviar y recibir escenarios</button>
-              <p class="form__legal">Al enviar, acepta nuestro <a href="aviso-de-privacidad.html">aviso de privacidad</a>. La evaluación inicial no sustituye un dictamen jurídico, financiero o técnico.</p>
+              <button data-edit="index.revelacion.button-1" type="submit" class="btn btn--primary btn--lg form__submit">Enviar y recibir escenarios</button>
+              <p data-edit="index.revelacion.p-4" class="form__legal">Al enviar, acepta nuestro <a href="aviso-de-privacidad.html">aviso de privacidad</a>. La evaluación inicial no sustituye un dictamen jurídico, financiero o técnico.</p>
             </form>
           </aside>
         </div>
@@ -1577,71 +1578,71 @@
     <section class="section section--alt" id="metodo" data-variant="a" aria-labelledby="method-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="method-title">Ocho etapas. En todo momento sabe en cuál está su proyecto.</h2>
-          <p>Publicamos el proceso completo porque es la parte que casi nadie explica, y es justo donde nacen todas las dudas.</p>
+          <h2 data-edit="index.metodo.h2-1" id="method-title">Ocho etapas. En todo momento sabe en cuál está su proyecto.</h2>
+          <p data-edit="index.metodo.p-1">Publicamos el proceso completo porque es la parte que casi nadie explica, y es justo donde nacen todas las dudas.</p>
         </header>
         <ol class="timeline" role="list">
           <li class="step">
             <div class="step__num" aria-hidden="true">01</div>
             <div class="step__body">
-              <h4>Entrevista inicial</h4>
-              <p>Conocemos su propiedad, objetivo y contexto.</p>
+              <h4 data-edit="index.metodo.h4-1">Entrevista inicial</h4>
+              <p data-edit="index.metodo.p-2">Conocemos su propiedad, objetivo y contexto.</p>
               <span class="step__time">1–2 SEMANAS</span>
             </div>
           </li>
           <li class="step">
             <div class="step__num" aria-hidden="true">02</div>
             <div class="step__body">
-              <h4>Presentación</h4>
-              <p>Revisamos el potencial de desarrollo de su propiedad.</p>
+              <h4 data-edit="index.metodo.h4-2">Presentación</h4>
+              <p data-edit="index.metodo.p-3">Revisamos el potencial de desarrollo de su propiedad.</p>
               <span class="step__time">2–4 SEMANAS</span>
             </div>
           </li>
           <li class="step">
             <div class="step__num" aria-hidden="true">03</div>
             <div class="step__body">
-              <h4>Factibilidad</h4>
-              <p>Analizamos variables técnicas, jurídicas y financieras.</p>
+              <h4 data-edit="index.metodo.h4-3">Factibilidad</h4>
+              <p data-edit="index.metodo.p-4">Analizamos variables técnicas, jurídicas y financieras.</p>
               <span class="step__time">4–8 SEMANAS</span>
             </div>
           </li>
           <li class="step">
             <div class="step__num" aria-hidden="true">04</div>
             <div class="step__body">
-              <h4>Decisión estratégica</h4>
-              <p>Se evalúa aportar el terreno o venderlo.</p>
+              <h4 data-edit="index.metodo.h4-4">Decisión estratégica</h4>
+              <p data-edit="index.metodo.p-5">Se evalúa aportar el terreno o venderlo.</p>
               <span class="step__time">2–3 SEMANAS</span>
             </div>
           </li>
           <li class="step">
             <div class="step__num" aria-hidden="true">05</div>
             <div class="step__body">
-              <h4>Plan de trabajo</h4>
-              <p>Definimos alcance, responsables y siguientes pasos.</p>
+              <h4 data-edit="index.metodo.h4-5">Plan de trabajo</h4>
+              <p data-edit="index.metodo.p-6">Definimos alcance, responsables y siguientes pasos.</p>
               <span class="step__time">3–4 SEMANAS</span>
             </div>
           </li>
           <li class="step">
             <div class="step__num" aria-hidden="true">06</div>
             <div class="step__body">
-              <h4>Primera fase</h4>
-              <p>Trámites, permisos, planos finales y estimaciones.</p>
+              <h4 data-edit="index.metodo.h4-6">Primera fase</h4>
+              <p data-edit="index.metodo.p-7">Trámites, permisos, planos finales y estimaciones.</p>
               <span class="step__time">3–6 MESES</span>
             </div>
           </li>
           <li class="step">
             <div class="step__num" aria-hidden="true">07</div>
             <div class="step__body">
-              <h4>Construcción</h4>
-              <p>Seguimiento de obra conforme al proyecto aprobado.</p>
+              <h4 data-edit="index.metodo.h4-7">Construcción</h4>
+              <p data-edit="index.metodo.p-8">Seguimiento de obra conforme al proyecto aprobado.</p>
               <span class="step__time">12–24 MESES</span>
             </div>
           </li>
           <li class="step">
             <div class="step__num" aria-hidden="true">08</div>
             <div class="step__body">
-              <h4>Entrega</h4>
-              <p>Cerramos la etapa y documentamos el resultado.</p>
+              <h4 data-edit="index.metodo.h4-8">Entrega</h4>
+              <p data-edit="index.metodo.p-9">Cerramos la etapa y documentamos el resultado.</p>
               <span class="step__time">2–3 MESES</span>
             </div>
           </li>
@@ -1655,8 +1656,8 @@
     <section class="section" id="obra" aria-labelledby="work-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="work-title">No es una propuesta teórica. Es lo que hacemos.</h2>
-          <p>Obra propia, en desarrollo y entregada, en el centro de México y el Caribe mexicano.</p>
+          <h2 data-edit="index.obra.h2-1" id="work-title">No es una propuesta teórica. Es lo que hacemos.</h2>
+          <p data-edit="index.obra.p-1">Obra propia, en desarrollo y entregada, en el centro de México y el Caribe mexicano.</p>
         </header>
         <div class="work">
           <a class="proj" href="desarrollos/residencial-fraile.html" aria-label="Ver el desarrollo Residencial Fraile">
@@ -1666,9 +1667,9 @@
             </div>
             <div class="proj__body">
               <div class="proj__meta">EDOMEX · JILOTZINGO</div>
-              <h3>Residencial Fraile</h3>
-              <p class="proj__loc">Jilotzingo · Estado de México</p>
-              <p class="proj__desc">Torre de departamentos en zona con gran plusvalía. Listo para entrega. Algunas unidades aún disponibles.</p>
+              <h3 data-edit="index.obra.h3-1">Residencial Fraile</h3>
+              <p data-edit="index.obra.p-2" class="proj__loc">Jilotzingo · Estado de México</p>
+              <p data-edit="index.obra.p-3" class="proj__desc">Torre de departamentos en zona con gran plusvalía. Listo para entrega. Algunas unidades aún disponibles.</p>
               <div class="proj__stats">
                 <div>
                   <div class="proj__stat-value">48</div>
@@ -1694,9 +1695,9 @@
             </div>
             <div class="proj__body">
               <div class="proj__meta">QROO · TULUM</div>
-              <h3>Itzaé</h3>
-              <p class="proj__loc">Tulum · Quintana Roo</p>
-              <p class="proj__desc">Torre de departamentos. Diseño enfocado en privacidad, confort y conexión con el entorno natural.</p>
+              <h3 data-edit="index.obra.h3-2">Itzaé</h3>
+              <p data-edit="index.obra.p-4" class="proj__loc">Tulum · Quintana Roo</p>
+              <p data-edit="index.obra.p-5" class="proj__desc">Torre de departamentos. Diseño enfocado en privacidad, confort y conexión con el entorno natural.</p>
               <div class="proj__stats">
                 <div>
                   <div class="proj__stat-value">32</div>
@@ -1721,9 +1722,9 @@
             </div>
             <div class="proj__body">
               <div class="proj__meta">CDMX · ALGARÍN</div>
-              <h3>Panorama</h3>
-              <p class="proj__loc">Enrique F Granados 60 · Colonia Algarín, Cuauhtémoc</p>
-              <p class="proj__desc">Proyecto en proceso en colonia Algarín, Cuauhtémoc. Grupo CISA está trabajando en factibilidad, permisos y proyecto arquitectónico.</p>
+              <h3 data-edit="index.obra.h3-3">Panorama</h3>
+              <p data-edit="index.obra.p-6" class="proj__loc">Enrique F Granados 60 · Colonia Algarín, Cuauhtémoc</p>
+              <p data-edit="index.obra.p-7" class="proj__desc">Proyecto en proceso en colonia Algarín, Cuauhtémoc. Grupo CISA está trabajando en factibilidad, permisos y proyecto arquitectónico.</p>
               <div class="proj__stats">
                 <div>
                   <div class="proj__stat-value">—</div>
@@ -1749,9 +1750,9 @@
             </div>
             <div class="proj__body">
               <div class="proj__meta">CDMX · OBRERA</div>
-              <h3>Summit</h3>
-              <p class="proj__loc">Colonia Obrera · Cuauhtémoc, Ciudad de México</p>
-              <p class="proj__desc">Predio en estudio para desarrollo de uso mixto. Grupo CISA está evaluando factibilidad, permisos y programa arquitectónico.</p>
+              <h3 data-edit="index.obra.h3-4">Summit</h3>
+              <p data-edit="index.obra.p-8" class="proj__loc">Colonia Obrera · Cuauhtémoc, Ciudad de México</p>
+              <p data-edit="index.obra.p-9" class="proj__desc">Predio en estudio para desarrollo de uso mixto. Grupo CISA está evaluando factibilidad, permisos y programa arquitectónico.</p>
               <div class="proj__stats">
                 <div>
                   <div class="proj__stat-value">—</div>
@@ -1780,7 +1781,7 @@
     <section class="section section--alt" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="faq-title">Lo que todos preguntan antes de dar el primer paso</h2>
+          <h2 data-edit="index.faq.h2-1" id="faq-title">Lo que todos preguntan antes de dar el primer paso</h2>
         </header>
         <div class="faq__list">
           <details class="faq__item">
@@ -1825,8 +1826,8 @@
     <section class="section section--cream" id="aliados" aria-labelledby="allies-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="allies-title">No trabajamos solos.</h2>
-          <p>Socios comerciales y aliados que participan según lo que cada proyecto necesita.</p>
+          <h2 data-edit="index.aliados.h2-1" id="allies-title">No trabajamos solos.</h2>
+          <p data-edit="index.aliados.p-1">Socios comerciales y aliados que participan según lo que cada proyecto necesita.</p>
         </header>
         <div class="allies__grid">
           <img class="allies__logo" src="assets/aliados/carvid.webp" alt="CARVID · aliado estratégico de Grupo CISA" loading="lazy" decoding="async" width="320" height="120">
@@ -1835,7 +1836,7 @@
           <img class="allies__logo" src="assets/aliados/kimbra.webp" alt="Kimbra · aliado estratégico de Grupo CISA" loading="lazy" decoding="async" width="320" height="120">
           <img class="allies__logo" src="assets/aliados/fundacion.webp" alt="Fundación Nuestra Historia · aliado estratégico de Grupo CISA" loading="lazy" decoding="async" width="320" height="120">
         </div>
-        <p class="allies__caption">Alianzas que nos permiten ejecutar con el mismo estándar en cualquier ciudad del país.</p>
+        <p data-edit="index.aliados.p-2" class="allies__caption">Alianzas que nos permiten ejecutar con el mismo estándar en cualquier ciudad del país.</p>
       </div>
     </section>
 
@@ -1845,41 +1846,41 @@
     <section class="section section--dark" aria-labelledby="closing-title">
       <div class="container">
         <header class="section-header section--center">
-          <h2 id="closing-title">Cualquier duda, el agente o nosotros se la resolvemos al instante.</h2>
-          <p>Si prefiere hablar directo con una persona, también.</p>
+          <h2 data-edit="index.closing.h2-1" id="closing-title">Cualquier duda, el agente o nosotros se la resolvemos al instante.</h2>
+          <p data-edit="index.closing.p-1">Si prefiere hablar directo con una persona, también.</p>
         </header>
         <div class="closing__grid">
           <div class="closing__col">
-            <h4>Si tiene un terreno</h4>
-            <a href="su-terreno.html#precalificar" class="btn btn--primary-dark btn--lg">Precalificar mi terreno</a>
+            <h4 data-edit="index.closing.h4-1">Si tiene un terreno</h4>
+            <a data-edit="index.closing.a-1" href="su-terreno.html#precalificar" class="btn btn--primary-dark btn--lg">Precalificar mi terreno</a>
           </div>
           <div class="closing__col">
-            <h4>Si prefiere atención humana</h4>
-            <a href="https://wa.me/525517964940?text=Hola%2C%20vengo%20del%20sitio%20de%20Grupo%20CISA%20y%20quiero%20informaci%C3%B3n." class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">Escríbanos por WhatsApp</a>
+            <h4 data-edit="index.closing.h4-2">Si prefiere atención humana</h4>
+            <a data-edit="index.closing.a-2" href="https://wa.me/525517964940?text=Hola%2C%20vengo%20del%20sitio%20de%20Grupo%20CISA%20y%20quiero%20informaci%C3%B3n." class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">Escríbanos por WhatsApp</a>
           </div>
           <div class="closing__col">
-            <h4>Si prefiere hablar por WhatsApp</h4>
-            <button type="button" class="btn btn--primary-dark btn--lg" data-agent-open aria-label="Iniciar conversación con el agente">Hablar con el agente</button>
+            <h4 data-edit="index.closing.h4-3">Si prefiere hablar por WhatsApp</h4>
+            <button data-edit="index.closing.button-1" type="button" class="btn btn--primary-dark btn--lg" data-agent-open aria-label="Iniciar conversación con el agente">Hablar con el agente</button>
           </div>
         </div>
 
         <div class="closing__contact">
           <div>
-            <h5>Oficinas</h5>
-            <p>Circuito Circunvalación Poniente No. 16, Local V-W<br>Ciudad Satélite, Naucalpan, Estado de México C.P. 53100</p>
-            <p><strong>Horario:</strong> Lunes a viernes, 9:00 a 18:00. WhatsApp en horario extendido.</p>
+            <h5 data-edit="index.closing.h5-1">Oficinas</h5>
+            <p data-edit="index.closing.p-2">Circuito Circunvalación Poniente No. 16, Local V-W<br>Ciudad Satélite, Naucalpan, Estado de México C.P. 53100</p>
+            <p data-edit="index.closing.p-3"><strong>Horario:</strong> Lunes a viernes, 9:00 a 18:00. WhatsApp en horario extendido.</p>
           </div>
           <div>
-            <h5>Teléfono</h5>
-            <p><a href="tel:+525517964940">55 1796 4940</a></p>
-            <p><a href="tel:+525553613771">55 5361 3771</a> ext. 251 o 237</p>
-            <p><strong>Correo:</strong> <a href="mailto:contacto@grupocisa.mx">contacto@grupocisa.mx</a></p>
+            <h5 data-edit="index.closing.h5-2">Teléfono</h5>
+            <p><a data-edit="index.closing.a-3" href="tel:+525517964940">55 1796 4940</a></p>
+            <p data-edit="index.closing.p-4"><a href="tel:+525553613771">55 5361 3771</a> ext. 251 o 237</p>
+            <p data-edit="index.closing.p-5"><strong>Correo:</strong> <a href="mailto:contacto@grupocisa.mx">contacto@grupocisa.mx</a></p>
           </div>
           <div>
-            <h5>Redes</h5>
-            <p><a href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></p>
-            <p><a href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></p>
-            <p><a href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+            <h5 data-edit="index.closing.h5-3">Redes</h5>
+            <p><a data-edit="index.closing.a-4" href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+            <p><a data-edit="index.closing.a-5" href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></p>
+            <p><a data-edit="index.closing.a-6" href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
           </div>
         </div>
       </div>
@@ -1895,40 +1896,40 @@
           <a href="index.html" aria-label="Grupo CISA · Inicio">
             <img src="assets/logo-grupo-cisa-dark.svg" alt="Grupo CISA" />
           </a>
-          <p>Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
+          <p data-edit="global.footer.desarrollo-e-inversion-inmobiliaria-sede">Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
         </div>
         <div>
-          <h5>Empresa</h5>
+          <h5 data-edit="global.footer.empresa">Empresa</h5>
           <ul>
             
-            <li><a href="nosotros.html#metodo">El proceso</a></li>
-            <li><a data-agent-open role="button" tabindex="0">Asistente</a></li>
-            <li><a href="index.html#faq">Preguntas frecuentes</a></li>
+            <li><a data-edit="global.footer.el-proceso" href="nosotros.html#metodo">El proceso</a></li>
+            <li><a data-edit="global.footer.asistente" data-agent-open role="button" tabindex="0">Asistente</a></li>
+            <li><a data-edit="global.footer.preguntas-frecuentes" href="index.html#faq">Preguntas frecuentes</a></li>
           </ul>
         </div>
         <div>
-          <h5>Servicios</h5>
+          <h5 data-edit="global.footer.servicios">Servicios</h5>
           <ul>
-            <li><a href="su-terreno.html">Aportar terreno</a></li>
-            <li><a href="su-terreno.html">Co-desarrollo</a></li>
-            <li><a href="su-terreno.html">Construcción</a></li>
-            <li><a href="inversion.html">Inversión</a></li>
+            <li><a data-edit="global.footer.aportar-terreno" href="su-terreno.html">Aportar terreno</a></li>
+            <li><a data-edit="global.footer.co-desarrollo" href="su-terreno.html">Co-desarrollo</a></li>
+            <li><a data-edit="global.footer.construccion" href="su-terreno.html">Construcción</a></li>
+            <li><a data-edit="global.footer.inversion" href="inversion.html">Inversión</a></li>
           </ul>
         </div>
         <div>
-          <h5>Contacto</h5>
+          <h5 data-edit="global.footer.contacto">Contacto</h5>
           <ul>
-            <li><a href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-            <li><a href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="aviso-de-privacidad.html">Aviso de privacidad</a></li>
+            <li><a data-edit="global.footer.whatsapp" href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a data-edit="global.footer.instagram" href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a data-edit="global.footer.facebook" href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a data-edit="global.footer.linkedin" href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a data-edit="global.footer.aviso-de-privacidad" href="aviso-de-privacidad.html">Aviso de privacidad</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
         <span>© 2026 Grupo CISA. Todos los derechos reservados.</span>
-        <span>Plataforma desarrollada por <a href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
+        <span>Plataforma desarrollada por <a data-edit="global.footer.abdev" href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
       </div>
     </div>
   </footer>
