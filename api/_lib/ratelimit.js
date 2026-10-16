@@ -30,19 +30,23 @@ async function hit(key, limit, windowSec) {
   return e.n <= limit;
 }
 
-// Marca un id como usado (enlace mágico de un solo uso). Solo con Upstash.
-async function once(id, ttlSec) {
-  if (!(process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN)) {
-    if (mem.has('once:' + id)) return false;
-    mem.set('once:' + id, { n: 1, reset: Date.now() + ttlSec * 1000 });
-    return true;
+// Contador de fallos (bloqueo tras N intentos). count() lee sin incrementar.
+async function count(key) {
+  if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+    try { const r = await upstash([['GET', `cisa-editor:rl:${key}`]]); return Number(r[0].result) || 0; } catch (e) { /* memoria */ }
   }
-  const res = await upstash([['SET', `cisa-editor:once:${id}`, '1', 'NX', 'EX', String(ttlSec)]]);
-  return res[0].result === 'OK';
+  const e = mem.get(key);
+  return e && e.reset >= Date.now() ? e.n : 0;
+}
+async function reset(key) {
+  mem.delete(key);
+  if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+    try { await upstash([['DEL', `cisa-editor:rl:${key}`]]); } catch (e) { /* ignore */ }
+  }
 }
 
 function clientIp(req) {
   return String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() || req.socket?.remoteAddress || 'unknown';
 }
 
-module.exports = { hit, once, clientIp };
+module.exports = { hit, count, reset, clientIp };

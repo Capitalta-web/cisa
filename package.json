@@ -10,7 +10,8 @@
     "impeccable:stop": "node .impeccable/scripts/live-server.mjs stop",
     "impeccable:audit": "node .impeccable/scripts/live-server.mjs --audit",
     "test": "node --test tests/",
-    "mark-editable": "node scripts/mark_editable.js"
+    "mark-editable": "node scripts/mark_editable.js",
+    "hash-password": "node scripts/hash_password.js"
   },
   "engines": {
     "node": ">=20.19"

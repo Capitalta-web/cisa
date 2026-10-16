@@ -50,15 +50,26 @@
   /* ---------- Login ---------- */
   function showLogin() {
     mountBar();
-    bar.innerHTML = '<span>Editor CISA</span><input type="email" placeholder="tu correo autorizado" autocomplete="email"><button class="pri">Enviarme enlace</button><button data-x>✕</button>';
-    var input = bar.querySelector('input');
+    bar.innerHTML = '<span>Editor CISA</span>' +
+      '<input name="usuario" placeholder="usuario" autocomplete="username" autocapitalize="none" required style="min-width:140px">' +
+      '<input name="contrasena" type="password" placeholder="contraseña" autocomplete="current-password" required style="min-width:160px">' +
+      '<button class="pri" type="button">Entrar</button><button type="button" data-x>✕</button><span data-msg role="alert"></span>';
+    // Sin <form>: los scripts del sitio (form-memoria) interceptan los submit.
+    var form = { usuario: bar.querySelector('[name=usuario]'), contrasena: bar.querySelector('[name=contrasena]'), querySelector: function (q) { return bar.querySelector(q); } };
+    var msg = bar.querySelector('[data-msg]');
     bar.querySelector('[data-x]').onclick = function () { bar.remove(); };
-    bar.querySelector('.pri').onclick = function () {
-      var b = this; b.disabled = true;
-      api(API_AUTH + '?accion=solicitar', { method: 'POST', body: JSON.stringify({ email: input.value, r: location.pathname }) })
-        .then(function (j) { bar.innerHTML = '<span>' + esc(j.mensaje || j.error || 'Listo') + '</span>'; })
-        .catch(function () { b.disabled = false; });
-    };
+    function submit() {
+      var b = form.querySelector('.pri'); b.disabled = true; msg.textContent = '';
+      api(API_AUTH + '?accion=entrar', { method: 'POST', body: JSON.stringify({ usuario: form.usuario.value, contrasena: form.contrasena.value }) })
+        .then(function (j) {
+          if (j.ok) { if (window.__cisaEdOn) { location.reload(); return; } bar.remove(); bar = null; enable({ usuario: j.usuario }); return; }
+          form.contrasena.value = ''; msg.textContent = j.error || 'No se pudo entrar'; b.disabled = false;
+        })
+        .catch(function () { msg.textContent = 'Sin conexión'; b.disabled = false; });
+    }
+    bar.querySelector('.pri').onclick = submit;
+    bar.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); e.stopPropagation(); submit(); } });
+    form.usuario.focus();
   }
 
   /* ---------- Edición ---------- */
@@ -89,6 +100,7 @@
   }
 
   function enable(session) {
+    window.__cisaEdOn = true;
     nodes().forEach(function (n) {
       var id = n.getAttribute('data-edit');
       if (!(id in originals)) originals[id] = n.innerHTML;
@@ -121,7 +133,7 @@
     }, true);
 
     mountBar();
-    bar.innerHTML = '<span title="' + esc(session.email) + '">✎ Editando</span><span data-s></span>' +
+    bar.innerHTML = '<span title="' + esc(session.usuario) + '">✎ Editando</span><span data-s></span>' +
       '<input data-nota placeholder="Nota para revisión (opcional)" maxlength="500">' +
       '<button class="pri" data-send>Enviar a revisión</button><button data-undo>Descartar</button><button data-out>Salir</button>';
     statusEl = bar.querySelector('[data-s]');

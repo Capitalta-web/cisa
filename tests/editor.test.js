@@ -4,11 +4,12 @@ const assert = require('node:assert');
 const fs = require('fs');
 const path = require('path');
 process.env.EDITOR_SESSION_SECRET = 'x'.repeat(40);
-process.env.EDITOR_ALLOWED_EMAILS = 'ana@cisa.mx, Alberto@ejemplo.com';
+const S0 = require('../api/_lib/session');
+process.env.EDITOR_USERS = `ana:${S0.hashPassword('clave-de-prueba-123', { N: 16384, r: 8, p: 1 })},alberto:${S0.hashPassword('otra-clave-segura-456', { N: 16384, r: 8, p: 1 })}`;
 const H = require('../api/_lib/html');
 const S = require('../api/_lib/session');
 const { prepare, normalizePage } = require('../api/editar');
-const { safeReturn } = require('../api/auth');
+const auth = require('../api/auth');
 
 test('sanitize: quita scripts, atributos y etiquetas no permitidas', () => {
   assert.equal(H.sanitize('Hola <script>alert(1)</script><b onclick="x">mundo</b>'), 'Hola <b>mundo</b>');
@@ -73,17 +74,70 @@ test('prepare: valida payload, separa globales y sanitiza', () => {
   assert.equal(normalizePage('/'), 'index.html');
 });
 
-test('sesión: firma, expiración, lista permitida', () => {
-  assert.ok(S.isAllowed('ALBERTO@ejemplo.com'));
-  assert.ok(!S.isAllowed('otro@x.com'));
-  const t = S.newSessionToken('ana@cisa.mx');
-  assert.equal(S.verify(t, 'sess').sub, 'ana@cisa.mx');
+test('sesión: firma, expiración, usuarios de EDITOR_USERS', () => {
+  assert.ok(S.isAllowed('ALBERTO'));
+  assert.ok(!S.isAllowed('otro'));
+  const t = S.newSessionToken('ana');
+  assert.equal(S.verify(t, 'sess').sub, 'ana');
   assert.equal(S.verify(t, 'link'), null);
   assert.equal(S.verify(t.slice(0, -2) + 'xx', 'sess'), null);
-  assert.equal(S.verify(S.sign({ typ: 'sess', sub: 'ana@cisa.mx', exp: 1 }), 'sess'), null);
-  assert.equal(S.verify(S.sign({ typ: 'sess', sub: 'intruso@x.com', exp: 9e9 }), 'sess'), null);
-  assert.equal(safeReturn('//evil.com'), '/');
-  assert.equal(safeReturn('/desarrollos/itzae.html'), '/desarrollos/itzae.html');
+  assert.equal(S.verify(S.sign({ typ: 'sess', sub: 'ana', exp: 1 }), 'sess'), null);
+  assert.equal(S.verify(S.sign({ typ: 'sess', sub: 'intruso', exp: 9e9 }), 'sess'), null);
+});
+
+test('contraseñas: scrypt, verificación y rechazo', () => {
+  const h = S.hashPassword('mi clave larga 1', { N: 16384, r: 8, p: 1 });
+  assert.match(h, /^scrypt\$16384\$8\$1\$[A-Za-z0-9+/=]+\$[A-Za-z0-9+/=]+$/);
+  assert.notEqual(h, S.hashPassword('mi clave larga 1', { N: 16384, r: 8, p: 1 })); // sal aleatoria
+  assert.ok(S.verifyPassword('mi clave larga 1', h));
+  assert.ok(!S.verifyPassword('mi clave larga 2', h));
+  assert.ok(!S.verifyPassword('x', 'plaintext'));
+  assert.ok(!S.verifyPassword('x', 'scrypt$2$1$1$AAAA$AAAA')); // parámetros débiles
+  assert.equal(S.checkCredentials(' Ana ', 'clave-de-prueba-123'), 'ana');
+  assert.equal(S.checkCredentials('ana', 'mala'), null);
+  assert.equal(S.checkCredentials('nadie', 'clave-de-prueba-123'), null);
+  assert.equal(S.checkCredentials('', ''), null);
+});
+
+function call(handler, { method = 'GET', url, body, headers = {} }) {
+  return new Promise((resolve) => {
+    const { Readable } = require('stream');
+    const req = Readable.from(body ? [JSON.stringify(body)] : []);
+    Object.assign(req, { method, url, headers: { host: 'sitio.test', origin: 'https://sitio.test', 'x-forwarded-for': headers.ip || '1.1.1.1', ...headers }, socket: {} });
+    const h = {};
+    const res = { statusCode: 200, setHeader: (k, v) => { h[k.toLowerCase()] = v; }, end: (b) => resolve({ status: res.statusCode, headers: h, body: b ? JSON.parse(b) : null }) };
+    handler(req, res);
+  });
+}
+
+test('api/auth: login correcto, error genérico, Origin y bloqueo por usuario', async () => {
+  const ok = await call(auth, { method: 'POST', url: '/api/auth?accion=entrar', body: { usuario: 'ana', contrasena: 'clave-de-prueba-123' } });
+  assert.equal(ok.status, 200);
+  const cookies = ok.headers['set-cookie'].join(';');
+  assert.match(cookies, /cisa_sess=[^;]+; Path=\/; HttpOnly; SameSite=Lax; Max-Age=28800/);
+  const sess = await call(auth, { url: '/api/auth?accion=sesion', headers: { cookie: ok.headers['set-cookie'][0].split(';')[0] } });
+  assert.deepEqual([sess.body.ok, sess.body.usuario], [true, 'ana']);
+
+  const bad1 = await call(auth, { method: 'POST', url: '/api/auth?accion=entrar', body: { usuario: 'nadie', contrasena: 'x' }, headers: { ip: '2.2.2.2' } });
+  const bad2 = await call(auth, { method: 'POST', url: '/api/auth?accion=entrar', body: { usuario: 'ana', contrasena: 'x' }, headers: { ip: '2.2.2.3' } });
+  assert.equal(bad1.status, 401); assert.equal(bad2.status, 401);
+  assert.equal(bad1.body.error, bad2.body.error); // no revela si el usuario existe
+
+  const cross = await call(auth, { method: 'POST', url: '/api/auth?accion=entrar', body: {}, headers: { origin: 'https://evil.test' } });
+  assert.equal(cross.status, 403);
+
+  for (let i = 1; i < auth.USER_LOCK_AFTER; i++) {
+    await call(auth, { method: 'POST', url: '/api/auth?accion=entrar', body: { usuario: 'alberto', contrasena: 'mala' }, headers: { ip: `3.3.3.${i}` } });
+  }
+  await call(auth, { method: 'POST', url: '/api/auth?accion=entrar', body: { usuario: 'alberto', contrasena: 'mala' }, headers: { ip: '3.3.3.9' } });
+  const locked = await call(auth, { method: 'POST', url: '/api/auth?accion=entrar', body: { usuario: 'alberto', contrasena: 'otra-clave-segura-456' }, headers: { ip: '3.3.4.1' } });
+  assert.equal(locked.status, 429); // ni con la contraseña correcta, mientras dure el bloqueo
+});
+
+test('api/auth: límite por IP', async () => {
+  let last;
+  for (let i = 0; i < 21; i++) last = await call(auth, { method: 'POST', url: '/api/auth?accion=entrar', body: { usuario: `u${i}`, contrasena: 'x' }, headers: { ip: '9.9.9.9' } });
+  assert.equal(last.status, 429);
 });
 
 test('páginas reales: todos los nodos marcados se pueden editar ida y vuelta', () => {

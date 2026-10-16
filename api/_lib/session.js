@@ -1,12 +1,11 @@
 // api/_lib/session.js
-// Tokens firmados con HMAC-SHA256 (sin base de datos): enlace mágico y cookie de sesión.
+// Tokens firmados con HMAC-SHA256 (sin base de datos): cookie de sesión; contraseñas con scrypt.
 'use strict';
 const crypto = require('crypto');
 
 const SESSION_COOKIE = 'cisa_sess';
 const FLAG_COOKIE = 'cisa_ed'; // NO es secreta: solo le dice al loader que cargue editor.js
 const SESSION_TTL = 8 * 60 * 60; // 8 h
-const LINK_TTL = 15 * 60; // 15 min
 
 function secret() {
   const s = process.env.EDITOR_SESSION_SECRET;
@@ -31,23 +30,62 @@ function verify(token, expectedType) {
   let p;
   try { p = JSON.parse(Buffer.from(body, 'base64url').toString('utf8')); } catch { return null; }
   if (p.typ !== expectedType || typeof p.exp !== 'number' || p.exp < Date.now() / 1000) return null;
-  if (!isAllowed(p.sub)) return null; // quitar un correo de la lista revoca su sesión
+  if (!isAllowed(p.sub)) return null; // quitar un usuario de EDITOR_USERS revoca su sesión
   return p;
 }
 
-function allowlist() {
-  return String(process.env.EDITOR_ALLOWED_EMAILS || '')
-    .split(/[,;\s]+/).map((e) => e.trim().toLowerCase()).filter(Boolean);
+// EDITOR_USERS="usuario:scrypt$N$r$p$salt_b64$hash_b64,otro:scrypt$..."
+// (generar con: npm run hash-password -- <usuario>)
+const USER_RE = /^[a-z0-9._-]{2,40}$/;
+function users() {
+  const out = {};
+  String(process.env.EDITOR_USERS || '').split(/[,\s]+/).filter(Boolean).forEach((entry) => {
+    const i = entry.indexOf(':');
+    if (i < 1) return;
+    const u = entry.slice(0, i).toLowerCase();
+    if (USER_RE.test(u)) out[u] = entry.slice(i + 1);
+  });
+  return out;
 }
-function isAllowed(email) {
-  return typeof email === 'string' && allowlist().includes(email.trim().toLowerCase());
+function isAllowed(user) {
+  return typeof user === 'string' && Object.prototype.hasOwnProperty.call(users(), user.trim().toLowerCase());
 }
 
-function newLinkToken(email) {
-  return sign({ typ: 'link', sub: email.toLowerCase(), jti: crypto.randomUUID(), exp: Math.floor(Date.now() / 1000) + LINK_TTL });
+const SCRYPT_DEFAULT = { N: 32768, r: 8, p: 1 };
+function hashPassword(password, opts = SCRYPT_DEFAULT) {
+  const salt = crypto.randomBytes(16);
+  const hash = crypto.scryptSync(String(password).normalize('NFKC'), salt, 32, { N: opts.N, r: opts.r, p: opts.p, maxmem: 256 * opts.N * opts.r });
+  return `scrypt$${opts.N}$${opts.r}$${opts.p}$${salt.toString('base64')}$${hash.toString('base64')}`;
 }
-function newSessionToken(email) {
-  return sign({ typ: 'sess', sub: email.toLowerCase(), exp: Math.floor(Date.now() / 1000) + SESSION_TTL });
+// Hash ficticio para gastar el mismo tiempo cuando el usuario no existe.
+let DUMMY;
+function verifyPassword(password, stored) {
+  const parts = String(stored || '').split('$');
+  let N, r, p, salt, hash;
+  if (parts.length === 6 && parts[0] === 'scrypt') {
+    [N, r, p] = parts.slice(1, 4).map(Number);
+    salt = Buffer.from(parts[4], 'base64'); hash = Buffer.from(parts[5], 'base64');
+  }
+  const valid = N >= 16384 && N <= 1048576 && (N & (N - 1)) === 0 && r >= 1 && r <= 32 && p >= 1 && p <= 4 && salt && salt.length >= 16 && hash && hash.length >= 32;
+  if (!valid) {
+    DUMMY = DUMMY || hashPassword('x');
+    verifyPassword(password, DUMMY);
+    return false;
+  }
+  if (typeof password !== 'string' || password.length > 256) return false;
+  const got = crypto.scryptSync(password.normalize('NFKC'), salt, hash.length, { N, r, p, maxmem: 256 * N * r + 1024 * 1024 });
+  return crypto.timingSafeEqual(got, hash);
+}
+// Devuelve el usuario normalizado si las credenciales son válidas; si no, null.
+function checkCredentials(user, password) {
+  const u = String(user || '').trim().toLowerCase();
+  const stored = USER_RE.test(u) ? users()[u] : undefined;
+  const ok = verifyPassword(String(password == null ? '' : password), stored);
+  return ok && stored ? u : null;
+}
+
+function newSessionToken(user) {
+  return sign({ typ: 'sess', sub: String(user).toLowerCase(), exp: Math.floor(Date.now() / 1000) + SESSION_TTL });
 }
 
 function parseCookies(req) {
@@ -82,6 +120,6 @@ function sameOrigin(req) {
 }
 
 module.exports = {
-  sign, verify, isAllowed, allowlist, newLinkToken, newSessionToken, getSession,
-  sessionCookies, clearCookies, parseCookies, sameOrigin, LINK_TTL, SESSION_TTL,
+  sign, verify, isAllowed, users, hashPassword, verifyPassword, checkCredentials, newSessionToken, getSession,
+  sessionCookies, clearCookies, parseCookies, sameOrigin, SESSION_TTL,
 };
