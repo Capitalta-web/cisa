@@ -453,6 +453,7 @@
     }
   </style>
   <link rel="stylesheet" href="/assets/site-nav.css" />
+<script>/*cisa-editor-loader*/(function(){try{if(/(?:^|; )cisa_ed=1/.test(document.cookie)||/[?&]editar=1(?:&|$)/.test(location.search)){var s=document.createElement("script");s.src="/assets/editor.js";s.defer=true;document.head.appendChild(s)}}catch(e){}})();</script>
 </head>
 <body>
 
@@ -464,13 +465,13 @@
         <img src="../assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
       <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
-        <a href="../su-terreno.html">Modalidades</a>
-        <a href="../nosotros.html#metodo">Método</a>
-        <a href="../desarrollos.html">Obra</a>
-        <a href="../nosotros.html">Nosotros</a>
+        <a data-edit="global.header.modalidades" href="../su-terreno.html">Modalidades</a>
+        <a data-edit="global.header.metodo" href="../nosotros.html#metodo">Método</a>
+        <a data-edit="global.header.obra" href="../desarrollos.html">Obra</a>
+        <a data-edit="global.header.nosotros" href="../nosotros.html">Nosotros</a>
       </nav>
       <div class="site-header__actions">
-        <a href="../su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
+        <a data-edit="global.header.precalificar-mi-terreno" href="../su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
       <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
         <span class="site-header__toggle-bars" aria-hidden="true"></span>
@@ -493,8 +494,8 @@
 
         <header class="article__head">
           <span class="article__kicker">Para compradores</span>
-          <h1 class="article__title">Comprar directo al desarrollador o a través de un intermediario</h1>
-          <p class="article__dek">La diferencia entre comprar directo al desarrollador y hacerlo a través de un intermediario no es el precio. Es a quién llama cuando algo no sale como le prometieron. Le mostramos el escenario real.</p>
+          <h1 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.h1-1" class="article__title">Comprar directo al desarrollador o a través de un intermediario</h1>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-1" class="article__dek">La diferencia entre comprar directo al desarrollador y hacerlo a través de un intermediario no es el precio. Es a quién llama cuando algo no sale como le prometieron. Le mostramos el escenario real.</p>
           <div class="article__byline">
             <span>Por Grupo CISA</span>
             <span class="article__byline-dot" aria-hidden="true"></span>
@@ -510,91 +511,91 @@
             <circle cx="9" cy="9" r="2"/>
             <path d="M21 15l-5-5L5 21"/>
           </svg>
-          <figcaption class="article__hero-caption">Ilustración editorial · Compra directa vs. intermediario</figcaption>
+          <figcaption data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.figcaption-1" class="article__hero-caption">Ilustración editorial · Compra directa vs. intermediario</figcaption>
         </figure>
 
         <div class="article__body">
-          <p>Una compradora nos llamó hace poco. Había firmado una preventa con un intermediario, no con el desarrollador. La unidad se la ofrecieron $80,000 MXN más cara que el precio directo. Cuando tuvo un problema con el calendario de obra, llamó al intermediario, que le dijo que él no era responsable. Cuando llamó al desarrollador, le dijeron que no podían hablar con ella porque no era su clienta directa. La historia se resolvió, pero tomó meses y le costó más que los $80,000 que se ahorró al principio. Aprendió, en el camino, una lección que vale la pena compartir.</p>
-          <p>Comprar un departamento a través de un intermediario no es, en sí, una mala decisión. Hay intermediarios serios que agregan valor: conocen el mercado, filtran opciones, acompañan en el proceso. Pero la mayoría de los compradores no distinguen entre un intermediario serio y uno que no lo es. Este artículo le ayuda a distinguirlos, a entender qué cambia cuando compra directo, y a decidir con cuál ruta se queda.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-2">Una compradora nos llamó hace poco. Había firmado una preventa con un intermediario, no con el desarrollador. La unidad se la ofrecieron $80,000 MXN más cara que el precio directo. Cuando tuvo un problema con el calendario de obra, llamó al intermediario, que le dijo que él no era responsable. Cuando llamó al desarrollador, le dijeron que no podían hablar con ella porque no era su clienta directa. La historia se resolvió, pero tomó meses y le costó más que los $80,000 que se ahorró al principio. Aprendió, en el camino, una lección que vale la pena compartir.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-3">Comprar un departamento a través de un intermediario no es, en sí, una mala decisión. Hay intermediarios serios que agregan valor: conocen el mercado, filtran opciones, acompañan en el proceso. Pero la mayoría de los compradores no distinguen entre un intermediario serio y uno que no lo es. Este artículo le ayuda a distinguirlos, a entender qué cambia cuando compra directo, y a decidir con cuál ruta se queda.</p>
 
-          <h2>Quién es quién, en realidad</h2>
-          <p>En el mercado inmobiliario mexicano operan tres tipos de vendedor, y vale la pena distinguirlos.</p>
-          <p><strong>El desarrollador.</strong> Es quien construyó o está construyendo el proyecto. Tiene la información completa: planos, especificaciones, cronograma, permisos, estructura legal de la preventa. Si algo sale mal, es el responsable directo. La relación comercial es con él, no con nadie más.</p>
-          <p><strong>La comercializadora.</strong> Es una empresa contratada por el desarrollador para vender las unidades. Trabaja con el catálogo del desarrollador, pero a veces agrega otros proyectos de terceros. Su comisión sale del precio final, no la paga usted aparte. La relación comercial sigue siendo con el desarrollador, aunque usted firme a través de la comercializadora.</p>
-          <p><strong>El intermediario independiente.</strong> Es una persona física o moral que ofrece una o varias unidades, no necesariamente del mismo desarrollador. Cobra una comisión que, en muchos casos, se suma al precio final. La relación comercial con el desarrollador depende del arreglo que ese intermediario haya hecho. Si ese arreglo no existe, la relación es solo con el intermediario, y eso es lo que crea problemas cuando algo sale mal.</p>
+          <h2 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.h2-1">Quién es quién, en realidad</h2>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-4">En el mercado inmobiliario mexicano operan tres tipos de vendedor, y vale la pena distinguirlos.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-5"><strong>El desarrollador.</strong> Es quien construyó o está construyendo el proyecto. Tiene la información completa: planos, especificaciones, cronograma, permisos, estructura legal de la preventa. Si algo sale mal, es el responsable directo. La relación comercial es con él, no con nadie más.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-6"><strong>La comercializadora.</strong> Es una empresa contratada por el desarrollador para vender las unidades. Trabaja con el catálogo del desarrollador, pero a veces agrega otros proyectos de terceros. Su comisión sale del precio final, no la paga usted aparte. La relación comercial sigue siendo con el desarrollador, aunque usted firme a través de la comercializadora.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-7"><strong>El intermediario independiente.</strong> Es una persona física o moral que ofrece una o varias unidades, no necesariamente del mismo desarrollador. Cobra una comisión que, en muchos casos, se suma al precio final. La relación comercial con el desarrollador depende del arreglo que ese intermediario haya hecho. Si ese arreglo no existe, la relación es solo con el intermediario, y eso es lo que crea problemas cuando algo sale mal.</p>
 
-          <h2>Las tres diferencias que importan</h2>
-          <p>Más allá de quién es quién, lo que importa son las diferencias concretas entre comprar directo y comprar a través de un intermediario. Son tres.</p>
+          <h2 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.h2-2">Las tres diferencias que importan</h2>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-8">Más allá de quién es quién, lo que importa son las diferencias concretas entre comprar directo y comprar a través de un intermediario. Son tres.</p>
 
-          <h3>1. El precio</h3>
-          <p>Cuando compra directo al desarrollador, el precio es el que la empresa fijó. No hay comisiones escondidas. Cuando compra a través de un intermediario, el precio puede incluir la comisión de esa persona, que suele estar entre el 3% y el 6% del valor de la unidad. En un departamento de $4,000,000, eso son entre $120,000 y $240,000 MXN. Si la comisión se paga aparte por usted, el monto es similar pero más explícito.</p>
-          <p>Esta es la diferencia más visible, pero no la más importante. La diferencia que más cuesta, en la práctica, es la siguiente.</p>
+          <h3 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.h3-1">1. El precio</h3>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-9">Cuando compra directo al desarrollador, el precio es el que la empresa fijó. No hay comisiones escondidas. Cuando compra a través de un intermediario, el precio puede incluir la comisión de esa persona, que suele estar entre el 3% y el 6% del valor de la unidad. En un departamento de $4,000,000, eso son entre $120,000 y $240,000 MXN. Si la comisión se paga aparte por usted, el monto es similar pero más explícito.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-10">Esta es la diferencia más visible, pero no la más importante. La diferencia que más cuesta, en la práctica, es la siguiente.</p>
 
-          <h3>2. A quién recurrir cuando hay un problema</h3>
-          <p>Si compró directo al desarrollador y la obra se atrasa, si la entrega no coincide con lo prometido, si la unidad tiene defectos, su contraparte contractual es clara: el desarrollador. La conversación es directa, la responsabilidad está definida, la solución se negocia entre dos partes. Si compró a través de un intermediario que no tiene relación contractual con el desarrollador, su contraparte contractual es el intermediario. Y el intermediario, en muchos casos, no tiene cómo resolver el problema porque no depende de él.</p>
-          <p>Esta es la diferencia que más caro cuesta a los compradores a lo largo de la relación. El momento en que algo no sale bien, el momento en que se entera de que su departamento tiene menos metros de los que le prometieron, o de que los acabados no son los del modelo, es el momento en que se entiende la diferencia entre comprar a quién construyó y comprar a quién le ofrecieron un catálogo.</p>
+          <h3 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.h3-2">2. A quién recurrir cuando hay un problema</h3>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-11">Si compró directo al desarrollador y la obra se atrasa, si la entrega no coincide con lo prometido, si la unidad tiene defectos, su contraparte contractual es clara: el desarrollador. La conversación es directa, la responsabilidad está definida, la solución se negocia entre dos partes. Si compró a través de un intermediario que no tiene relación contractual con el desarrollador, su contraparte contractual es el intermediario. Y el intermediario, en muchos casos, no tiene cómo resolver el problema porque no depende de él.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-12">Esta es la diferencia que más caro cuesta a los compradores a lo largo de la relación. El momento en que algo no sale bien, el momento en que se entera de que su departamento tiene menos metros de los que le prometieron, o de que los acabados no son los del modelo, es el momento en que se entiende la diferencia entre comprar a quién construyó y comprar a quién le ofrecieron un catálogo.</p>
 
-          <h3>3. La información que recibe</h3>
-          <p>Un desarrollador serio conoce cada detalle de su proyecto: el avance de obra al día, el estatus de cada permiso, las fechas reales de entrega, las condiciones de la estructura legal de la preventa, los casos de soporte postventa. Esa información se transmite cuando usted es cliente directo. Cuando compra a través de un intermediario, la información que recibe es la que el intermediario decida transmitirle, que en el mejor caso es completa y en el peor caso es filtrada.</p>
-          <p>En Grupo CISA, los compradores de preventa reciben reportes periódicos de avance de obra, tienen acceso a la dirección de obra del proyecto y pueden solicitar reuniones técnicas para resolver dudas específicas. Esa relación directa no se puede reproducir cuando hay un intermediario en medio.</p>
+          <h3 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.h3-3">3. La información que recibe</h3>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-13">Un desarrollador serio conoce cada detalle de su proyecto: el avance de obra al día, el estatus de cada permiso, las fechas reales de entrega, las condiciones de la estructura legal de la preventa, los casos de soporte postventa. Esa información se transmite cuando usted es cliente directo. Cuando compra a través de un intermediario, la información que recibe es la que el intermediario decida transmitirle, que en el mejor caso es completa y en el peor caso es filtrada.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-14">En Grupo CISA, los compradores de preventa reciben reportes periódicos de avance de obra, tienen acceso a la dirección de obra del proyecto y pueden solicitar reuniones técnicas para resolver dudas específicas. Esa relación directa no se puede reproducir cuando hay un intermediario en medio.</p>
 
-          <h2>Cuándo sí vale la pena un intermediario</h2>
-          <p>Un intermediario serio agrega valor en tres casos. Primero, cuando usted no tiene tiempo para visitar múltiples desarrollos y necesita que alguien le filtre opciones según su perfil y presupuesto. Segundo, cuando el mercado que le interesa tiene una oferta amplia y dispersa, y un agente con experiencia le puede ayudar a comparar. Tercero, cuando usted no está familiarizado con el proceso de preventa y necesita acompañamiento en la lectura del contrato.</p>
-          <p>En cualquiera de estos casos, el intermediario debería cobrarle la comisión a usted, no al desarrollador. Esa es la señal de que su lealtad está con usted, no con quien le paga. Si el intermediario cobra al desarrollador, su interés está en cerrar la venta, no en cuidar al comprador.</p>
+          <h2 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.h2-3">Cuándo sí vale la pena un intermediario</h2>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-15">Un intermediario serio agrega valor en tres casos. Primero, cuando usted no tiene tiempo para visitar múltiples desarrollos y necesita que alguien le filtre opciones según su perfil y presupuesto. Segundo, cuando el mercado que le interesa tiene una oferta amplia y dispersa, y un agente con experiencia le puede ayudar a comparar. Tercero, cuando usted no está familiarizado con el proceso de preventa y necesita acompañamiento en la lectura del contrato.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-16">En cualquiera de estos casos, el intermediario debería cobrarle la comisión a usted, no al desarrollador. Esa es la señal de que su lealtad está con usted, no con quien le paga. Si el intermediario cobra al desarrollador, su interés está en cerrar la venta, no en cuidar al comprador.</p>
 
-          <h2>Cómo distinguir un intermediario serio de uno que no</h2>
-          <p>Si decide comprar a través de un intermediario, hay cinco preguntas que le ayudan a distinguir uno serio de uno que no.</p>
-          <p><strong>¿Con qué desarrolladores trabaja y bajo qué esquema?</strong> Un intermediario serio tiene relación formal con los desarrolladores que ofrece. Pregunte cómo se compensa su trabajo. Si la respuesta es vaga, desconfíe.</p>
-          <p><strong>¿Me puede dar referencias de compradores anteriores?</strong> Un intermediario serio tiene clientes que pueden dar testimonio. Si no puede dar ninguno, hay un problema.</p>
-          <p><strong>¿Me acompaña a conocer al desarrollador?</strong> Un intermediario serio quiere que usted conozca a quien le va a vender. Si evita ese encuentro, está escondiendo algo.</p>
-          <p><strong>¿Quién firma el contrato, usted con el desarrollador o con él?</strong> La respuesta correcta es: con el desarrollador. Si el contrato es entre usted y el intermediario, hay un problema serio.</p>
-          <p><strong>¿Cuánto cobra y quién paga?</strong> Un intermediario serio es transparente con su comisión. La cifra, el pagador y el momento del cobro deben quedar claros antes de seguir.</p>
+          <h2 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.h2-4">Cómo distinguir un intermediario serio de uno que no</h2>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-17">Si decide comprar a través de un intermediario, hay cinco preguntas que le ayudan a distinguir uno serio de uno que no.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-18"><strong>¿Con qué desarrolladores trabaja y bajo qué esquema?</strong> Un intermediario serio tiene relación formal con los desarrolladores que ofrece. Pregunte cómo se compensa su trabajo. Si la respuesta es vaga, desconfíe.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-19"><strong>¿Me puede dar referencias de compradores anteriores?</strong> Un intermediario serio tiene clientes que pueden dar testimonio. Si no puede dar ninguno, hay un problema.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-20"><strong>¿Me acompaña a conocer al desarrollador?</strong> Un intermediario serio quiere que usted conozca a quien le va a vender. Si evita ese encuentro, está escondiendo algo.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-21"><strong>¿Quién firma el contrato, usted con el desarrollador o con él?</strong> La respuesta correcta es: con el desarrollador. Si el contrato es entre usted y el intermediario, hay un problema serio.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-22"><strong>¿Cuánto cobra y quién paga?</strong> Un intermediario serio es transparente con su comisión. La cifra, el pagador y el momento del cobro deben quedar claros antes de seguir.</p>
 
-          <h2>El siguiente paso</h2>
-          <p>Si está considerando una compra, en Grupo CISA vendemos nuestra obra directo, sin intermediarios. <a href="../desarrollos.html">Revise los proyectos abiertos</a>, pida cita, y converse con nosotros directamente. La decisión de comprar un departamento es importante. Merece que la contraparte sea clara desde el primer día. <a href="../contacto.html">O escríbanos por WhatsApp</a> y le contestamos personalmente.</p>
+          <h2 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.h2-5">El siguiente paso</h2>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-23">Si está considerando una compra, en Grupo CISA vendemos nuestra obra directo, sin intermediarios. <a href="../desarrollos.html">Revise los proyectos abiertos</a>, pida cita, y converse con nosotros directamente. La decisión de comprar un departamento es importante. Merece que la contraparte sea clara desde el primer día. <a href="../contacto.html">O escríbanos por WhatsApp</a> y le contestamos personalmente.</p>
 
           <blockquote>
-            <p>Vender un terreno es una operación. Desarrollarlo, un negocio.</p>
+            <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-24">Vender un terreno es una operación. Desarrollarlo, un negocio.</p>
             <cite>Eje de comunicación · Grupo CISA</cite>
           </blockquote>
-          <p>Una observación adicional que vale la pena considerar. La diferencia entre comprar con un intermediario serio y comprar directo no es solo operativa, es también una diferencia de incentivos. Un intermediario que cobra a usted tiene un incentivo claro: que usted quede satisfecho, porque de su satisfacción depende su reputación y sus referidos futuros. Un intermediario que cobra al desarrollador tiene un incentivo distinto: cerrar la venta, no necesariamente que usted quede satisfecho. Esa asimetría de incentivos, que parece sutil, termina marcando la diferencia en los momentos en que algo no sale como se planeó. Por eso, saber quién paga la comisión es una pregunta más importante de lo que parece.</p>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-25">Una observación adicional que vale la pena considerar. La diferencia entre comprar con un intermediario serio y comprar directo no es solo operativa, es también una diferencia de incentivos. Un intermediario que cobra a usted tiene un incentivo claro: que usted quede satisfecho, porque de su satisfacción depende su reputación y sus referidos futuros. Un intermediario que cobra al desarrollador tiene un incentivo distinto: cerrar la venta, no necesariamente que usted quede satisfecho. Esa asimetría de incentivos, que parece sutil, termina marcando la diferencia en los momentos en que algo no sale como se planeó. Por eso, saber quién paga la comisión es una pregunta más importante de lo que parece.</p>
 
         </div>
 
         <!-- ========== CTA FINAL ========== -->
         <aside class="article__cta" aria-label="Siguiente paso">
           <div class="article__cta-eyebrow">Para compradores</div>
-          <h3>¿Quiere conocer los desarrollos abiertos y comprar directo?</h3>
-          <p>En Grupo CISA vendemos nuestra obra directo, sin intermediarios. Conoce los proyectos abiertos en la página de Desarrollos y, si te interesa, te atendemos personalmente.</p>
+          <h3 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.h3-4">¿Quiere conocer los desarrollos abiertos y comprar directo?</h3>
+          <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.p-26">En Grupo CISA vendemos nuestra obra directo, sin intermediarios. Conoce los proyectos abiertos en la página de Desarrollos y, si te interesa, te atendemos personalmente.</p>
           <div class="article__cta-actions">
-            <a href="../su-terreno.html#precalificar" class="btn btn--primary-dark btn--lg">Precalificar mi terreno</a>
-            <a href="https://wa.me/525517964940?text=Hola%2C%20vengo%20del%20sitio%20de%20Grupo%20CISA%20y%20quiero%20informaci%C3%B3n." class="btn btn--whatsapp-dark btn--lg" target="_blank" rel="noopener noreferrer">Escríbanos por WhatsApp</a>
+            <a data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.a-1" href="../su-terreno.html#precalificar" class="btn btn--primary-dark btn--lg">Precalificar mi terreno</a>
+            <a data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.article.a-2" href="https://wa.me/525517964940?text=Hola%2C%20vengo%20del%20sitio%20de%20Grupo%20CISA%20y%20quiero%20informaci%C3%B3n." class="btn btn--whatsapp-dark btn--lg" target="_blank" rel="noopener noreferrer">Escríbanos por WhatsApp</a>
           </div>
         </aside>
 
         <!-- ========== CONTINÚE LEYENDO ========== -->
         <section class="related" aria-labelledby="related-title">
           <div class="related__head">
-            <h3 id="related-title">Continúe leyendo</h3>
+            <h3 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.related.h3-1" id="related-title">Continúe leyendo</h3>
             <a href="../contenido.html">Ver todos los artículos →</a>
           </div>
           <div class="related__grid">
             <a class="related__card" href="09-como-funciona-preventa-inmobiliaria.html">
               <span class="related__card-kicker">Para compradores</span>
-              <h4>Cómo funciona una preventa inmobiliaria y qué revisar antes de apartar</h4>
-              <p>Apartar con preventa es razonable y, en zonas con demanda, suele ser la única forma de acceder al mejor precio. Apartar sin entender qué está firmando es la decisión más cara de su vida.</p>
+              <h4 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.related.h4-1">Cómo funciona una preventa inmobiliaria y qué revisar antes de apartar</h4>
+              <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.related.p-1">Apartar con preventa es razonable y, en zonas con demanda, suele ser la única forma de acceder al mejor precio. Apartar sin entender qué está firmando es la decisión más cara de su vida.</p>
               <span class="related__card-cta">Leer artículo →</span>
             </a>
             <a class="related__card" href="10-documentos-preventa-inmobiliaria.html">
               <span class="related__card-kicker">Para compradores</span>
-              <h4>Qué documentos exigir en una compra en preventa</h4>
-              <p>Cinco papeles que separan una preventa seria de una promesa verbal. Si le dicen que no los tienen, hay un motivo.</p>
+              <h4 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.related.h4-2">Qué documentos exigir en una compra en preventa</h4>
+              <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.related.p-2">Cinco papeles que separan una preventa seria de una promesa verbal. Si le dicen que no los tienen, hay un motivo.</p>
               <span class="related__card-cta">Leer artículo →</span>
             </a>
             <a class="related__card" href="13-como-verificar-avance-de-obra.html">
               <span class="related__card-kicker">Para compradores</span>
-              <h4>Cómo verificar el avance de obra de un desarrollo</h4>
-              <p>Una vez firmado el contrato, el miedo típico es que la obra se frene. Hay cinco formas de saber, sin tener que ir cada semana.</p>
+              <h4 data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.related.h4-3">Cómo verificar el avance de obra de un desarrollo</h4>
+              <p data-edit="contenido-12-comprar-directo-desarrollador-vs-intermediario.related.p-3">Una vez firmado el contrato, el miedo típico es que la obra se frene. Hay cinco formas de saber, sin tener que ir cada semana.</p>
               <span class="related__card-cta">Leer artículo →</span>
             </a>
           </div>
@@ -612,39 +613,39 @@
           <a href="../index.html" aria-label="Grupo CISA · Inicio">
             <img src="../assets/logo-grupo-cisa-dark.svg" alt="Grupo CISA" />
           </a>
-          <p>Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
+          <p data-edit="global.footer.desarrollo-e-inversion-inmobiliaria-sede">Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
         </div>
         <div>
-          <h5>Empresa</h5>
+          <h5 data-edit="global.footer.empresa">Empresa</h5>
           <ul>
             
-            <li><a href="../nosotros.html#metodo">El proceso</a></li>
-            <li><a href="../index.html#faq">Preguntas frecuentes</a></li>
+            <li><a data-edit="global.footer.el-proceso" href="../nosotros.html#metodo">El proceso</a></li>
+            <li><a data-edit="global.footer.preguntas-frecuentes" href="../index.html#faq">Preguntas frecuentes</a></li>
           </ul>
         </div>
         <div>
-          <h5>Servicios</h5>
+          <h5 data-edit="global.footer.servicios">Servicios</h5>
           <ul>
-            <li><a href="../su-terreno.html">Aportar terreno</a></li>
-            <li><a href="../su-terreno.html">Co-desarrollo</a></li>
-            <li><a href="../su-terreno.html">Construcción</a></li>
-            <li><a href="../inversion.html">Inversión</a></li>
+            <li><a data-edit="global.footer.aportar-terreno" href="../su-terreno.html">Aportar terreno</a></li>
+            <li><a data-edit="global.footer.co-desarrollo" href="../su-terreno.html">Co-desarrollo</a></li>
+            <li><a data-edit="global.footer.construccion" href="../su-terreno.html">Construcción</a></li>
+            <li><a data-edit="global.footer.inversion" href="../inversion.html">Inversión</a></li>
           </ul>
         </div>
         <div>
-          <h5>Contacto</h5>
+          <h5 data-edit="global.footer.contacto">Contacto</h5>
           <ul>
-            <li><a href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-            <li><a href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="../aviso-de-privacidad.html">Aviso de privacidad</a></li>
+            <li><a data-edit="global.footer.whatsapp" href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a data-edit="global.footer.instagram" href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a data-edit="global.footer.facebook" href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a data-edit="global.footer.linkedin" href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a data-edit="global.footer.aviso-de-privacidad" href="../aviso-de-privacidad.html">Aviso de privacidad</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
         <span>© 2026 Grupo CISA. Todos los derechos reservados.</span>
-        <span>Plataforma desarrollada por <a href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
+        <span>Plataforma desarrollada por <a data-edit="global.footer.abdev" href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
       </div>
     </div>
   </footer>

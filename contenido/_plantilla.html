@@ -447,6 +447,7 @@
     }
   </style>
   <link rel="stylesheet" href="/assets/site-nav.css" />
+<script>/*cisa-editor-loader*/(function(){try{if(/(?:^|; )cisa_ed=1/.test(document.cookie)||/[?&]editar=1(?:&|$)/.test(location.search)){var s=document.createElement("script");s.src="/assets/editor.js";s.defer=true;document.head.appendChild(s)}}catch(e){}})();</script>
 </head>
 <body>
 
@@ -458,13 +459,13 @@
         <img src="../assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
       <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
-        <a href="../su-terreno.html">Modalidades</a>
-        <a href="../nosotros.html#metodo">Método</a>
-        <a href="../desarrollos.html">Obra</a>
-        <a href="../nosotros.html">Nosotros</a>
+        <a data-edit="global.header.modalidades" href="../su-terreno.html">Modalidades</a>
+        <a data-edit="global.header.metodo" href="../nosotros.html#metodo">Método</a>
+        <a data-edit="global.header.obra" href="../desarrollos.html">Obra</a>
+        <a data-edit="global.header.nosotros" href="../nosotros.html">Nosotros</a>
       </nav>
       <div class="site-header__actions">
-        <a href="../su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
+        <a data-edit="global.header.precalificar-mi-terreno" href="../su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
       <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
         <span class="site-header__toggle-bars" aria-hidden="true"></span>
@@ -487,8 +488,8 @@
 
         <header class="article__head">
           <span class="article__kicker">__KICKER__</span>
-          <h1 class="article__title">__TITULO__</h1>
-          <p class="article__dek">__DEK__</p>
+          <h1 data-edit="contenido-_plantilla.article.h1-1" class="article__title">__TITULO__</h1>
+          <p data-edit="contenido-_plantilla.article.p-1" class="article__dek">__DEK__</p>
           <div class="article__byline">
             <span>Por Grupo CISA</span>
             <span class="article__byline-dot" aria-hidden="true"></span>
@@ -504,7 +505,7 @@
             <circle cx="9" cy="9" r="2"/>
             <path d="M21 15l-5-5L5 21"/>
           </svg>
-          <figcaption class="article__hero-caption">__HERO_CAPTION__</figcaption>
+          <figcaption data-edit="contenido-_plantilla.article.figcaption-1" class="article__hero-caption">__HERO_CAPTION__</figcaption>
         </figure>
 
         <div class="article__body">
@@ -514,37 +515,37 @@ __ARTICLE_BODY__
         <!-- ========== CTA FINAL ========== -->
         <aside class="article__cta" aria-label="Siguiente paso">
           <div class="article__cta-eyebrow">__CTA_EYEBROW__</div>
-          <h3>__CTA_H3__</h3>
-          <p>__CTA_P__</p>
+          <h3 data-edit="contenido-_plantilla.article.h3-1">__CTA_H3__</h3>
+          <p data-edit="contenido-_plantilla.article.p-2">__CTA_P__</p>
           <div class="article__cta-actions">
-            <a href="../su-terreno.html#precalificar" class="btn btn--primary-dark btn--lg">Precalificar mi terreno</a>
-            <a href="https://wa.me/525517964940?text=Hola%2C%20vengo%20del%20sitio%20de%20Grupo%20CISA%20y%20quiero%20informaci%C3%B3n." class="btn btn--whatsapp-dark btn--lg" target="_blank" rel="noopener noreferrer">Escríbanos por WhatsApp</a>
+            <a data-edit="contenido-_plantilla.article.a-1" href="../su-terreno.html#precalificar" class="btn btn--primary-dark btn--lg">Precalificar mi terreno</a>
+            <a data-edit="contenido-_plantilla.article.a-2" href="https://wa.me/525517964940?text=Hola%2C%20vengo%20del%20sitio%20de%20Grupo%20CISA%20y%20quiero%20informaci%C3%B3n." class="btn btn--whatsapp-dark btn--lg" target="_blank" rel="noopener noreferrer">Escríbanos por WhatsApp</a>
           </div>
         </aside>
 
         <!-- ========== CONTINÚE LEYENDO ========== -->
         <section class="related" aria-labelledby="related-title">
           <div class="related__head">
-            <h3 id="related-title">Continúe leyendo</h3>
+            <h3 data-edit="contenido-_plantilla.related.h3-1" id="related-title">Continúe leyendo</h3>
             <a href="../contenido.html">Ver todos los artículos →</a>
           </div>
           <div class="related__grid">
             <a class="related__card" href="__REL_1_HREF__">
               <span class="related__card-kicker">__REL_1_KICKER__</span>
-              <h4>__REL_1_TITLE__</h4>
-              <p>__REL_1_DEK__</p>
+              <h4 data-edit="contenido-_plantilla.related.h4-1">__REL_1_TITLE__</h4>
+              <p data-edit="contenido-_plantilla.related.p-1">__REL_1_DEK__</p>
               <span class="related__card-cta">Leer artículo →</span>
             </a>
             <a class="related__card" href="__REL_2_HREF__">
               <span class="related__card-kicker">__REL_2_KICKER__</span>
-              <h4>__REL_2_TITLE__</h4>
-              <p>__REL_2_DEK__</p>
+              <h4 data-edit="contenido-_plantilla.related.h4-2">__REL_2_TITLE__</h4>
+              <p data-edit="contenido-_plantilla.related.p-2">__REL_2_DEK__</p>
               <span class="related__card-cta">Leer artículo →</span>
             </a>
             <a class="related__card" href="__REL_3_HREF__">
               <span class="related__card-kicker">__REL_3_KICKER__</span>
-              <h4>__REL_3_TITLE__</h4>
-              <p>__REL_3_DEK__</p>
+              <h4 data-edit="contenido-_plantilla.related.h4-3">__REL_3_TITLE__</h4>
+              <p data-edit="contenido-_plantilla.related.p-3">__REL_3_DEK__</p>
               <span class="related__card-cta">Leer artículo →</span>
             </a>
           </div>
@@ -562,39 +563,39 @@ __ARTICLE_BODY__
           <a href="../index.html" aria-label="Grupo CISA · Inicio">
             <img src="../assets/logo-grupo-cisa-dark.svg" alt="Grupo CISA" />
           </a>
-          <p>Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
+          <p data-edit="global.footer.desarrollo-e-inversion-inmobiliaria-sede">Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
         </div>
         <div>
-          <h5>Empresa</h5>
+          <h5 data-edit="global.footer.empresa">Empresa</h5>
           <ul>
             
-            <li><a href="../nosotros.html#metodo">El proceso</a></li>
-            <li><a href="../index.html#faq">Preguntas frecuentes</a></li>
+            <li><a data-edit="global.footer.el-proceso" href="../nosotros.html#metodo">El proceso</a></li>
+            <li><a data-edit="global.footer.preguntas-frecuentes" href="../index.html#faq">Preguntas frecuentes</a></li>
           </ul>
         </div>
         <div>
-          <h5>Servicios</h5>
+          <h5 data-edit="global.footer.servicios">Servicios</h5>
           <ul>
-            <li><a href="../su-terreno.html">Aportar terreno</a></li>
-            <li><a href="../su-terreno.html">Co-desarrollo</a></li>
-            <li><a href="../su-terreno.html">Construcción</a></li>
-            <li><a href="../inversion.html">Inversión</a></li>
+            <li><a data-edit="global.footer.aportar-terreno" href="../su-terreno.html">Aportar terreno</a></li>
+            <li><a data-edit="global.footer.co-desarrollo" href="../su-terreno.html">Co-desarrollo</a></li>
+            <li><a data-edit="global.footer.construccion" href="../su-terreno.html">Construcción</a></li>
+            <li><a data-edit="global.footer.inversion" href="../inversion.html">Inversión</a></li>
           </ul>
         </div>
         <div>
-          <h5>Contacto</h5>
+          <h5 data-edit="global.footer.contacto">Contacto</h5>
           <ul>
-            <li><a href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-            <li><a href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="../aviso-de-privacidad.html">Aviso de privacidad</a></li>
+            <li><a data-edit="global.footer.whatsapp" href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a data-edit="global.footer.instagram" href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a data-edit="global.footer.facebook" href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a data-edit="global.footer.linkedin" href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a data-edit="global.footer.aviso-de-privacidad" href="../aviso-de-privacidad.html">Aviso de privacidad</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
         <span>© 2026 Grupo CISA. Todos los derechos reservados.</span>
-        <span>Plataforma desarrollada por <a href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
+        <span>Plataforma desarrollada por <a data-edit="global.footer.abdev" href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
       </div>
     </div>
   </footer>

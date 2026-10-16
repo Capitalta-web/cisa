@@ -1063,6 +1063,7 @@
     }
   </style>
   <link rel="stylesheet" href="/assets/site-nav.css" />
+<script>/*cisa-editor-loader*/(function(){try{if(/(?:^|; )cisa_ed=1/.test(document.cookie)||/[?&]editar=1(?:&|$)/.test(location.search)){var s=document.createElement("script");s.src="/assets/editor.js";s.defer=true;document.head.appendChild(s)}}catch(e){}})();</script>
 </head>
 <body>
 
@@ -1075,14 +1076,14 @@
         <img src="assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
       <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
-        <a href="su-terreno.html">Modalidades</a>
-        <a href="nosotros.html#metodo">Método</a>
-        <a href="desarrollos.html">Obra</a>
-        <a href="contenido.html">Contenido</a>
-        <a href="nosotros.html">Nosotros</a>
+        <a data-edit="global.header.modalidades" href="su-terreno.html">Modalidades</a>
+        <a data-edit="global.header.metodo" href="nosotros.html#metodo">Método</a>
+        <a data-edit="global.header.obra" href="desarrollos.html">Obra</a>
+        <a data-edit="global.header.contenido" href="contenido.html">Contenido</a>
+        <a data-edit="global.header.nosotros" href="nosotros.html">Nosotros</a>
       </nav>
       <div class="site-header__actions">
-        <a href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
+        <a data-edit="global.header.precalificar-mi-terreno" href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
       <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
         <span class="site-header__toggle-bars" aria-hidden="true"></span>
@@ -1109,10 +1110,10 @@
 
         <div class="hero__main hero__main--centered">
           <div class="hero__copy" style="max-width: 880px;">
-            <h1 id="hero-title" class="hero__title">
+            <h1 data-edit="contacto.hero.h1-1" id="hero-title" class="hero__title">
               Cualquier <span class="underline accent">canal</span>, mismo equipo.
             </h1>
-            <p class="hero__bajada">
+            <p data-edit="contacto.hero.p-1" class="hero__bajada">
               WhatsApp, teléfono, correo o el formulario. La consulta llega al mismo equipo comercial.
             </p>
             <div class="hero__ctas">
@@ -1120,7 +1121,7 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
                 Escribir por WhatsApp
               </a>
-              <a href="#form" class="btn btn--secondary--green btn--lg">Enviar formulario</a>
+              <a data-edit="contacto.hero.a-1" href="#form" class="btn btn--secondary--green btn--lg">Enviar formulario</a>
             </div>
           </div>
         </div>
@@ -1133,8 +1134,8 @@
     <section class="section" aria-labelledby="canales-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="canales-title">Tres canales, una sola respuesta.</h2>
-          <p>Elija el que prefiera. La consulta llega al mismo equipo comercial.</p>
+          <h2 data-edit="contacto.canales.h2-1" id="canales-title">Tres canales, una sola respuesta.</h2>
+          <p data-edit="contacto.canales.p-1">Elija el que prefiera. La consulta llega al mismo equipo comercial.</p>
         </header>
         <div class="contact-grid">
           <article class="contact-card">
@@ -1143,9 +1144,9 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
               </svg>
             </div>
-            <h3>Oficinas</h3>
-            <p>Circuito Circunvalación Poniente No. 16, Local V-W</p>
-            <p>Ciudad Satélite, Naucalpan, Estado de México C.P. 53100</p>
+            <h3 data-edit="contacto.contact-card.h3-1">Oficinas</h3>
+            <p data-edit="contacto.contact-card.p-1">Circuito Circunvalación Poniente No. 16, Local V-W</p>
+            <p data-edit="contacto.contact-card.p-2">Ciudad Satélite, Naucalpan, Estado de México C.P. 53100</p>
             <p style="font-size: 14px; color: var(--ink-500); margin-top: 16px;"><strong style="color: var(--ink-900);">Horario:</strong> Lunes a viernes, 9:00 a 18:00. WhatsApp en horario extendido.</p>
           </article>
 
@@ -1153,7 +1154,7 @@
             <div class="contact-card__icon contact-card__icon--whatsapp" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
             </div>
-            <h3>WhatsApp · Teléfono</h3>
+            <h3 data-edit="contacto.contact-card.h3-2">WhatsApp · Teléfono</h3>
             <p><strong style="color: var(--ink-900);">WhatsApp:</strong> <a href="https://wa.me/525517964940" style="color: var(--brand-green-dark); text-decoration: underline;">55 1796 4940</a></p>
             <p><strong style="color: var(--ink-900);">Tel principal:</strong> <a href="tel:+525517964940">55 1796 4940</a></p>
             <p><strong style="color: var(--ink-900);">Tel alterno:</strong> <a href="tel:+525553613771">55 5361 3771</a> ext. 251 o 237</p>
@@ -1166,11 +1167,11 @@
                 <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
               </svg>
             </div>
-            <h3>Redes sociales</h3>
-            <p><a href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer" style="color: var(--brand-green-dark); text-decoration: underline;">Instagram · @grupocisamx</a></p>
-            <p><a href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer" style="color: var(--brand-green-dark); text-decoration: underline;">Facebook · /grupocisamx</a></p>
-            <p><a href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer" style="color: var(--brand-green-dark); text-decoration: underline;">LinkedIn · /company/grupocisa</a></p>
-            <p style="font-size: 14px; color: var(--ink-500); margin-top: 16px;">[URLs por confirmar con CISA]</p>
+            <h3 data-edit="contacto.contact-card.h3-3">Redes sociales</h3>
+            <p><a data-edit="contacto.contact-card.a-1" href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer" style="color: var(--brand-green-dark); text-decoration: underline;">Instagram · @grupocisamx</a></p>
+            <p><a data-edit="contacto.contact-card.a-2" href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer" style="color: var(--brand-green-dark); text-decoration: underline;">Facebook · /grupocisamx</a></p>
+            <p><a data-edit="contacto.contact-card.a-3" href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer" style="color: var(--brand-green-dark); text-decoration: underline;">LinkedIn · /company/grupocisa</a></p>
+            <p data-edit="contacto.contact-card.p-3" style="font-size: 14px; color: var(--ink-500); margin-top: 16px;">[URLs por confirmar con CISA]</p>
           </article>
         </div>
       </div>
@@ -1183,32 +1184,32 @@
       <div class="container">
         <div class="revelation">
           <div class="revelation__copy">
-            <h2 id="form-title">O si prefiere, escríbanos por aquí.</h2>
-            <p>
+            <h2 data-edit="contacto.form.h2-1" id="form-title">O si prefiere, escríbanos por aquí.</h2>
+            <p data-edit="contacto.form.p-1">
               Si el formulario no le convence, ignore esta sección. WhatsApp y teléfono están arriba. Este canal es para consultas que no requieren respuesta inmediata.
             </p>
-            <p>
+            <p data-edit="contacto.form.p-2">
               <strong>Lo que pasa después.</strong> Recibimos su mensaje, lo revisamos y le respondemos. Si requiere atención inmediata, use WhatsApp.
             </p>
           </div>
           <aside class="revelation__form" aria-label="Formulario de contacto general">
-            <h3>Su mensaje</h3>
-            <p class="form__microcopy">Sin spam</p>
+            <h3 data-edit="contacto.form.h3-1">Su mensaje</h3>
+            <p data-edit="contacto.form.p-3" class="form__microcopy">Sin spam</p>
             <form action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST" novalidate>
               <div class="form__field">
-                <label for="nombre">Su nombre</label>
+                <label data-edit="contacto.form.label-1" for="nombre">Su nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required />
               </div>
               <div class="form__field">
-                <label for="correo">Correo electrónico</label>
+                <label data-edit="contacto.form.label-2" for="correo">Correo electrónico</label>
                 <input type="email" id="correo" name="correo" placeholder="nombre@empresa.com" required />
               </div>
               <div class="form__field">
-                <label for="telefono">Teléfono con lada (opcional)</label>
+                <label data-edit="contacto.form.label-3" for="telefono">Teléfono con lada (opcional)</label>
                 <input type="tel" id="telefono" name="telefono" placeholder="55 1234 5678" />
               </div>
               <div class="form__field">
-                <label for="interes">¿Sobre qué es la consulta?</label>
+                <label data-edit="contacto.form.label-4" for="interes">¿Sobre qué es la consulta?</label>
                 <select id="interes" name="interes">
                   <option value="">Seleccione una opción</option>
                   <option>Aportar un terreno</option>
@@ -1221,14 +1222,14 @@
                 </select>
               </div>
               <div class="form__field">
-                <label for="mensaje">Su mensaje</label>
+                <label data-edit="contacto.form.label-5" for="mensaje">Su mensaje</label>
                 <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntenos brevemente en qué podemos ayudar" required></textarea>
               </div>
               <input type="hidden" name="_subject" value="[CISA] Nuevo mensaje desde el sitio" />
               <input type="text" name="_gotcha" style="display:none" />
               <input type="hidden" name="_next" value="#gracias" />
-              <button type="submit" class="btn btn--primary btn--lg form__submit">Enviar mensaje</button>
-              <p class="form__legal">Al enviar, acepta nuestro <a href="aviso-de-privacidad.html">aviso de privacidad</a>.</p>
+              <button data-edit="contacto.form.button-1" type="submit" class="btn btn--primary btn--lg form__submit">Enviar mensaje</button>
+              <p data-edit="contacto.form.p-4" class="form__legal">Al enviar, acepta nuestro <a href="aviso-de-privacidad.html">aviso de privacidad</a>.</p>
             </form>
           </aside>
         </div>
@@ -1245,39 +1246,39 @@
           <a href="index.html" aria-label="Grupo CISA · Inicio">
             <img src="assets/logo-grupo-cisa-dark.svg" alt="Grupo CISA" />
           </a>
-          <p>Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
+          <p data-edit="global.footer.desarrollo-e-inversion-inmobiliaria-sede">Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
         </div>
         <div>
-          <h5>Empresa</h5>
+          <h5 data-edit="global.footer.empresa">Empresa</h5>
           <ul>
             
-            <li><a href="nosotros.html#metodo">El proceso</a></li>
-            <li><a href="index.html#faq">Preguntas frecuentes</a></li>
+            <li><a data-edit="global.footer.el-proceso" href="nosotros.html#metodo">El proceso</a></li>
+            <li><a data-edit="global.footer.preguntas-frecuentes" href="index.html#faq">Preguntas frecuentes</a></li>
           </ul>
         </div>
         <div>
-          <h5>Servicios</h5>
+          <h5 data-edit="global.footer.servicios">Servicios</h5>
           <ul>
-            <li><a href="su-terreno.html">Aportar terreno</a></li>
-            <li><a href="su-terreno.html">Co-desarrollo</a></li>
-            <li><a href="su-terreno.html">Construcción</a></li>
-            <li><a href="inversion.html">Inversión</a></li>
+            <li><a data-edit="global.footer.aportar-terreno" href="su-terreno.html">Aportar terreno</a></li>
+            <li><a data-edit="global.footer.co-desarrollo" href="su-terreno.html">Co-desarrollo</a></li>
+            <li><a data-edit="global.footer.construccion" href="su-terreno.html">Construcción</a></li>
+            <li><a data-edit="global.footer.inversion" href="inversion.html">Inversión</a></li>
           </ul>
         </div>
         <div>
-          <h5>Contacto</h5>
+          <h5 data-edit="global.footer.contacto">Contacto</h5>
           <ul>
-            <li><a href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-            <li><a href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="aviso-de-privacidad.html">Aviso de privacidad</a></li>
+            <li><a data-edit="global.footer.whatsapp" href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a data-edit="global.footer.instagram" href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a data-edit="global.footer.facebook" href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a data-edit="global.footer.linkedin" href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a data-edit="global.footer.aviso-de-privacidad" href="aviso-de-privacidad.html">Aviso de privacidad</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
         <span>© 2026 Grupo CISA. Todos los derechos reservados.</span>
-        <span>Plataforma desarrollada por <a href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
+        <span>Plataforma desarrollada por <a data-edit="global.footer.abdev" href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
       </div>
     </div>
   </footer>

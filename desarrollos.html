@@ -1205,6 +1205,7 @@
     }
   </style>
   <link rel="stylesheet" href="/assets/site-nav.css" />
+<script>/*cisa-editor-loader*/(function(){try{if(/(?:^|; )cisa_ed=1/.test(document.cookie)||/[?&]editar=1(?:&|$)/.test(location.search)){var s=document.createElement("script");s.src="/assets/editor.js";s.defer=true;document.head.appendChild(s)}}catch(e){}})();</script>
 </head>
 <body>
 
@@ -1217,14 +1218,14 @@
         <img src="assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
       <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
-        <a href="su-terreno.html">Modalidades</a>
-        <a href="nosotros.html#metodo">Método</a>
-        <a href="desarrollos.html">Obra</a>
-        <a href="contenido.html">Contenido</a>
-        <a href="nosotros.html">Nosotros</a>
+        <a data-edit="global.header.modalidades" href="su-terreno.html">Modalidades</a>
+        <a data-edit="global.header.metodo" href="nosotros.html#metodo">Método</a>
+        <a data-edit="global.header.obra" href="desarrollos.html">Obra</a>
+        <a data-edit="global.header.contenido" href="contenido.html">Contenido</a>
+        <a data-edit="global.header.nosotros" href="nosotros.html">Nosotros</a>
       </nav>
       <div class="site-header__actions">
-        <a href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
+        <a data-edit="global.header.precalificar-mi-terreno" href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
       <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
         <span class="site-header__toggle-bars" aria-hidden="true"></span>
@@ -1251,15 +1252,15 @@
 
         <div class="hero__main hero__main--centered">
           <div class="hero__copy" style="max-width: 880px;">
-            <h1 id="hero-title" class="hero__title">
+            <h1 data-edit="desarrollos.hero.h1-1" id="hero-title" class="hero__title">
               Desarrollos en marcha, en distintas <span class="underline accent">etapas</span>.
             </h1>
-            <p class="hero__bajada">
+            <p data-edit="desarrollos.hero.p-1" class="hero__bajada">
               Cada proyecto en una fase distinta: en trámite, terminado y en preventa. El estatus de cada uno se publica para que pueda revisarlo antes de cualquier conversación.
             </p>
             <div class="hero__ctas">
-              <a href="#proyectos" class="btn btn--primary btn--lg">Ver proyectos vigentes</a>
-              <a href="https://wa.me/525517964940?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20desarrollos%20de%20Grupo%20CISA." class="btn btn--secondary--green btn--lg" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+              <a data-edit="desarrollos.hero.a-1" href="#proyectos" class="btn btn--primary btn--lg">Ver proyectos vigentes</a>
+              <a data-edit="desarrollos.hero.a-2" href="https://wa.me/525517964940?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20desarrollos%20de%20Grupo%20CISA." class="btn btn--secondary--green btn--lg" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
             </div>
           </div>
         </div>
@@ -1289,14 +1290,14 @@
           <div class="filters__group">
             <span class="filters__label">Estatus</span>
             <div class="filters__chips" role="group">
-              <button type="button" class="chip chip--active" aria-pressed="true">Todos</button>
-              <button type="button" class="chip" aria-pressed="false">
+              <button data-edit="desarrollos.section.button-1" type="button" class="chip chip--active" aria-pressed="true">Todos</button>
+              <button data-edit="desarrollos.section.button-2" type="button" class="chip" aria-pressed="false">
                 <span class="chip__dot chip__dot--warning"></span> En trámite
               </button>
-              <button type="button" class="chip" aria-pressed="false">
+              <button data-edit="desarrollos.section.button-3" type="button" class="chip" aria-pressed="false">
                 <span class="chip__dot chip__dot--success"></span> Terminada
               </button>
-              <button type="button" class="chip" aria-pressed="false">
+              <button data-edit="desarrollos.section.button-4" type="button" class="chip" aria-pressed="false">
                 <span class="chip__dot chip__dot--info"></span> Preventa
               </button>
             </div>
@@ -1304,10 +1305,10 @@
           <div class="filters__group">
             <span class="filters__label">Zona</span>
             <div class="filters__chips" role="group">
-              <button type="button" class="chip chip--active" aria-pressed="true">Todas</button>
-              <button type="button" class="chip" aria-pressed="false">CDMX</button>
-              <button type="button" class="chip" aria-pressed="false">Estado de México</button>
-              <button type="button" class="chip" aria-pressed="false">Quintana Roo</button>
+              <button data-edit="desarrollos.section.button-5" type="button" class="chip chip--active" aria-pressed="true">Todas</button>
+              <button data-edit="desarrollos.section.button-6" type="button" class="chip" aria-pressed="false">CDMX</button>
+              <button data-edit="desarrollos.section.button-7" type="button" class="chip" aria-pressed="false">Estado de México</button>
+              <button data-edit="desarrollos.section.button-8" type="button" class="chip" aria-pressed="false">Quintana Roo</button>
             </div>
           </div>
         </div>
@@ -1320,8 +1321,8 @@
     <section class="section" id="proyectos" aria-labelledby="devs-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="devs-title">Cuatro proyectos en marcha.</h2>
-          <p>Consulte el estatus real y los datos clave de cada desarrollo antes de solicitar información.</p>
+          <h2 data-edit="desarrollos.proyectos.h2-1" id="devs-title">Cuatro proyectos en marcha.</h2>
+          <p data-edit="desarrollos.proyectos.p-1">Consulte el estatus real y los datos clave de cada desarrollo antes de solicitar información.</p>
         </header>
 
         <div class="devs-grid">
@@ -1338,32 +1339,32 @@
               <div class="dev-card__meta">
                 <span class="mono">EDOMEX-002</span>
               </div>
-              <h3>Residencial Fraile</h3>
-              <p class="dev-card__loc-name">Jilotzingo · Estado de México</p>
-              <p class="dev-card__desc">Conjunto residencial vertical de 28 departamentos en Jilotzingo. Entregado en 2025 y vendido.</p>
+              <h3 data-edit="desarrollos.residencial-fraile.h3-1">Residencial Fraile</h3>
+              <p data-edit="desarrollos.residencial-fraile.p-1" class="dev-card__loc-name">Jilotzingo · Estado de México</p>
+              <p data-edit="desarrollos.residencial-fraile.p-1-2" class="dev-card__desc">Conjunto residencial vertical de 28 departamentos en Jilotzingo. Entregado en 2025 y vendido.</p>
 
               <dl class="dev-card__stats">
                 <div>
-                  <dt>Producto</dt>
-                  <dd>Conjunto residencial vertical</dd>
+                  <dt data-edit="desarrollos.residencial-fraile.dt-1">Producto</dt>
+                  <dd data-edit="desarrollos.residencial-fraile.dd-1-2">Conjunto residencial vertical</dd>
                 </div>
                 <div>
-                  <dt>Etapa</dt>
-                  <dd>Terminado y vendido</dd>
+                  <dt data-edit="desarrollos.residencial-fraile.dt-2">Etapa</dt>
+                  <dd data-edit="desarrollos.residencial-fraile.dd-2-2">Terminado y vendido</dd>
                 </div>
                 <div>
-                  <dt>Entrega</dt>
-                  <dd>2025</dd>
+                  <dt data-edit="desarrollos.residencial-fraile.dt-3">Entrega</dt>
+                  <dd data-edit="desarrollos.residencial-fraile.dd-3-2">2025</dd>
                 </div>
                 <div>
-                  <dt>Unidades</dt>
-                  <dd>28</dd>
+                  <dt data-edit="desarrollos.residencial-fraile.dt-4">Unidades</dt>
+                  <dd data-edit="desarrollos.residencial-fraile.dd-4-2">28</dd>
                 </div>
               </dl>
 
               <div class="dev-card__cta">
-                <a href="desarrollos/residencial-fraile.html" class="btn btn--primary">Ver desarrollo</a>
-                <a href="https://wa.me/525517964940?text=Hola%2C%20quiero%20información%20sobre%20Residencial%20El%20Fraile%20en%20Jilotzingo." class="btn btn--secondary--green" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a data-edit="desarrollos.residencial-fraile.a-1" href="desarrollos/residencial-fraile.html" class="btn btn--primary">Ver desarrollo</a>
+                <a data-edit="desarrollos.residencial-fraile.a-2" href="https://wa.me/525517964940?text=Hola%2C%20quiero%20información%20sobre%20Residencial%20El%20Fraile%20en%20Jilotzingo." class="btn btn--secondary--green" target="_blank" rel="noopener noreferrer">WhatsApp</a>
               </div>
             </div>
           </article>
@@ -1378,28 +1379,28 @@
               <div class="dev-card__meta">
                 <span class="mono">QROO-003</span>
               </div>
-              <h3>Itzaé</h3>
-              <p class="dev-card__loc-name">Tulum · Quintana Roo</p>
-              <p class="dev-card__desc">Dieciséis departamentos verticales en La Veleta. Cinco tipologías, alberca y áreas verdes. Modelo de rentas vacacionales.</p>
+              <h3 data-edit="desarrollos.itzae.h3-1">Itzaé</h3>
+              <p data-edit="desarrollos.itzae.p-1" class="dev-card__loc-name">Tulum · Quintana Roo</p>
+              <p data-edit="desarrollos.itzae.p-2" class="dev-card__desc">Dieciséis departamentos verticales en La Veleta. Cinco tipologías, alberca y áreas verdes. Modelo de rentas vacacionales.</p>
 
               <dl class="dev-card__stats">
                 <div>
-                  <dt>Producto</dt>
-                  <dd>16 departamentos</dd>
+                  <dt data-edit="desarrollos.itzae.dt-1">Producto</dt>
+                  <dd data-edit="desarrollos.itzae.dd-1">16 departamentos</dd>
                 </div>
                 <div>
-                  <dt>Tipologías</dt>
-                  <dd>5 (45 a 140 m²)</dd>
+                  <dt data-edit="desarrollos.itzae.dt-2">Tipologías</dt>
+                  <dd data-edit="desarrollos.itzae.dd-2">5 (45 a 140 m²)</dd>
                 </div>
                 <div>
-                  <dt>Entrega estimada</dt>
-                  <dd>2027 · Q4</dd>
+                  <dt data-edit="desarrollos.itzae.dt-3">Entrega estimada</dt>
+                  <dd data-edit="desarrollos.itzae.dd-3">2027 · Q4</dd>
                 </div>
               </dl>
 
               <div class="dev-card__cta">
-                <a href="desarrollos/itzae.html" class="btn btn--primary">Conocer Itzaé</a>
-                <a href="https://wa.me/525517964940?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Itza%C3%A9%20Tulum." class="btn btn--secondary--green" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a data-edit="desarrollos.itzae.a-1" href="desarrollos/itzae.html" class="btn btn--primary">Conocer Itzaé</a>
+                <a data-edit="desarrollos.itzae.a-2" href="https://wa.me/525517964940?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Itza%C3%A9%20Tulum." class="btn btn--secondary--green" target="_blank" rel="noopener noreferrer">WhatsApp</a>
               </div>
             </div>
           </article>
@@ -1417,31 +1418,31 @@
               <div class="dev-card__meta">
                 <span class="mono">CDMX-004</span>
               </div>
-              <h3>Panorama</h3>
-              <p class="dev-card__loc-name">Enrique F. Granados 60 · Colonia Algarín, Cuauhtémoc</p>
-              <p class="dev-card__desc">Proyecto en estudio en colonia Algarín. Grupo CISA está trabajando en factibilidad, permisos y partido arquitectónico.</p>
+              <h3 data-edit="desarrollos.panorama.h3-1">Panorama</h3>
+              <p data-edit="desarrollos.panorama.p-1" class="dev-card__loc-name">Enrique F. Granados 60 · Colonia Algarín, Cuauhtémoc</p>
+              <p data-edit="desarrollos.panorama.p-2" class="dev-card__desc">Proyecto en estudio en colonia Algarín. Grupo CISA está trabajando en factibilidad, permisos y partido arquitectónico.</p>
               <dl class="dev-card__stats">
                 <div>
-                  <dt>Producto</dt>
-                  <dd>En estudio</dd>
+                  <dt data-edit="desarrollos.panorama.dt-1">Producto</dt>
+                  <dd data-edit="desarrollos.panorama.dd-1">En estudio</dd>
                 </div>
                 <div>
-                  <dt>Etapa</dt>
-                  <dd>Factibilidad</dd>
+                  <dt data-edit="desarrollos.panorama.dt-2">Etapa</dt>
+                  <dd data-edit="desarrollos.residencial-fraile.dd-2">Factibilidad</dd>
                 </div>
                 <div>
-                  <dt>Entrega</dt>
-                  <dd>Por definir</dd>
+                  <dt data-edit="desarrollos.panorama.dt-3">Entrega</dt>
+                  <dd data-edit="desarrollos.residencial-fraile.dd-3">Por definir</dd>
                 </div>
                 <div>
-                  <dt>Unidades</dt>
-                  <dd>Por confirmar</dd>
+                  <dt data-edit="desarrollos.itzae.dt-4">Unidades</dt>
+                  <dd data-edit="desarrollos.residencial-fraile.dd-1">Por confirmar</dd>
                 </div>
               </dl>
 
               <div class="dev-card__cta">
-                <a href="desarrollos/panorama.html" class="btn btn--primary">Ver desarrollo</a>
-                <a href="https://wa.me/525517964940?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Panorama%20en%20Colonia%20Algar%C3%ADn." class="btn btn--secondary--green" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a data-edit="desarrollos.panorama.a-1" href="desarrollos/panorama.html" class="btn btn--primary">Ver desarrollo</a>
+                <a data-edit="desarrollos.panorama.a-2" href="https://wa.me/525517964940?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Panorama%20en%20Colonia%20Algar%C3%ADn." class="btn btn--secondary--green" target="_blank" rel="noopener noreferrer">WhatsApp</a>
               </div>
             </div>
           </article>
@@ -1459,27 +1460,27 @@
               <div class="dev-card__meta">
                 <span class="mono">CDMX-005</span>
               </div>
-              <h3>Summit</h3>
-              <p class="dev-card__loc-name">Colonia Obrera · Cuauhtémoc, Ciudad de México</p>
-              <p class="dev-card__desc">Proyecto en estudio en colonia Obrera. Grupo CISA está trabajando en factibilidad, permisos y partido arquitectónico.</p>
+              <h3 data-edit="desarrollos.summit.h3-1">Summit</h3>
+              <p data-edit="desarrollos.summit.p-1" class="dev-card__loc-name">Colonia Obrera · Cuauhtémoc, Ciudad de México</p>
+              <p data-edit="desarrollos.summit.p-1-2" class="dev-card__desc">Proyecto en estudio en colonia Obrera. Grupo CISA está trabajando en factibilidad, permisos y partido arquitectónico.</p>
               <dl class="dev-card__stats">
                 <div>
-                  <dt>Producto</dt>
-                  <dd>En estudio</dd>
+                  <dt data-edit="desarrollos.summit.dt-1">Producto</dt>
+                  <dd data-edit="desarrollos.summit.dd-1">En estudio</dd>
                 </div>
                 <div>
-                  <dt>Etapa</dt>
-                  <dd>Factibilidad</dd>
+                  <dt data-edit="desarrollos.summit.dt-2">Etapa</dt>
+                  <dd data-edit="desarrollos.panorama.dd-2">Factibilidad</dd>
                 </div>
                 <div>
-                  <dt>Unidades</dt>
-                  <dd>Por confirmar</dd>
+                  <dt data-edit="desarrollos.panorama.dt-4">Unidades</dt>
+                  <dd data-edit="desarrollos.residencial-fraile.dd-4">Por confirmar</dd>
                 </div>
               </dl>
 
               <div class="dev-card__cta">
-                <a href="desarrollos/summit.html" class="btn btn--primary">Ver desarrollo</a>
-                <a href="https://wa.me/525517964940?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Summit%20en%20Colonia%20Obrera." class="btn btn--secondary--green" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a data-edit="desarrollos.summit.a-1" href="desarrollos/summit.html" class="btn btn--primary">Ver desarrollo</a>
+                <a data-edit="desarrollos.summit.a-2" href="https://wa.me/525517964940?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Summit%20en%20Colonia%20Obrera." class="btn btn--secondary--green" target="_blank" rel="noopener noreferrer">WhatsApp</a>
               </div>
             </div>
           </article>
@@ -1493,29 +1494,29 @@
     <section class="section section--alt" aria-labelledby="lineas-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="lineas-title">Cuatro líneas de producto.</h2>
-          <p>Lo que diseñamos y construimos, en cuatro familias. Los desarrollos vigentes pueden combinar más de una.</p>
+          <h2 data-edit="desarrollos.lineas.h2-1" id="lineas-title">Cuatro líneas de producto.</h2>
+          <p data-edit="desarrollos.lineas.p-1">Lo que diseñamos y construimos, en cuatro familias. Los desarrollos vigentes pueden combinar más de una.</p>
         </header>
         <div class="lines__grid">
           <article class="line">
             <span class="line__chip">First Summit</span>
-            <h4>Primera vivienda</h4>
-            <p>Departamentos accesibles, personalizables en acabados, pensados para que el propietario los adapte a su medida y posibilidades.</p>
+            <h4 data-edit="desarrollos.line.h4-1">Primera vivienda</h4>
+            <p data-edit="desarrollos.line.p-1">Departamentos accesibles, personalizables en acabados, pensados para que el propietario los adapte a su medida y posibilidades.</p>
           </article>
           <article class="line">
             <span class="line__chip">Urban Summit</span>
-            <h4>Uso mixto</h4>
-            <p>Proyectos en zonas de crecimiento. Diseño vanguardista integrado al contexto, con locales comerciales en planta baja.</p>
+            <h4 data-edit="desarrollos.line.h4-2">Uso mixto</h4>
+            <p data-edit="desarrollos.line.p-2">Proyectos en zonas de crecimiento. Diseño vanguardista integrado al contexto, con locales comerciales en planta baja.</p>
           </article>
           <article class="line">
             <span class="line__chip">Green Summit</span>
-            <h4>Lotes residenciales</h4>
-            <p>Privadas residenciales con urbanización de primer nivel, amenidades y reglamento de construcción controlado.</p>
+            <h4 data-edit="desarrollos.line.h4-3">Lotes residenciales</h4>
+            <p data-edit="desarrollos.line.p-3">Privadas residenciales con urbanización de primer nivel, amenidades y reglamento de construcción controlado.</p>
           </article>
           <article class="line">
             <span class="line__chip">Seaside Summit</span>
-            <h4>Destinos turísticos</h4>
-            <p>Desarrollos en zonas turísticas de alto crecimiento, con diseño vanguardista y amenidades de bajo mantenimiento.</p>
+            <h4 data-edit="desarrollos.line.h4-4">Destinos turísticos</h4>
+            <p data-edit="desarrollos.line.p-4">Desarrollos en zonas turísticas de alto crecimiento, con diseño vanguardista y amenidades de bajo mantenimiento.</p>
           </article>
         </div>
       </div>
@@ -1528,13 +1529,13 @@
       <div class="container">
         <div class="next">
           <div class="next__copy">
-            <h2 id="next-title">El próximo desarrollo puede ser el suyo.</h2>
-            <p>
+            <h2 data-edit="desarrollos.next.h2-1" id="next-title">El próximo desarrollo puede ser el suyo.</h2>
+            <p data-edit="desarrollos.next.p-1">
               Si tiene un terreno con potencial, forme parte del próximo proyecto. La revisión inicial es preliminar.
             </p>
             <div class="next__ctas">
-              <a href="su-terreno.html" class="btn btn--primary btn--lg">Precalificar mi terreno</a>
-              <a href="https://wa.me/525517964940?text=Hola%2C%20quiero%20saber%20si%20mi%20terreno%20puede%20ser%20parte%20del%20pr%C3%B3ximo%20desarrollo." class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">
+              <a data-edit="desarrollos.next.a-1" href="su-terreno.html" class="btn btn--primary btn--lg">Precalificar mi terreno</a>
+              <a data-edit="global.footer.whatsapp" href="https://wa.me/525517964940?text=Hola%2C%20quiero%20saber%20si%20mi%20terreno%20puede%20ser%20parte%20del%20pr%C3%B3ximo%20desarrollo." class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
                 </svg>
@@ -1573,39 +1574,39 @@
           <a href="index.html" aria-label="Grupo CISA · Inicio">
             <img src="assets/logo-grupo-cisa-dark.svg" alt="Grupo CISA" />
           </a>
-          <p>Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
+          <p data-edit="global.footer.desarrollo-e-inversion-inmobiliaria-sede">Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
         </div>
         <div>
-          <h5>Empresa</h5>
+          <h5 data-edit="global.footer.empresa">Empresa</h5>
           <ul>
             
-            <li><a href="nosotros.html#metodo">El proceso</a></li>
-            <li><a href="index.html#faq">Preguntas frecuentes</a></li>
+            <li><a data-edit="global.footer.el-proceso" href="nosotros.html#metodo">El proceso</a></li>
+            <li><a data-edit="global.footer.preguntas-frecuentes" href="index.html#faq">Preguntas frecuentes</a></li>
           </ul>
         </div>
         <div>
-          <h5>Servicios</h5>
+          <h5 data-edit="global.footer.servicios">Servicios</h5>
           <ul>
-            <li><a href="su-terreno.html">Aportar terreno</a></li>
-            <li><a href="su-terreno.html">Co-desarrollo</a></li>
-            <li><a href="su-terreno.html">Construcción</a></li>
-            <li><a href="inversion.html">Inversión</a></li>
+            <li><a data-edit="global.footer.aportar-terreno" href="su-terreno.html">Aportar terreno</a></li>
+            <li><a data-edit="global.footer.co-desarrollo" href="su-terreno.html">Co-desarrollo</a></li>
+            <li><a data-edit="global.footer.construccion" href="su-terreno.html">Construcción</a></li>
+            <li><a data-edit="global.footer.inversion" href="inversion.html">Inversión</a></li>
           </ul>
         </div>
         <div>
-          <h5>Contacto</h5>
+          <h5 data-edit="global.footer.contacto">Contacto</h5>
           <ul>
-            <li><a href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-            <li><a href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="aviso-de-privacidad.html">Aviso de privacidad</a></li>
+            <li><a data-edit="global.footer.whatsapp-2" href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a data-edit="global.footer.instagram" href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a data-edit="global.footer.facebook" href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a data-edit="global.footer.linkedin" href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a data-edit="global.footer.aviso-de-privacidad" href="aviso-de-privacidad.html">Aviso de privacidad</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
         <span>© 2026 Grupo CISA. Todos los derechos reservados.</span>
-        <span>Plataforma desarrollada por <a href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
+        <span>Plataforma desarrollada por <a data-edit="global.footer.abdev" href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
       </div>
     </div>
   </footer>

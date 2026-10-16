@@ -23,3 +23,6 @@ preview-*.png
 
 # Utilidades de mantenimiento (no son parte del sitio)
 scripts/
+
+# Pruebas del editor en vivo
+tests/

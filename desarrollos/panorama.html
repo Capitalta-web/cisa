@@ -197,6 +197,7 @@
     @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important;}}
   </style>
   <link rel="stylesheet" href="/assets/site-nav.css" />
+<script>/*cisa-editor-loader*/(function(){try{if(/(?:^|; )cisa_ed=1/.test(document.cookie)||/[?&]editar=1(?:&|$)/.test(location.search)){var s=document.createElement("script");s.src="/assets/editor.js";s.defer=true;document.head.appendChild(s)}}catch(e){}})();</script>
 </head>
 <body>
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
@@ -204,14 +205,14 @@
     <div class="container site-header__inner">
       <a href="../index.html" class="site-header__brand" aria-label="Grupo CISA · Inicio"><img src="../assets/logo-grupo-cisa.svg" alt="Grupo CISA" /></a>
       <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
-        <a href="../su-terreno.html">Modalidades</a>
-        <a href="../desarrollos.html" aria-current="page">Obra</a>
-        <a href="../contenido.html">Contenido</a>
-        <a href="../nosotros.html#metodo">Método</a>
-        <a href="../nosotros.html">Nosotros</a>
+        <a data-edit="global.header.modalidades" href="../su-terreno.html">Modalidades</a>
+        <a data-edit="global.header.obra" href="../desarrollos.html" aria-current="page">Obra</a>
+        <a data-edit="global.header.contenido" href="../contenido.html">Contenido</a>
+        <a data-edit="global.header.metodo" href="../nosotros.html#metodo">Método</a>
+        <a data-edit="global.header.nosotros" href="../nosotros.html">Nosotros</a>
       </nav>
       <div class="site-header__actions">
-        <a href="../su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
+        <a data-edit="global.header.precalificar-mi-terreno" href="../su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
       <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
         <span class="site-header__toggle-bars" aria-hidden="true"></span>
@@ -237,8 +238,8 @@
           <span class="dev-card__chip" style="background:var(--brand-green-tint);color:var(--brand-green-dark);">Colonia Algarín · Cuauhtémoc, CDMX</span>
           <span class="dev-card__chip" style="background:var(--ink-100);color:var(--ink-700);">CDMX-004</span>
         </div>
-        <h1 id="dev-title" class="dev-hero__title">Panorama</h1>
-        <p class="dev-hero__sub">Un predio en Enrique F. Granados 60, colonia Algarín, Cuauhtémoc, Ciudad de México. Grupo CISA está estudiando el desarrollo.</p>
+        <h1 data-edit="desarrollos-panorama.dev.h1-1" id="dev-title" class="dev-hero__title">Panorama</h1>
+        <p data-edit="desarrollos-panorama.dev.p-1" class="dev-hero__sub">Un predio en Enrique F. Granados 60, colonia Algarín, Cuauhtémoc, Ciudad de México. Grupo CISA está estudiando el desarrollo.</p>
         <div class="dev-hero__meta">
           <span>CDMX · Algarín · Mixto</span>
           <span>En estudio</span>
@@ -252,20 +253,20 @@
     <!-- CLARA · Resumen -->
     <section class="dev-summary" aria-labelledby="resumen-title">
       <div class="container">
-        <h2 id="resumen-title">Sobre el predio</h2>
-        <p class="dev-summary__lede" style="margin-top:20px;">Panorama es un proyecto de Grupo CISA en Enrique F. Granados 60, colonia Algarín, Cuauhtémoc, Ciudad de México. Está en estudio. Los datos del proyecto se publican en esta página conforme se confirman.</p>
+        <h2 data-edit="desarrollos-panorama.resumen.h2-1" id="resumen-title">Sobre el predio</h2>
+        <p data-edit="desarrollos-panorama.resumen.p-1" class="dev-summary__lede" style="margin-top:20px;">Panorama es un proyecto de Grupo CISA en Enrique F. Granados 60, colonia Algarín, Cuauhtémoc, Ciudad de México. Está en estudio. Los datos del proyecto se publican en esta página conforme se confirman.</p>
       </div>
     </section>
 
     <!-- CLARA · Ficha -->
     <section class="dev-ficha" aria-labelledby="ficha-title">
       <div class="container">
-        <h2 id="ficha-title">Ficha técnica</h2>
+        <h2 data-edit="desarrollos-panorama.ficha.h2-1" id="ficha-title">Ficha técnica</h2>
         <dl class="dev-ficha__grid">
-          <div class="dev-ficha__cell"><dt>Producto</dt><dd>En estudio</dd></div>
-          <div class="dev-ficha__cell"><dt>Ubicación</dt><dd>Enrique F. Granados 60 · Colonia Algarín, Cuauhtémoc, Ciudad de México</dd></div>
-          <div class="dev-ficha__cell"><dt>Modelo</dt><dd>Uso mixto (vivienda + comercio PB)</dd></div>
-          <div class="dev-ficha__cell dev-ficha__cell--pending"><dt>Entrega estimada</dt><dd>Aún no hay fecha. Se publica cuando el proyecto arquitectónico esté aprobado por la autoridad.</dd></div>
+          <div class="dev-ficha__cell"><dt data-edit="desarrollos-panorama.ficha.dt-1">Producto</dt><dd data-edit="desarrollos-panorama.ficha.dd-1">En estudio</dd></div>
+          <div class="dev-ficha__cell"><dt data-edit="desarrollos-panorama.ficha.dt-3">Ubicación</dt><dd data-edit="desarrollos-panorama.ficha.dd-2">Enrique F. Granados 60 · Colonia Algarín, Cuauhtémoc, Ciudad de México</dd></div>
+          <div class="dev-ficha__cell"><dt data-edit="desarrollos-panorama.ficha.dt-4">Modelo</dt><dd data-edit="desarrollos-panorama.ficha.dd-4">Uso mixto (vivienda + comercio PB)</dd></div>
+          <div class="dev-ficha__cell dev-ficha__cell--pending"><dt data-edit="desarrollos-panorama.ficha.dt-6">Entrega estimada</dt><dd data-edit="desarrollos-panorama.ficha.dd-6">Aún no hay fecha. Se publica cuando el proyecto arquitectónico esté aprobado por la autoridad.</dd></div>
         </dl>
       </div>
     </section>
@@ -273,20 +274,20 @@
     <!-- VERDE · Tipologías -->
     <section class="dev-tipologias" aria-labelledby="tipo-title">
       <div class="container">
-        <h2 id="tipo-title">Tipologías</h2>
-        <p class="section-header">No hay tipologías publicadas todavía. La hipótesis inicial es vivienda con comercio en planta baja, pero la mezcla final se define al cierre de la factibilidad y con el visto bueno del uso de suelo.</p>
+        <h2 data-edit="desarrollos-panorama.tipo.h2-1" id="tipo-title">Tipologías</h2>
+        <p data-edit="desarrollos-panorama.tipo.p-1" class="section-header">No hay tipologías publicadas todavía. La hipótesis inicial es vivienda con comercio en planta baja, pero la mezcla final se define al cierre de la factibilidad y con el visto bueno del uso de suelo.</p>
         <div class="dev-tipologias__grid">
           <article class="dev-tipologia">
-            <h4>Mezcla de unidades</h4>
-            <p class="dev-tipologia__pending">Departamentos de 1, 2 y 3 recámaras son la hipótesis inicial. Se confirma al cierre del proyecto arquitectónico.</p>
+            <h4 data-edit="desarrollos-panorama.dev-tipologia.h4-1">Mezcla de unidades</h4>
+            <p data-edit="desarrollos-panorama.dev-tipologia.p-1" class="dev-tipologia__pending">Departamentos de 1, 2 y 3 recámaras son la hipótesis inicial. Se confirma al cierre del proyecto arquitectónico.</p>
           </article>
           <article class="dev-tipologia">
-            <h4>Metrajes</h4>
-            <p class="dev-tipologia__pending">Los rangos de superficie se calculan con la cabida aprobada por la autoridad y el programa del arquitecto.</p>
+            <h4 data-edit="desarrollos-panorama.dev-tipologia.h4-1-2">Metrajes</h4>
+            <p data-edit="desarrollos-panorama.dev-tipologia.p-2" class="dev-tipologia__pending">Los rangos de superficie se calculan con la cabida aprobada por la autoridad y el programa del arquitecto.</p>
           </article>
           <article class="dev-tipologia">
-            <h4>Locales comerciales</h4>
-            <p class="dev-tipologia__pending">La cantidad de locales en planta baja se define con la cabida y la estrategia comercial del equipo de CISA.</p>
+            <h4 data-edit="desarrollos-panorama.dev-tipologia.h4-3">Locales comerciales</h4>
+            <p data-edit="desarrollos-panorama.dev-tipologia.p-3" class="dev-tipologia__pending">La cantidad de locales en planta baja se define con la cabida y la estrategia comercial del equipo de CISA.</p>
           </article>
         </div>
       </div>
@@ -295,14 +296,14 @@
     <!-- CLARA · Amenidades -->
     <section class="dev-amenidades" aria-labelledby="amenidades-title">
       <div class="container">
-        <h2 id="amenidades-title">Lo que se está evaluando</h2>
-        <p class="section-header" style="color:var(--ink-700);font-size:18px;margin-top:12px;">El programa arquitectónico se discute con la dirección de Grupo CISA. Los puntos confirmados son los que ya cuentan con visto bueno verbal; el resto requiere decisión.</p>
+        <h2 data-edit="desarrollos-panorama.amenidades.h2-1" id="amenidades-title">Lo que se está evaluando</h2>
+        <p data-edit="desarrollos-panorama.amenidades.p-1" class="section-header" style="color:var(--ink-700);font-size:18px;margin-top:12px;">El programa arquitectónico se discute con la dirección de Grupo CISA. Los puntos confirmados son los que ya cuentan con visto bueno verbal; el resto requiere decisión.</p>
         <ul class="dev-amenidades__list">
-          <li class="dev-amenidades__item dev-amenidades__item--confirmed">Mezcla de vivienda y comercio en planta baja</li>
-          <li class="dev-amenidades__item dev-amenidades__item--confirmed">Estacionamiento por unidad, según normatividad de la CDMX</li>
-          <li class="dev-amenidades__item dev-amenidades__item--pending">Lobby con control de acceso (por confirmar)</li>
-          <li class="dev-amenidades__item dev-amenidades__item--pending">Roof garden o área común en azotea (por confirmar)</li>
-          <li class="dev-amenidades__item dev-amenidades__item--pending">Cuarto de bicicletas y basura (por confirmar)</li>
+          <li data-edit="desarrollos-panorama.amenidades.li-1" class="dev-amenidades__item dev-amenidades__item--confirmed">Mezcla de vivienda y comercio en planta baja</li>
+          <li data-edit="desarrollos-panorama.amenidades.li-2" class="dev-amenidades__item dev-amenidades__item--confirmed">Estacionamiento por unidad, según normatividad de la CDMX</li>
+          <li data-edit="desarrollos-panorama.amenidades.li-3" class="dev-amenidades__item dev-amenidades__item--pending">Lobby con control de acceso (por confirmar)</li>
+          <li data-edit="desarrollos-panorama.amenidades.li-4" class="dev-amenidades__item dev-amenidades__item--pending">Roof garden o área común en azotea (por confirmar)</li>
+          <li data-edit="desarrollos-panorama.amenidades.li-5" class="dev-amenidades__item dev-amenidades__item--pending">Cuarto de bicicletas y basura (por confirmar)</li>
         </ul>
       </div>
     </section>
@@ -310,16 +311,16 @@
     <!-- VERDE · Ubicación -->
     <section class="dev-ubicacion" aria-labelledby="ubic-title">
       <div class="container">
-        <h2 id="ubic-title">Ubicación y contexto</h2>
+        <h2 data-edit="desarrollos-panorama.ubic.h2-1" id="ubic-title">Ubicación y contexto</h2>
         <div class="dev-ubicacion__grid dev-ubicacion__grid--single">
           <div>
-            <p class="dev-ubicacion__intro">Sobre la colonia Algarín, Cuauhtémoc. Lo que conviene saber del contexto antes de invertir:</p>
+            <p data-edit="desarrollos-panorama.ubic.p-1" class="dev-ubicacion__intro">Sobre la colonia Algarín, Cuauhtémoc. Lo que conviene saber del contexto antes de invertir:</p>
             <ul class="dev-ubicacion__list">
-              <li>Conectividad con Circuito Interior y Calzada Ignacio Zaragoza</li>
-              <li>Cercanía con varias líneas del Metro y Metrobús</li>
-              <li>Zona con comercio consolidado a la redonda</li>
-              <li>Mezcla de uso habitacional, comercial y de servicios</li>
-              <li>Acceso rápido al Aeropuerto Internacional de la CDMX</li>
+              <li data-edit="desarrollos-panorama.ubic.li-1">Conectividad con Circuito Interior y Calzada Ignacio Zaragoza</li>
+              <li data-edit="desarrollos-panorama.ubic.li-2">Cercanía con varias líneas del Metro y Metrobús</li>
+              <li data-edit="desarrollos-panorama.ubic.li-3">Zona con comercio consolidado a la redonda</li>
+              <li data-edit="desarrollos-panorama.ubic.li-4">Mezcla de uso habitacional, comercial y de servicios</li>
+              <li data-edit="desarrollos-panorama.ubic.li-5">Acceso rápido al Aeropuerto Internacional de la CDMX</li>
             </ul>
           </div>
         </div>
@@ -329,32 +330,32 @@
     <!-- CLARA · Galería del entorno -->
     <section class="dev-galeria" aria-labelledby="galeria-title">
       <div class="container">
-        <h2 id="galeria-title">El proyecto en imágenes</h2>
-        <p class="section-header" style="color:var(--ink-700);font-size:18px;margin-top:12px;">Renders del partido arquitectónico en estudio. Tres fachadas y tres vistas interiores de un departamento tipo. El mapa, la cabida y los planos ejecutivos se publican al cierre del estudio de factibilidad.</p>
+        <h2 data-edit="desarrollos-panorama.galeria.h2-1" id="galeria-title">El proyecto en imágenes</h2>
+        <p data-edit="desarrollos-panorama.galeria.p-1" class="section-header" style="color:var(--ink-700);font-size:18px;margin-top:12px;">Renders del partido arquitectónico en estudio. Tres fachadas y tres vistas interiores de un departamento tipo. El mapa, la cabida y los planos ejecutivos se publican al cierre del estudio de factibilidad.</p>
         <div class="dev-galeria__grid">
           <figure class="dev-galeria__item">
             <img src="../assets/desarrollos/panorama/hero-fachada.webp" alt="Fachada principal del desarrollo Panorama, vista frontal con transeúntes." loading="lazy" decoding="async" />
-            <figcaption class="dev-galeria__caption">Fachada principal</figcaption>
+            <figcaption data-edit="desarrollos-panorama.galeria.figcaption-1" class="dev-galeria__caption">Fachada principal</figcaption>
           </figure>
           <figure class="dev-galeria__item">
             <img src="../assets/desarrollos/panorama/fachada-arboles.webp" alt="Fachada lateral con balcones y arbolado joven. Vista desde la calle." loading="lazy" decoding="async" />
-            <figcaption class="dev-galeria__caption">Fachada con entorno</figcaption>
+            <figcaption data-edit="desarrollos-panorama.galeria.figcaption-2" class="dev-galeria__caption">Fachada con entorno</figcaption>
           </figure>
           <figure class="dev-galeria__item">
             <img src="../assets/desarrollos/panorama/fachada-atardecer.webp" alt="Fachada del desarrollo Panorama al atardecer, vista tres cuartos." loading="lazy" decoding="async" />
-            <figcaption class="dev-galeria__caption">Fachada al atardecer</figcaption>
+            <figcaption data-edit="desarrollos-panorama.galeria.figcaption-3" class="dev-galeria__caption">Fachada al atardecer</figcaption>
           </figure>
           <figure class="dev-galeria__item">
             <img src="../assets/desarrollos/panorama/interior.webp" alt="Interior de departamento tipo. Sala y comedor amueblados, pareja abrazándose." loading="lazy" decoding="async" />
-            <figcaption class="dev-galeria__caption">Interior · Sala-comedor</figcaption>
+            <figcaption data-edit="desarrollos-panorama.galeria.figcaption-4" class="dev-galeria__caption">Interior · Sala-comedor</figcaption>
           </figure>
           <figure class="dev-galeria__item">
             <img src="../assets/desarrollos/panorama/interior-cocina.webp" alt="Interior de departamento tipo. Sala abierta con cocina integral y comedor." loading="lazy" decoding="async" />
-            <figcaption class="dev-galeria__caption">Interior · Sala-cocina</figcaption>
+            <figcaption data-edit="desarrollos-panorama.galeria.figcaption-5" class="dev-galeria__caption">Interior · Sala-cocina</figcaption>
           </figure>
           <figure class="dev-galeria__item">
             <img src="../assets/desarrollos/panorama/interior-recamara.webp" alt="Recámara principal con balcón privado, vista al desarrollo." loading="lazy" decoding="async" />
-            <figcaption class="dev-galeria__caption">Interior · Recámara principal</figcaption>
+            <figcaption data-edit="desarrollos-panorama.galeria.figcaption-6" class="dev-galeria__caption">Interior · Recámara principal</figcaption>
           </figure>
         </div>
       </div>
@@ -363,8 +364,8 @@
     <!-- VERDE · Proceso -->
     <section class="dev-proceso" aria-labelledby="proceso-title">
       <div class="container">
-        <h2 id="proceso-title">Etapas para que esto deje de ser un terreno y sea un desarrollo</h2>
-        <p class="section-header" style="color:rgba(255,255,255,0.78);font-size:18px;margin-top:12px;">El proceso de Grupo CISA aplicado a un predio en estudio. Cada paso tiene un entregable verificable.</p>
+        <h2 data-edit="desarrollos-panorama.proceso.h2-1" id="proceso-title">Etapas para que esto deje de ser un terreno y sea un desarrollo</h2>
+        <p data-edit="desarrollos-panorama.proceso.p-1" class="section-header" style="color:rgba(255,255,255,0.78);font-size:18px;margin-top:12px;">El proceso de Grupo CISA aplicado a un predio en estudio. Cada paso tiene un entregable verificable.</p>
         <ol class="dev-proceso__steps">
           <li><div><strong>Entrevista inicial</strong>Conocemos su propiedad, objetivo y contexto.</div></li>
           <li><div><strong>Presentación</strong>Revisamos el potencial de desarrollo de su propiedad.</div></li>
@@ -381,21 +382,21 @@
     <!-- CLARA · Avance -->
     <section class="dev-avance" aria-labelledby="avance-title">
       <div class="container">
-        <h2 id="avance-title">Avance del proyecto</h2>
+        <h2 data-edit="desarrollos-panorama.avance.h2-1" id="avance-title">Avance del proyecto</h2>
         <div class="dev-avance__bar"><div class="dev-avance__bar-fill" style="width:10%;"></div></div>
-        <p class="dev-avance__caption">10% · Etapa de estudio de mercado y factibilidad</p>
-        <p style="margin-top:24px;color:var(--ink-500);font-size:14px;max-width:640px;">El avance corresponde a la fase previa a la preventa. No hay obra física en el terreno. Esta página se actualiza cuando se cierre el estudio.</p>
+        <p data-edit="desarrollos-panorama.avance.p-1" class="dev-avance__caption">10% · Etapa de estudio de mercado y factibilidad</p>
+        <p data-edit="desarrollos-panorama.avance.p-1-2" style="margin-top:24px;color:var(--ink-500);font-size:14px;max-width:640px;">El avance corresponde a la fase previa a la preventa. No hay obra física en el terreno. Esta página se actualiza cuando se cierre el estudio.</p>
       </div>
     </section>
 
     <!-- VERDE · CTA final -->
     <section class="dev-cta">
       <div class="container dev-cta__inner">
-        <h2>¿Quiere saber cuándo avanzamos a preventa?</h2>
-        <p>Si está considerando una unidad en Panorama o quiere aportar un terreno en la zona, dejamos sus datos y le avisamos cuando el proyecto tenga información verificable.</p>
+        <h2 data-edit="desarrollos-panorama.dev-cta.h2-1">¿Quiere saber cuándo avanzamos a preventa?</h2>
+        <p data-edit="desarrollos-panorama.dev-cta.p-1">Si está considerando una unidad en Panorama o quiere aportar un terreno en la zona, dejamos sus datos y le avisamos cuando el proyecto tenga información verificable.</p>
         <div class="dev-cta__actions">
-          <a href="https://wa.me/525517964940?text=Hola%2C%20me%20interesa%20Panorama%20en%20Colonia%20Algar%C3%ADn" class="btn btn--whatsapp btn--lg">Hablar por WhatsApp</a>
-          <a href="../su-terreno.html#precalificar" class="btn btn--outline btn--lg">Precalificar mi terreno</a>
+          <a data-edit="desarrollos-panorama.dev-cta.a-1" href="https://wa.me/525517964940?text=Hola%2C%20me%20interesa%20Panorama%20en%20Colonia%20Algar%C3%ADn" class="btn btn--whatsapp btn--lg">Hablar por WhatsApp</a>
+          <a data-edit="desarrollos-panorama.dev-cta.a-2" href="../su-terreno.html#precalificar" class="btn btn--outline btn--lg">Precalificar mi terreno</a>
         </div>
       </div>
     </section>
@@ -409,39 +410,39 @@
           <a href="../index.html" aria-label="Grupo CISA · Inicio">
             <img src="../assets/logo-grupo-cisa-dark.svg" alt="Grupo CISA" />
           </a>
-          <p>Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
+          <p data-edit="global.footer.desarrollo-e-inversion-inmobiliaria-sede">Desarrollo e inversión inmobiliaria. Sede en Ciudad Satélite, Estado de México.</p>
         </div>
         <div>
-          <h5>Empresa</h5>
+          <h5 data-edit="global.footer.empresa">Empresa</h5>
           <ul style="list-style:none;padding:0;margin:0;">
             
-            <li><a href="../nosotros.html#metodo">El proceso</a></li>
-            <li><a href="../index.html#faq">Preguntas frecuentes</a></li>
+            <li><a data-edit="global.footer.el-proceso" href="../nosotros.html#metodo">El proceso</a></li>
+            <li><a data-edit="global.footer.preguntas-frecuentes" href="../index.html#faq">Preguntas frecuentes</a></li>
           </ul>
         </div>
         <div>
-          <h5>Servicios</h5>
+          <h5 data-edit="global.footer.servicios">Servicios</h5>
           <ul style="list-style:none;padding:0;margin:0;">
-            <li><a href="../su-terreno.html">Aportar terreno</a></li>
-            <li><a href="../su-terreno.html">Co-desarrollo</a></li>
-            <li><a href="../su-terreno.html">Construcción</a></li>
-            <li><a href="../inversion.html">Inversión</a></li>
+            <li><a data-edit="global.footer.aportar-terreno" href="../su-terreno.html">Aportar terreno</a></li>
+            <li><a data-edit="global.footer.co-desarrollo" href="../su-terreno.html">Co-desarrollo</a></li>
+            <li><a data-edit="global.footer.construccion" href="../su-terreno.html">Construcción</a></li>
+            <li><a data-edit="global.footer.inversion" href="../inversion.html">Inversión</a></li>
           </ul>
         </div>
         <div>
-          <h5>Contacto</h5>
+          <h5 data-edit="global.footer.contacto">Contacto</h5>
           <ul style="list-style:none;padding:0;margin:0;">
-            <li><a href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-            <li><a href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="../aviso-de-privacidad.html">Aviso de privacidad</a></li>
+            <li><a data-edit="global.footer.whatsapp" href="https://wa.me/525517964940" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a data-edit="global.footer.instagram" href="https://instagram.com/grupocisamx" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a data-edit="global.footer.facebook" href="https://facebook.com/grupocisamx" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a data-edit="global.footer.linkedin" href="https://linkedin.com/company/grupocisa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a data-edit="global.footer.aviso-de-privacidad" href="../aviso-de-privacidad.html">Aviso de privacidad</a></li>
           </ul>
         </div>
       </div>
       <div class="site-footer__bottom">
         <span>© 2026 Grupo CISA. Todos los derechos reservados.</span>
-        <span>Plataforma desarrollada por <a href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
+        <span>Plataforma desarrollada por <a data-edit="global.footer.abdev" href="https://abdev.click" target="_blank" rel="noopener noreferrer">ABDev</a></span>
       </div>
     </div>
   </footer>
