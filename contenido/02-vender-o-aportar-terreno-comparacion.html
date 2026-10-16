@@ -124,19 +124,23 @@
     @media (min-width: 1024px) { .fab-whatsapp { left: 32px; bottom: 32px; } }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css" />
 </head>
 <body>
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
   <header class="site-header" role="banner">
     <div class="container site-header__inner">
       <a href="../index.html" class="site-header__brand" aria-label="Grupo CISA · Inicio"><img src="../assets/logo-grupo-cisa.svg" alt="Grupo CISA" /></a>
-      <nav class="site-header__nav" aria-label="Navegación principal">
+      <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <a href="../su-terreno.html">Modalidades</a>
         <a href="../nosotros.html#metodo">Método</a>
         <a href="../desarrollos.html">Obra</a>
         <a href="../nosotros.html">Nosotros</a>
       </nav>
       <div class="site-header__actions"><a href="../su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a></div>
+      <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
@@ -328,5 +332,6 @@
 
 <link rel="stylesheet" href="/assets/agent-cisa-fab.css">
 <script src="/assets/agent-cisa-fab.js" defer></script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>

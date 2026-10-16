@@ -452,6 +452,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css" />
 </head>
 <body>
 
@@ -462,7 +463,7 @@
       <a href="index.html" class="site-header__brand" aria-label="Grupo CISA · Inicio">
         <img src="assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
-      <nav class="site-header__nav" aria-label="Navegación principal">
+      <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <a href="su-terreno.html">Modalidades</a>
         <a href="nosotros.html#metodo">Método</a>
         <a href="desarrollos.html">Obra</a>
@@ -471,6 +472,9 @@
       <div class="site-header__actions">
         <a href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
+      <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
@@ -493,7 +497,7 @@
 
 
         <div class="article__body">
-<p><em>Última actualización: 7 de septiembre de 2026.</em></p>
+<p><em>Última actualización: 8 de octubre de 2026.</em></p>
 
 <p>Este aviso describe el tratamiento que Grupo CISA da a los datos personales
 recabados a través de este sitio web, en cumplimiento de la Ley Federal de
@@ -502,9 +506,9 @@ Protección de Datos Personales en Posesión de los Particulares.</p>
 <h2>1. Quién es responsable de sus datos</h2>
 <p>El responsable del tratamiento de sus datos personales es
 <strong>[DATO FALTANTE: denominación o razón social completa de Grupo CISA]</strong> (&laquo;Grupo CISA&raquo;), con domicilio en
-[DATO FALTANTE: calle y número] Ciudad Satélite, Naucalpan, Estado de México, C.P. 53100.</p>
+Circuito Circunvalación Poniente No. 16, Local V-W, Ciudad Satélite, Naucalpan, Estado de México, C.P. 53100.</p>
 <p>Para cualquier asunto relacionado con este aviso puede escribir a
-<a href="mailto:contacto@grupocisa.mx">contacto@grupocisa.mx</a> o llamar al 55 5361 3771.</p>
+<a href="mailto:contacto@grupocisa.mx">contacto@grupocisa.mx</a> o llamar al 55 5361 3771, ext. 251 o 237.</p>
 
 <h2>2. Qué datos recabamos</h2>
 <p>A través de los formularios de este sitio recabamos únicamente los datos que
@@ -597,8 +601,8 @@ Información y Protección de Datos Personales (INAI),
 
 <h2>10. Contacto</h2>
 <p>Grupo CISA<br />
-[DATO FALTANTE: calle y número] Ciudad Satélite, Naucalpan, Estado de México, C.P. 53100<br />
-Teléfono: 55 5361 3771<br />
+Circuito Circunvalación Poniente No. 16, Local V-W, Ciudad Satélite, Naucalpan, Estado de México, C.P. 53100<br />
+Teléfono: 55 1796 4940 y 55 5361 3771, ext. 251 o 237<br />
 WhatsApp: 55 1796 4940<br />
 Correo: <a href="mailto:contacto@grupocisa.mx">contacto@grupocisa.mx</a></p>
         </div>
@@ -683,5 +687,6 @@ Correo: <a href="mailto:contacto@grupocisa.mx">contacto@grupocisa.mx</a></p>
 
 <link rel="stylesheet" href="/assets/agent-cisa-fab.css">
 <script src="/assets/agent-cisa-fab.js" defer></script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>

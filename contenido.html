@@ -377,7 +377,7 @@
       gap: 24px;
       margin-top: 56px;
     }
-    @media (min-width: 768px) { .closing__grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 768px) { .closing__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
     .closing__col {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.10);
@@ -388,7 +388,7 @@
     }
     .closing__col:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.20); }
     .closing__col h4 { color: white; font-size: 15px; margin-bottom: 20px; }
-    .closing__col .btn { width: 100%; }
+    .closing__col .btn { width: 100%; white-space: normal; }
     .btn--primary-dark { background: white; color: var(--ink-900); }
     .btn--primary-dark:hover { background: var(--ink-50); }
 
@@ -440,6 +440,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css" />
 </head>
 <body>
 
@@ -450,7 +451,7 @@
       <a href="index.html" class="site-header__brand" aria-label="Grupo CISA · Inicio">
         <img src="assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
-      <nav class="site-header__nav" aria-label="Navegación principal">
+      <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <a href="su-terreno.html">Modalidades</a>
         <a href="nosotros.html#metodo">Método</a>
         <a href="desarrollos.html">Obra</a>
@@ -460,6 +461,9 @@
       <div class="site-header__actions">
         <a href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
+      <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
@@ -812,5 +816,6 @@
 
 <link rel="stylesheet" href="/assets/agent-cisa-fab.css">
 <script src="/assets/agent-cisa-fab.js" defer></script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>

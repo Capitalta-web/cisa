@@ -10,9 +10,9 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Residencial El Fraile · Jilotzingo, Estado de México · Grupo CISA</title>
-  <meta name="description" content="Residencial El Fraile: desarrollo en evaluación en Jilotzingo, Estado de México. Grupo CISA analiza factibilidad, uso de suelo y esquema jurídico antes de publicar preventa." />
+  <meta name="description" content="Residencial El Fraile: conjunto residencial vertical de 28 departamentos en Jilotzingo, Estado de México. Desarrollado por Grupo CISA, entregado en 2025 y vendido." />
   <meta property="og:title" content="Residencial El Fraile · Jilotzingo, Estado de México · Grupo CISA" />
-  <meta property="og:description" content="Desarrollo en evaluación en Jilotzingo, EdoMex. Factibilidad y uso de suelo en análisis. La preventa se publica cuando Grupo CISA confirme el proyecto." />
+  <meta property="og:description" content="28 departamentos en Jilotzingo, EdoMex. Proyecto de Grupo CISA entregado en 2025 y vendido." />
   <meta name="theme-color" content="#1F4D2A" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F4D2A'/%3E%3Cpath d='M10 16 L22 16' stroke='%238BC34A' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M16 10 L16 22' stroke='%238BC34A' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,8 +93,9 @@
     .dev-hero__image{width:100%;aspect-ratio:16/9;background:var(--bg-dark);position:relative;overflow:hidden;}
     .dev-hero__image img{width:100%;height:100%;object-fit:cover;display:block;}
     .dev-hero__image-tag{position:absolute;top:24px;left:24px;display:flex;gap:8px;flex-wrap:wrap;}
+    .dev-hero__image-tag .dev-card__chip{background:rgba(255,255,255,0.95);}
     @media (max-width:767px){.dev-hero__image-tag{top:88px;left:16px;}}
-    .dev-hero__body{padding:48px 0 32px;}
+    .dev-hero__body{padding-top:48px;padding-bottom:32px;}
     .dev-hero__back{display:inline-flex;align-items:center;gap:6px;font:600 14px/1 var(--font-mono);color:var(--ink-500);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:24px;}
     .dev-hero__back:hover{color:var(--brand-green-dark);}
     .dev-hero__top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px;}
@@ -130,6 +131,7 @@
     .dev-ubicacion h2{color:#fff;}
     .dev-ubicacion__grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:32px;position:relative;}
     @media (max-width:768px){.dev-ubicacion__grid{grid-template-columns:1fr;}}
+    .dev-ubicacion__grid--single{grid-template-columns:1fr;max-width:760px;}
     .dev-ubicacion__list{list-style:none;padding:0;margin:0;}
     .dev-ubicacion__list li{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.15);display:flex;gap:10px;font-size:15px;color:rgba(255,255,255,0.85);}
     .dev-ubicacion__list li::before{content:'→';color:var(--brand-green-light);font-weight:700;}
@@ -196,13 +198,14 @@
 
     @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important;}}
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css" />
 </head>
 <body>
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
   <header class="site-header" role="banner">
     <div class="container site-header__inner">
       <a href="../index.html" class="site-header__brand" aria-label="Grupo CISA · Inicio"><img src="../assets/logo-grupo-cisa.svg" alt="Grupo CISA" /></a>
-      <nav class="site-header__nav" aria-label="Navegación principal">
+      <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <a href="../su-terreno.html">Modalidades</a>
         <a href="../desarrollos.html" aria-current="page">Obra</a>
         <a href="../contenido.html">Contenido</a>
@@ -212,6 +215,9 @@
       <div class="site-header__actions">
         <a href="../su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
+      <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
@@ -221,8 +227,8 @@
       <div class="dev-hero__image">
         <img src="../assets/desarrollos/fraile/hero-render.webp" alt="Render arquitectónico de Residencial Fraile, conjunto de departamentos en Jilotzingo, Estado de México." />
         <div class="dev-hero__image-tag">
-          <span class="dev-card__chip dev-card__chip--warning">
-            <span class="dev-card__dot"></span> En evaluación
+          <span class="dev-card__chip dev-card__chip--success">
+            <span class="dev-card__dot"></span> Entregado 2025
           </span>
           <span class="dev-card__chip" style="background:rgba(255,255,255,0.95);color:var(--ink-700);">Habitacional</span>
         </div>
@@ -234,14 +240,13 @@
           <span class="dev-card__chip" style="background:var(--ink-100);color:var(--ink-700);">EDOMEX-002</span>
         </div>
         <h1 id="dev-title" class="dev-hero__title">Residencial El Fraile</h1>
-        <p class="dev-hero__sub">Un terreno en Jilotzingo que Grupo CISA está evaluando. Lo publicamos aquí para que el expediente avance de manera transparente.</p>
+        <p class="dev-hero__sub">Veintiocho departamentos en Jilotzingo, Estado de México. Grupo CISA desarrolló el proyecto y lo entregó en 2025. Está vendido.</p>
         <div class="dev-hero__meta">
-          <span>EDOMEX · JLO · HAB</span>
+          <span>EDOMEX · Jilotzingo · Habitacional</span>
           <span>28 departamentos</span>
-          <span>Actualizado 2026-Q3</span>
         </div>
-        <div class="dev-state-banner dev-state-banner--warning">
-          <strong>Estado actual:</strong> Proyecto en evaluación final. El programa arquitectónico está definido (28 departamentos, 2 tipologías). Grupo CISA está concluyendo permisos, esquema financiero y verificación jurídica antes de pasar a preventa. La información de esta página se actualiza cuando se cierra la evaluación.
+        <div class="dev-state-banner dev-state-banner--success">
+          <strong>Estado actual:</strong> Proyecto terminado y vendido. Grupo CISA concluyó la obra y entregó los 28 departamentos en 2025. No hay unidades disponibles.
         </div>
       </div>
     </section>
@@ -249,8 +254,8 @@
     <!-- CLARA · Resumen -->
     <section class="dev-summary" aria-labelledby="resumen-title">
       <div class="container">
-        <h2 id="resumen-title">Por qué publicamos un proyecto que aún no es proyecto</h2>
-        <p class="dev-summary__lede" style="margin-top:20px;">Residencial El Fraile es un terreno que Grupo CISA identificó como candidato para desarrollo habitacional en Jilotzingo, Estado de México. La zona, la conectividad y la superficie permiten pensar en un conjunto residencial de baja densidad. Antes de fijar unidades, tipologías o precios, la empresa debe confirmar tres cosas: que el uso de suelo lo permite, que la situación jurídica del predio está saneada y que la factibilidad económica cierra. Hasta que esas tres condiciones se cumplan, esta página muestra lo que se sabe y lo que todavía no. La información se actualiza conforme se libera.</p>
+        <h2 id="resumen-title">Un proyecto terminado en Jilotzingo</h2>
+        <p class="dev-summary__lede" style="margin-top:20px;">Residencial El Fraile es un conjunto residencial vertical de baja densidad en Jilotzingo, Estado de México: 28 departamentos en dos tipologías, en un predio de 1,600 m² con más de 6,000 m² construidos. Grupo CISA desarrolló el proyecto y lo entregó en 2025. Hoy está vendido. Lo publicamos como referencia de obra terminada: es el tipo de resultado que buscamos con cada terreno que entra a desarrollo.</p>
       </div>
     </section>
 
@@ -262,9 +267,10 @@
           <div class="dev-ficha__cell"><dt>Producto</dt><dd>Conjunto residencial vertical, 28 departamentos</dd></div>
           <div class="dev-ficha__cell"><dt>Tipologías</dt><dd>Tipo 1 (141 m²) · Tipo 2 PH (162 m²)</dd></div>
           <div class="dev-ficha__cell"><dt>Ubicación</dt><dd>Jilotzingo · Estado de México</dd></div>
+          <div class="dev-ficha__cell"><dt>Modelo</dt><dd>Habitacional</dd></div>
           <div class="dev-ficha__cell"><dt>Superficie terreno</dt><dd>1,600 m²</dd></div>
           <div class="dev-ficha__cell"><dt>Construcción</dt><dd>Más de 6,000 m² construidos</dd></div>
-          <div class="dev-ficha__cell dev-ficha__cell--pending"><dt>Entrega estimada</dt><dd>Por confirmar al cierre de la evaluación financiera.</dd></div>
+          <div class="dev-ficha__cell"><dt>Entrega</dt><dd>2025</dd></div>
         </dl>
       </div>
     </section>
@@ -273,7 +279,7 @@
     <section class="dev-tipologias" aria-labelledby="tipo-title">
       <div class="container">
         <h2 id="tipo-title">Tipologías</h2>
-        <p class="section-header">El proyecto contempla 28 departamentos en dos tipologías. La distribución final del total entre tipologías se publica cuando se cierra el esquema financiero. Los planos y el programa arquitectónico están disponibles para revisión en cita previa.</p>
+        <p class="section-header">Los 28 departamentos de Residencial El Fraile se construyeron en dos tipologías.</p>
         <div class="dev-tipologias__grid">
           <article class="dev-tipologia">
             <span class="dev-tipologia__badge">TIPO 1</span>
@@ -286,9 +292,9 @@
             <p>Sala, acceso directo a Roof Garden, comedor, cocina, cuarto de servicio, bodega, 1 ½ baño, dos recámaras secundarias con baño completo compartido, recámara principal con vestidor y baño completo, estudio, bodega.</p>
           </article>
           <article class="dev-tipologia">
-            <span class="dev-tipologia__badge">PRECIOS</span>
-            <h4>Por confirmar</h4>
-            <p class="dev-tipologia__pending">No publicamos un rango de precios sin antes cerrar estructura de costos, permisos y esquema financiero.</p>
+            <span class="dev-tipologia__badge">DISPONIBILIDAD</span>
+            <h4>Vendido</h4>
+            <p>Todas las unidades de Residencial El Fraile están vendidas.</p>
           </article>
         </div>
       </div>
@@ -297,14 +303,10 @@
     <!-- CLARA · Amenidades -->
     <section class="dev-amenidades" aria-labelledby="amenidades-title">
       <div class="container">
-        <h2 id="amenidades-title">Lo que se está evaluando</h2>
-        <p class="section-header" style="color:var(--ink-700);font-size:18px;margin-top:12px;">El programa arquitectónico se discute con la dirección de Grupo CISA. Los puntos confirmados son los que ya cuentan con visto bueno verbal de la desarrolladora; el resto requiere decisión.</p>
+        <h2 id="amenidades-title">Características del conjunto</h2>
         <ul class="dev-amenidades__list">
           <li class="dev-amenidades__item dev-amenidades__item--confirmed">Conjunto de baja densidad, congruente con el entorno de Jilotzingo</li>
           <li class="dev-amenidades__item dev-amenidades__item--confirmed">Estacionamiento por unidad, según normatividad municipal</li>
-          <li class="dev-amenidades__item dev-amenidades__item--pending">Áreas verdes comunes (programa y superficie por definir)</li>
-          <li class="dev-amenidades__item dev-amenidades__item--pending">Caseta de acceso con control (por confirmar)</li>
-          <li class="dev-amenidades__item dev-amenidades__item--pending">Amenidades deportivas o recreativas (por confirmar)</li>
         </ul>
       </div>
     </section>
@@ -313,7 +315,7 @@
     <section class="dev-ubicacion" aria-labelledby="ubic-title">
       <div class="container">
         <h2 id="ubic-title">Ubicación y contexto</h2>
-        <div class="dev-ubicacion__grid">
+        <div class="dev-ubicacion__grid dev-ubicacion__grid--single">
           <div>
             <p class="dev-ubicacion__intro">Jilotzingo es un municipio conurbado al norponiente del Valle de México, con perfil residencial y conectividad hacia Naucalpan y la Ciudad Satélite. La zona se caracteriza por vialidades internas de baja velocidad, predios de superficie media a grande y un entorno boscoso que forma parte del valor del producto.</p>
             <ul class="dev-ubicacion__list">
@@ -322,12 +324,7 @@
               <li>Entorno predominantemente habitacional y boscoso</li>
               <li>Regulación municipal de baja densidad</li>
               <li>Acceso a servicios municipales básicos (agua, electricidad, vialidades)</li>
-              <li>Coordenadas específicas por confirmar con la desarrolladora</li>
             </ul>
-          </div>
-          <div class="dev-ubicacion__map">
-            [DATO FALTANTE: mapa embebido]<br>
-            Coordenadas y/o iframe de Google Maps
           </div>
         </div>
       </div>
@@ -394,16 +391,17 @@
     <!-- VERDE · Proceso -->
     <section class="dev-proceso" aria-labelledby="proceso-title">
       <div class="container">
-        <h2 id="proceso-title">Etapas para que esto deje de ser un terreno y sea un desarrollo</h2>
-        <p class="section-header" style="color:rgba(255,255,255,0.78);font-size:18px;margin-top:12px;">El proceso de Grupo CISA aplicado a un predio en evaluación. Cada paso tiene un entregable verificable y una duración estimada.</p>
+        <h2 id="proceso-title">Las etapas que convirtieron este terreno en un desarrollo</h2>
+        <p class="section-header" style="color:rgba(255,255,255,0.78);font-size:18px;margin-top:12px;">El proceso que siguió Grupo CISA en este desarrollo. Cada paso tiene un entregable verificable.</p>
         <ol class="dev-proceso__steps">
-          <li><div><strong>Identificación del predio</strong>Terreno localizado por el equipo de originación, con base en el perfil de zona y la conectividad.</div></li>
-          <li><div><strong>Estudio de factibilidad</strong>Análisis de uso de suelo, cabida, costos estimados y producto posible.</div></li>
-          <li><div><strong>Verificación jurídica</strong>Dictamen de propiedad, gravámenes, situación registral y libertad de venta.</div></li>
-          <li><div><strong>Decisión de invertir</strong>Si las tres validaciones anteriores cierran, el comité de CISA aprueba iniciar el proyecto.</div></li>
-          <li><div><strong>Proyecto arquitectónico</strong>Se desarrolla el proyecto y se somete a la autoridad para licencias.</div></li>
-          <li><div><strong>Esquema financiero y preventa</strong>Se publica la preventa con precios, tipologías y calendario.</div></li>
-          <li><div><strong>Construcción y entrega</strong>Obra con reportes mensuales de avance y entrega con escritura.</div></li>
+          <li><div><strong>Entrevista inicial</strong>Conocemos su propiedad, objetivo y contexto.</div></li>
+          <li><div><strong>Presentación</strong>Revisamos el potencial de desarrollo de su propiedad.</div></li>
+          <li><div><strong>Factibilidad</strong>Analizamos variables técnicas, jurídicas y financieras.</div></li>
+          <li><div><strong>Decisión estratégica</strong>Se evalúa aportar el terreno o venderlo.</div></li>
+          <li><div><strong>Plan de trabajo</strong>Definimos alcance, responsables y siguientes pasos.</div></li>
+          <li><div><strong>Primera fase</strong>Trámites, permisos, planos finales y estimaciones.</div></li>
+          <li><div><strong>Construcción</strong>Seguimiento de obra conforme al proyecto aprobado.</div></li>
+          <li><div><strong>Entrega</strong>Cerramos la etapa y documentamos el resultado.</div></li>
         </ol>
       </div>
     </section>
@@ -412,19 +410,19 @@
     <section class="dev-avance" aria-labelledby="avance-title">
       <div class="container">
         <h2 id="avance-title">Avance del proyecto</h2>
-        <div class="dev-avance__bar"><div class="dev-avance__bar-fill" style="width:15%;"></div></div>
-        <p class="dev-avance__caption">15% · Etapa de evaluación y factibilidad</p>
-        <p style="margin-top:24px;color:var(--ink-500);font-size:14px;max-width:640px;">El avance corresponde a la fase previa a la preventa: identificación, factibilidad y validación jurídica. No hay obra física en el terreno todavía. Esta página se actualiza cuando se cierra la evaluación.</p>
+        <div class="dev-avance__bar"><div class="dev-avance__bar-fill" style="width:100%;"></div></div>
+        <p class="dev-avance__caption">100% · Entregado en 2025</p>
+        <p style="margin-top:24px;color:var(--ink-500);font-size:14px;max-width:640px;">La obra está terminada y el proyecto está vendido.</p>
       </div>
     </section>
 
     <!-- VERDE · CTA final -->
     <section class="dev-cta">
       <div class="container dev-cta__inner">
-        <h2>¿Quiere saber cuándo avanzamos a preventa?</h2>
-        <p>Si está considerando una unidad en El Fraile o quiere aportar un terreno vecino, dejamos sus datos y le avisamos cuando el proyecto tenga información verificable.</p>
+        <h2>¿Quiere ser parte del próximo proyecto?</h2>
+        <p>Residencial El Fraile ya está vendido. Si le interesan los próximos desarrollos de Grupo CISA o tiene un terreno que podría aportar, platiquemos.</p>
         <div class="dev-cta__actions">
-          <a href="https://wa.me/525517964940?text=Hola%2C%20me%20interesa%20Residencial%20El%20Fraile%20en%20Jilotzingo" class="btn btn--whatsapp btn--lg">Hablar por WhatsApp</a>
+          <a href="https://wa.me/525517964940?text=Hola%2C%20vi%20Residencial%20El%20Fraile%20y%20quiero%20informaci%C3%B3n%20sobre%20los%20pr%C3%B3ximos%20proyectos%20de%20Grupo%20CISA." class="btn btn--whatsapp btn--lg">Hablar por WhatsApp</a>
           <a href="../su-terreno.html#precalificar" class="btn btn--outline btn--lg">Precalificar mi terreno</a>
         </div>
       </div>
@@ -497,5 +495,6 @@
 
 <link rel="stylesheet" href="/assets/agent-cisa-fab.css">
 <script src="/assets/agent-cisa-fab.js" defer></script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>

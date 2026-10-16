@@ -452,6 +452,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css" />
 </head>
 <body>
 
@@ -462,7 +463,7 @@
       <a href="../index.html" class="site-header__brand" aria-label="Grupo CISA · Inicio">
         <img src="../assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
-      <nav class="site-header__nav" aria-label="Navegación principal">
+      <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <a href="../su-terreno.html">Modalidades</a>
         <a href="../nosotros.html#metodo">Método</a>
         <a href="../desarrollos.html">Obra</a>
@@ -471,6 +472,9 @@
       <div class="site-header__actions">
         <a href="../su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
+      <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
@@ -542,17 +546,18 @@
           <p>El reparto se hace con un criterio. No es 50/50 ni 60/40 por regla. Es un cálculo que toma en cuenta qué aporta cada parte. El desarrollador aporta capital (que tiene costo financiero), trabajo de meses o años, riesgo comercial y know-how. El propietario aporta el activo físico que hace posible el proyecto. La ecuación final suele estar entre el 25% y el 45% del valor del proyecto terminado para el propietario, dependiendo del caso. Pero cada proyecto es distinto.</p>
           <p>Lo que sí es regla: el criterio se escribe antes de empezar y se mantiene durante todo el proyecto. Si alguien le ofrece un reparto que se decide «al final, según como salgan las cosas», no firme. El criterio tiene que estar en el contrato desde el día uno.</p>
 
-          <h2>Los siete pasos del proceso</h2>
-          <p>Una aportación bien estructurada sigue siete etapas, con tiempos claros. Le dejamos el orden en que ocurren, no los plazos exactos, que dependen del proyecto.</p>
+          <h2>Los ocho pasos del proceso</h2>
+          <p>Una aportación bien estructurada sigue ocho etapas. Así las ordena Grupo CISA, en el orden en que ocurren:</p>
 
           <ol>
-            <li>Entrevista inicial: el desarrollador conoce el terreno, la situación del propietario y la expectativa de ambos.</li>
-            <li>Revisión de factibilidad: el desarrollador revisa uso de suelo, topografía, situación jurídica, mercado y número potencial de unidades.</li>
-            <li>Acuerdo de principios: si la factibilidad es positiva, se firma un documento privado que establece las bases del proyecto, con opción a desistir.</li>
-            <li>Estructuración legal: se elige la figura (fideicomiso, sociedad o asociación), se redactan los contratos, interviene el banco si hay fideicomiso.</li>
-            <li>Firma del contrato definitivo: se firma ante notario, con la presencia del abogado del propietario.</li>
-            <li>Ejecución del proyecto: el desarrollador se encarga de permisos, obra, preventa, construcción y entrega.</li>
-            <li>Liquidación: el proyecto se cierra, se reparte el resultado según las reglas, el propietario recibe sus metros y, en su caso, su participación.</li>
+            <li>Entrevista inicial: conocemos su propiedad, objetivo y contexto.</li>
+            <li>Presentación: revisamos el potencial de desarrollo de su propiedad.</li>
+            <li>Factibilidad: analizamos variables técnicas, jurídicas y financieras.</li>
+            <li>Decisión estratégica: se evalúa aportar el terreno o venderlo.</li>
+            <li>Plan de trabajo: definimos alcance, responsables y siguientes pasos.</li>
+            <li>Primera fase: trámites, permisos, planos finales y estimaciones.</li>
+            <li>Construcción: seguimiento de obra conforme al proyecto aprobado.</li>
+            <li>Entrega: cerramos la etapa y documentamos el resultado.</li>
           </ol>
 
           <h2>Las tres preguntas que debe hacer antes de firmar</h2>
@@ -695,5 +700,6 @@
 
 <link rel="stylesheet" href="/assets/agent-cisa-fab.css">
 <script src="/assets/agent-cisa-fab.js" defer></script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>

@@ -579,7 +579,6 @@
     }
     #metodo[data-variant="b"] .step h4 { color: white; }
     #metodo[data-variant="b"] .step p { color: rgba(255,255,255,0.65); }
-    #metodo[data-variant="b"] .step__time { color: var(--brand-green-light); }
 
     /* agente B · eliminado con la sección #agente (ahora FAB flotante) */
 
@@ -664,7 +663,6 @@
     }
     #metodo[data-variant="c"] .step h4 { color: var(--brand-green-dark); }
     #metodo[data-variant="c"] .step p { color: var(--ink-700); }
-    #metodo[data-variant="c"] .step__time { color: var(--brand-green); }
 
     /* === Agente C · eliminado con la sección #agente (ahora FAB flotante) === */
 
@@ -673,7 +671,7 @@
        ================================================================ */
     .revelation {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 48px;
       align-items: start;
       margin-top: 32px;
@@ -746,14 +744,6 @@
     .step__body { flex: 1; }
     .step h4 { font-size: 16px; margin-bottom: 4px; }
     .step p { font-size: 14px; color: var(--ink-500); line-height: 1.5; }
-    .step__time {
-      display: inline-block;
-      font-family: var(--font-mono);
-      font-size: 10px; font-weight: 600;
-      color: var(--brand-green);
-      text-transform: uppercase; letter-spacing: 0.10em;
-      margin-top: 8px;
-    }
 
     /* ================================================================
        BLOQUE 5 · Obra construida (4 proyectos)
@@ -1111,7 +1101,7 @@
       gap: 24px;
       margin-top: 56px;
     }
-    @media (min-width: 768px) { .closing__grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 768px) { .closing__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
     .closing__col {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.10);
@@ -1122,7 +1112,7 @@
     }
     .closing__col:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.20); }
     .closing__col h4 { color: white; font-size: 15px; margin-bottom: 20px; }
-    .closing__col .btn { width: 100%; }
+    .closing__col .btn { width: 100%; white-space: normal; }
     .closing__contact {
       display: grid;
       gap: 32px;
@@ -1334,6 +1324,7 @@
     }
 
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css" />
 </head>
 <body>
 
@@ -1345,7 +1336,7 @@
       <a href="/" class="site-header__brand" aria-label="Grupo CISA · Inicio">
         <img src="assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
-      <nav class="site-header__nav" aria-label="Navegación principal">
+      <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <a href="su-terreno.html">Modalidades</a>
         <a href="nosotros.html#metodo">Método</a>
         <a href="desarrollos.html">Obra</a>
@@ -1355,6 +1346,9 @@
       <div class="site-header__actions">
         <a href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
+      <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
@@ -1394,7 +1388,7 @@
               </div>
               <div class="hero__proof-divider" aria-hidden="true"></div>
               <div class="hero__proof-item" role="listitem">
-                <span class="hero__proof-value num">+500,000</span>
+                <span class="hero__proof-value num">15,000</span>
                 <span class="hero__proof-label">m² construidos</span>
               </div>
               <div class="hero__proof-divider" aria-hidden="true"></div>
@@ -1586,7 +1580,6 @@
             <div class="step__body">
               <h4>Entrevista inicial</h4>
               <p>Conocemos su propiedad, objetivo y contexto.</p>
-              <span class="step__time">1–2 SEMANAS</span>
             </div>
           </li>
           <li class="step">
@@ -1594,7 +1587,6 @@
             <div class="step__body">
               <h4>Presentación</h4>
               <p>Revisamos el potencial de desarrollo de su propiedad.</p>
-              <span class="step__time">2–4 SEMANAS</span>
             </div>
           </li>
           <li class="step">
@@ -1602,7 +1594,6 @@
             <div class="step__body">
               <h4>Factibilidad</h4>
               <p>Analizamos variables técnicas, jurídicas y financieras.</p>
-              <span class="step__time">4–8 SEMANAS</span>
             </div>
           </li>
           <li class="step">
@@ -1610,7 +1601,6 @@
             <div class="step__body">
               <h4>Decisión estratégica</h4>
               <p>Se evalúa aportar el terreno o venderlo.</p>
-              <span class="step__time">2–3 SEMANAS</span>
             </div>
           </li>
           <li class="step">
@@ -1618,7 +1608,6 @@
             <div class="step__body">
               <h4>Plan de trabajo</h4>
               <p>Definimos alcance, responsables y siguientes pasos.</p>
-              <span class="step__time">3–4 SEMANAS</span>
             </div>
           </li>
           <li class="step">
@@ -1626,7 +1615,6 @@
             <div class="step__body">
               <h4>Primera fase</h4>
               <p>Trámites, permisos, planos finales y estimaciones.</p>
-              <span class="step__time">3–6 MESES</span>
             </div>
           </li>
           <li class="step">
@@ -1634,7 +1622,6 @@
             <div class="step__body">
               <h4>Construcción</h4>
               <p>Seguimiento de obra conforme al proyecto aprobado.</p>
-              <span class="step__time">12–24 MESES</span>
             </div>
           </li>
           <li class="step">
@@ -1642,7 +1629,6 @@
             <div class="step__body">
               <h4>Entrega</h4>
               <p>Cerramos la etapa y documentamos el resultado.</p>
-              <span class="step__time">2–3 MESES</span>
             </div>
           </li>
         </ol>
@@ -1668,10 +1654,10 @@
               <div class="proj__meta">EDOMEX · JILOTZINGO</div>
               <h3>Residencial Fraile</h3>
               <p class="proj__loc">Jilotzingo · Estado de México</p>
-              <p class="proj__desc">Torre de departamentos en zona con gran plusvalía. Listo para entrega. Algunas unidades aún disponibles.</p>
+              <p class="proj__desc">Torre de departamentos en zona con gran plusvalía. Entregada en 2025 y vendida.</p>
               <div class="proj__stats">
                 <div>
-                  <div class="proj__stat-value">48</div>
+                  <div class="proj__stat-value">28</div>
                   <div class="proj__stat-label">Unidades</div>
                 </div>
                 <div>
@@ -1689,7 +1675,6 @@
 
           <a class="proj" href="desarrollos/itzae.html" aria-label="Ver el desarrollo Itzaé">
             <div class="proj__media" aria-hidden="true">
-              <span class="proj__chip proj__chip--info"><span class="proj__chip-dot"></span>Preventa</span>
               <img src="assets/desarrollos/itzae/hero-render.webp" alt="" loading="lazy" decoding="async" width="1568" height="672">
             </div>
             <div class="proj__body">
@@ -1716,14 +1701,14 @@
             </a>
           <a class="proj" href="desarrollos/panorama.html" aria-label="Ver el desarrollo Panorama">
             <div class="proj__media" aria-hidden="true">
-              <span class="proj__chip proj__chip--info"><span class="proj__chip-dot"></span>En proceso</span>
+              <span class="proj__chip proj__chip--info"><span class="proj__chip-dot"></span>En estudio</span>
               <img src="assets/desarrollos/panorama/hero-fachada.webp" alt="" loading="lazy" decoding="async" width="1920" height="1188">
             </div>
             <div class="proj__body">
               <div class="proj__meta">CDMX · ALGARÍN</div>
               <h3>Panorama</h3>
-              <p class="proj__loc">Enrique F Granados 60 · Colonia Algarín, Cuauhtémoc</p>
-              <p class="proj__desc">Proyecto en proceso en colonia Algarín, Cuauhtémoc. Grupo CISA está trabajando en factibilidad, permisos y proyecto arquitectónico.</p>
+              <p class="proj__loc">Enrique F. Granados 60 · Colonia Algarín, Cuauhtémoc</p>
+              <p class="proj__desc">Proyecto en estudio en colonia Algarín, Cuauhtémoc. Grupo CISA está trabajando en factibilidad, permisos y proyecto arquitectónico.</p>
               <div class="proj__stats">
                 <div>
                   <div class="proj__stat-value">—</div>
@@ -1761,10 +1746,6 @@
                   <div class="proj__stat-value">—</div>
                   <div class="proj__stat-label">Niveles</div>
                 </div>
-                <div>
-                  <div class="proj__stat-value">—</div>
-                  <div class="proj__stat-label">Entrega</div>
-                </div>
               </div>
               <span class="proj__go">Ver el desarrollo <span aria-hidden="true">→</span></span>
             </div>
@@ -1799,7 +1780,7 @@
             <summary class="faq__question">¿Cuánto tarda todo el proceso?
               <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </summary>
-            <div class="faq__answer">Un desarrollo completo se mide en años, no en meses. Cada etapa tiene un rango estimado y el avance queda documentado con fecha. Lo publicamos porque la opacidad es lo que más cuesta.</div>
+            <div class="faq__answer">Depende de cada proyecto: ubicación, permisos y tamaño de la obra. Lo que no cambia es que en todo momento sabe en cuál de las ocho etapas está su proyecto y que el avance queda documentado con fecha. Lo publicamos porque la opacidad es lo que más cuesta.</div>
           </details>
           <details class="faq__item">
             <summary class="faq__question">¿Quién pone el capital?
@@ -2016,5 +1997,6 @@
      data-ui="off": aqui solo se necesita guardado + envio; el formulario del home
      no lleva el indicador de borrador (sin cambios visuales en esta pagina). -->
 <script src="assets/form-memoria.js" defer data-ui="off"></script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>

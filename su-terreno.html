@@ -462,7 +462,7 @@
        ================================================================ */
     .revelation {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 48px;
       align-items: start;
       margin-top: 32px;
@@ -514,14 +514,9 @@
     .form__legal a { color: var(--brand-green-dark); text-decoration: underline; }
 
     /* ================================================================
-       BLOQUE 4 · 8 etapas del método (línea de tiempo)
-       ================================================================ */
-    /* ================================================================
-       ETAPAS · panel de plan de obra
-       Lectura tipo consola tecnica sobre el verde profundo de marca:
-       eje de meses, lineas guia, y una barra por etapa. Compara
-       duraciones; no es un calendario acumulado, asi que no afirma un
-       plazo total del proyecto.
+       BLOQUE 6 · 8 etapas del método
+       Panel sobre el verde profundo de marca. Solo nombre y entregable
+       de cada etapa: sin plazos (decisión del cliente, 8 oct 2026).
        ================================================================ */
     .etapas {
       margin-top: 48px;
@@ -545,45 +540,6 @@
       background-size: 48px 48px;
     }
     @media (min-width: 1024px) { .etapas { padding: 32px 32px 28px; } }
-
-    .etapas__head {
-      position: relative;
-      display: none;
-      grid-template-columns: 44px 260px 1fr;
-      gap: 20px;
-      align-items: end;
-      padding: 0 12px 10px;
-      border-bottom: 1px solid rgba(139, 195, 74, 0.18);
-    }
-    @media (min-width: 1024px) { .etapas__head { display: grid; } }
-    .etapas__col {
-      grid-column: 2;
-      font-family: var(--font-mono);
-      font-size: 10px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.14em;
-      color: rgba(139, 195, 74, 0.72);
-    }
-    .etapas__axis-scale {
-      grid-column: 3;
-      position: relative;
-      height: 18px;
-      padding-right: 108px;
-    }
-    .etapas__unit {
-      position: absolute; left: 0; bottom: 0;
-      font-family: var(--font-mono);
-      font-size: 10px; font-weight: 700;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      color: rgba(139, 195, 74, 0.72);
-    }
-    .etapas__ticks { position: relative; height: 100%; }
-    .etapas__tick {
-      position: absolute; bottom: 0; transform: translateX(-50%);
-      font-family: var(--font-mono);
-      font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
-      color: rgba(255,255,255,.42);
-    }
-    .etapas__tick:last-child { transform: translateX(-100%); }
 
     .etapas__list { position: relative; list-style: none; margin: 0; padding: 0; }
 
@@ -613,16 +569,17 @@
       transform: translateY(-2px) scale(1.05);
     }
     @media (min-width: 1024px) {
-      .etapa {
-        grid-template-columns: 44px 260px 1fr;
-        align-items: center;
-        gap: 20px;
-        padding: 13px 12px;
+      .etapas__list {
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        grid-auto-flow: column;
+        column-gap: 40px;
       }
+      .etapa:nth-child(4) { border-bottom: 0; }
+      .etapa { gap: 20px; padding: 16px 12px; }
     }
 
     .etapa__num {
-      grid-row: span 2;
       width: 40px; height: 40px;
       display: grid; place-items: center;
       border-radius: var(--radius-sm, 8px);
@@ -633,7 +590,6 @@
       font-size: 12px; font-weight: 700;
       transition: background 260ms, border-color 260ms, color 260ms, box-shadow 260ms;
     }
-    @media (min-width: 1024px) { .etapa__num { grid-row: auto; } }
     .etapa:hover .etapa__num {
       background: var(--brand-green-light);
       border-color: var(--brand-green-light);
@@ -650,70 +606,8 @@
       color: rgba(255,255,255,.52);
     }
 
-    .etapa__bar {
-      grid-column: 2 / -1;
-      display: grid;
-      grid-template-columns: 1fr 96px;
-      gap: 12px;
-      align-items: center;
-      margin-top: 12px;
-    }
-    @media (min-width: 1024px) { .etapa__bar { grid-column: auto; margin-top: 0; } }
-    .etapa__track {
-      position: relative;
-      width: 100%; height: 14px;
-      background-image: linear-gradient(to right, rgba(255,255,255,.10) 0 1px, transparent 1px);
-      background-size: 25% 100%;
-      background-repeat: repeat-x;
-    }
-    /* Tramo hasta el maximo del rango */
-    .etapa__range {
-      position: absolute; inset: 0 auto 0 0;
-      background: rgba(139, 195, 74, 0.16);
-      border: 1px solid rgba(139, 195, 74, 0.32);
-      border-radius: var(--radius-pill);
-      transition: background 260ms, border-color 260ms;
-    }
-    /* Tramo de duracion minima */
-    .etapa__min {
-      position: absolute; inset: 2px auto 2px 0;
-      background: linear-gradient(90deg, var(--brand-green), var(--brand-green-light));
-      border-radius: var(--radius-pill);
-      box-shadow: 0 0 12px rgba(139, 195, 74, 0.32);
-      transition: box-shadow 260ms;
-    }
-    .etapa:hover .etapa__range {
-      background: rgba(139, 195, 74, 0.24);
-      border-color: rgba(139, 195, 74, 0.55);
-    }
-    .etapa:hover .etapa__min { box-shadow: 0 0 18px rgba(139, 195, 74, 0.55); }
-
-    .etapa__time {
-      font-family: var(--font-mono);
-      font-size: 10px; font-weight: 700;
-      color: var(--brand-green-light);
-      text-transform: uppercase; letter-spacing: 0.08em;
-      white-space: nowrap;
-      text-align: right;
-    }
-
-    .etapas__foot {
-      position: relative;
-      margin: 18px 0 0;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      display: flex; flex-wrap: wrap; gap: 8px 22px;
-      font-family: var(--font-mono);
-      font-size: 10px; font-weight: 600;
-      text-transform: uppercase; letter-spacing: 0.08em;
-      color: rgba(255,255,255,.42);
-    }
-    .etapas__key { display: inline-flex; align-items: center; gap: 7px; }
-    .etapas__swatch { width: 20px; height: 8px; border-radius: var(--radius-pill); }
-    .etapas__swatch--min { background: linear-gradient(90deg, var(--brand-green), var(--brand-green-light)); }
-    .etapas__swatch--max { background: rgba(139, 195, 74, 0.20); border: 1px solid rgba(139, 195, 74, 0.36); }
     @media (prefers-reduced-motion: reduce) {
-      .etapa, .etapa__num, .etapa__range, .etapa__min { transition: none; }
+      .etapa, .etapa__num, .etapa__icon { transition: none; }
     }
 
 
@@ -1239,7 +1133,7 @@
       gap: 24px;
       margin-top: 56px;
     }
-    @media (min-width: 768px) { .closing__grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 768px) { .closing__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
     .closing__col {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.10);
@@ -1250,7 +1144,7 @@
     }
     .closing__col:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.20); }
     .closing__col h4 { color: white; font-size: 15px; margin-bottom: 20px; }
-    .closing__col .btn { width: 100%; }
+    .closing__col .btn { width: 100%; white-space: normal; }
     .closing__contact {
       display: grid;
       gap: 32px;
@@ -1324,6 +1218,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css" />
 </head>
 <body>
 
@@ -1335,7 +1230,7 @@
       <a href="/" class="site-header__brand" aria-label="Grupo CISA · Inicio">
         <img src="assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
-      <nav class="site-header__nav" aria-label="Navegación principal">
+      <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <a href="su-terreno.html">Modalidades</a>
         <a href="nosotros.html#metodo">Método</a>
         <a href="desarrollos.html">Obra</a>
@@ -1345,6 +1240,9 @@
       <div class="site-header__actions">
         <a href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
+      <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
@@ -1629,30 +1527,53 @@
     </section>
 
     <!-- ============================================================
-         BLOQUE 6 · LAS 7 ETAPAS CON TIEMPOS
+         BLOQUE 6 · LAS 8 ETAPAS DEL MÉTODO
          ============================================================ -->
     <section class="section" id="metodo" aria-labelledby="etapas-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="etapas-title">Siete etapas. Le entregamos el rango de tiempo en la primera entrevista.</h2>
-          <p>Publicamos cuánto dura cada etapa porque la opacidad es lo que más cuesta. Los rangos son indicativos y se afinan proyecto por proyecto.</p>
+          <h2 id="etapas-title">Ocho etapas. En todo momento sabe en cuál está su proyecto.</h2>
+          <p>Publicamos el proceso completo porque la opacidad es lo que más cuesta. Se lo explicamos paso por paso desde la primera entrevista.</p>
         </header>
         <div class="etapas">
-          <div class="etapas__head" aria-hidden="true">
-            <span class="etapas__col">Etapa</span>
-            <div class="etapas__axis-scale">
-              <span class="etapas__unit">Meses</span>
-              <div class="etapas__ticks">
-                  <span class="etapas__tick" style="left:25.00%">6</span>
-                  <span class="etapas__tick" style="left:50.00%">12</span>
-                  <span class="etapas__tick" style="left:75.00%">18</span>
-                  <span class="etapas__tick" style="left:100.00%">24</span>
-              </div>
-            </div>
-          </div>
           <ol class="etapas__list" role="list">
           <li class="etapa">
             <span class="etapa__num" aria-hidden="true">01</span>
+            <svg class="etapa__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M8 10 H40 V32 H22 L14 40 V32 H8 Z"/>
+              <path d="M16 19 H32 M16 25 H26"/>
+            </svg>
+            <div class="etapa__name">
+              <h4>Entrevista inicial</h4>
+              <p>Conocemos su propiedad, objetivo y contexto.</p>
+            </div>
+          </li>
+          <li class="etapa">
+            <span class="etapa__num" aria-hidden="true">02</span>
+            <svg class="etapa__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6" y="8" width="36" height="24" rx="2"/>
+              <path d="M24 32 V40 M16 42 L24 36 L32 42"/>
+              <path d="M13 26 L20 19 L26 23 L35 14"/>
+            </svg>
+            <div class="etapa__name">
+              <h4>Presentación</h4>
+              <p>Revisamos el potencial de desarrollo de su propiedad.</p>
+            </div>
+          </li>
+          <li class="etapa">
+            <span class="etapa__num" aria-hidden="true">03</span>
+            <svg class="etapa__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M24 6 C16 6 10 12 10 20 C10 28 16 34 24 42 C32 34 38 28 38 20 C38 12 32 6 24 6 Z"/>
+              <circle cx="24" cy="20" r="5"/>
+              <path d="M20 28 C20 26 22 24 24 24 C26 24 28 26 28 28"/>
+            </svg>
+            <div class="etapa__name">
+              <h4>Factibilidad</h4>
+              <p>Analizamos variables técnicas, jurídicas y financieras.</p>
+            </div>
+          </li>
+          <li class="etapa">
+            <span class="etapa__num" aria-hidden="true">04</span>
             <svg class="etapa__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M10 8 H30 L38 16 V40 H10 Z"/>
               <path d="M30 8 V16 H38"/>
@@ -1661,74 +1582,8 @@
               <path d="M17 42 H34"/>
             </svg>
             <div class="etapa__name">
-              <h4>Aportación del terreno</h4>
-              <p>Se define qué aporta cada parte y bajo qué figura.</p>
-            </div>
-            <div class="etapa__bar">
-              <div class="etapa__track" role="img" aria-label="Duración de la etapa: 2–4 semanas">
-                <span class="etapa__range" style="width:4.17%"></span>
-                <span class="etapa__min" style="width:2.08%"></span>
-              </div>
-              <span class="etapa__time">2–4 semanas</span>
-            </div>
-          </li>
-          <li class="etapa">
-            <span class="etapa__num" aria-hidden="true">02</span>
-            <svg class="etapa__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M24 6 C16 6 10 12 10 20 C10 28 16 34 24 42 C32 34 38 28 38 20 C38 12 32 6 24 6 Z"/>
-              <circle cx="24" cy="20" r="5"/>
-              <path d="M20 28 C20 26 22 24 24 24 C26 24 28 26 28 28"/>
-            </svg>
-            <div class="etapa__name">
-              <h4>Conceptualización y factibilidad</h4>
-              <p>Qué se puede construir ahí y si tiene sentido económico.</p>
-            </div>
-            <div class="etapa__bar">
-              <div class="etapa__track" role="img" aria-label="Duración de la etapa: 4–8 semanas">
-                <span class="etapa__range" style="width:8.33%"></span>
-                <span class="etapa__min" style="width:4.17%"></span>
-              </div>
-              <span class="etapa__time">4–8 semanas</span>
-            </div>
-          </li>
-          <li class="etapa">
-            <span class="etapa__num" aria-hidden="true">03</span>
-            <svg class="etapa__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M6 40 H42"/>
-              <path d="M8 40 V20 L24 8 L40 20 V40"/>
-              <rect x="14" y="24" width="6" height="16"/>
-              <rect x="28" y="24" width="6" height="16"/>
-              <rect x="22" y="32" width="4" height="8"/>
-              <path d="M8 16 H40" stroke-dasharray="2 2"/>
-            </svg>
-            <div class="etapa__name">
-              <h4>Proyecto arquitectónico</h4>
-              <p>El desarrollo toma forma y superficie vendible.</p>
-            </div>
-            <div class="etapa__bar">
-              <div class="etapa__track" role="img" aria-label="Duración de la etapa: 2–4 meses">
-                <span class="etapa__range" style="width:16.67%"></span>
-                <span class="etapa__min" style="width:8.33%"></span>
-              </div>
-              <span class="etapa__time">2–4 meses</span>
-            </div>
-          </li>
-          <li class="etapa">
-            <span class="etapa__num" aria-hidden="true">04</span>
-            <svg class="etapa__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M24 6 L40 14 V26 C40 34 32 40 24 42 C16 40 8 34 8 26 V14 Z"/>
-              <path d="M18 24 L22 28 L30 20"/>
-            </svg>
-            <div class="etapa__name">
-              <h4>Esquema legal</h4>
-              <p>Contratos, permisos y licencias.</p>
-            </div>
-            <div class="etapa__bar">
-              <div class="etapa__track" role="img" aria-label="Duración de la etapa: 3–6 meses">
-                <span class="etapa__range" style="width:25.00%"></span>
-                <span class="etapa__min" style="width:12.50%"></span>
-              </div>
-              <span class="etapa__time">3–6 meses</span>
+              <h4>Decisión estratégica</h4>
+              <p>Se evalúa aportar el terreno o venderlo.</p>
             </div>
           </li>
           <li class="etapa">
@@ -1740,19 +1595,27 @@
               <circle cx="24" cy="24" r="3"/>
             </svg>
             <div class="etapa__name">
-              <h4>Esquema financiero</h4>
-              <p>Cómo se financia la obra y cómo se reparte el resultado.</p>
-            </div>
-            <div class="etapa__bar">
-              <div class="etapa__track" role="img" aria-label="Duración de la etapa: 2–3 meses">
-                <span class="etapa__range" style="width:12.50%"></span>
-                <span class="etapa__min" style="width:8.33%"></span>
-              </div>
-              <span class="etapa__time">2–3 meses</span>
+              <h4>Plan de trabajo</h4>
+              <p>Definimos alcance, responsables y siguientes pasos.</p>
             </div>
           </li>
           <li class="etapa">
             <span class="etapa__num" aria-hidden="true">06</span>
+            <svg class="etapa__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 40 H42"/>
+              <path d="M8 40 V20 L24 8 L40 20 V40"/>
+              <rect x="14" y="24" width="6" height="16"/>
+              <rect x="28" y="24" width="6" height="16"/>
+              <rect x="22" y="32" width="4" height="8"/>
+              <path d="M8 16 H40" stroke-dasharray="2 2"/>
+            </svg>
+            <div class="etapa__name">
+              <h4>Primera fase</h4>
+              <p>Trámites, permisos, planos finales y estimaciones.</p>
+            </div>
+          </li>
+          <li class="etapa">
+            <span class="etapa__num" aria-hidden="true">07</span>
             <svg class="etapa__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M24 4 V44"/>
               <path d="M18 10 H30 M16 16 H32 M18 22 H30 M16 28 H32 M18 34 H30 M16 40 H32"/>
@@ -1761,18 +1624,11 @@
             </svg>
             <div class="etapa__name">
               <h4>Construcción</h4>
-              <p>Obra con avance documentado y fechado.</p>
-            </div>
-            <div class="etapa__bar">
-              <div class="etapa__track" role="img" aria-label="Duración de la etapa: 12–24 meses">
-                <span class="etapa__range" style="width:100.00%"></span>
-                <span class="etapa__min" style="width:50.00%"></span>
-              </div>
-              <span class="etapa__time">12–24 meses</span>
+              <p>Seguimiento de obra conforme al proyecto aprobado.</p>
             </div>
           </li>
           <li class="etapa">
-            <span class="etapa__num" aria-hidden="true">07</span>
+            <span class="etapa__num" aria-hidden="true">08</span>
             <svg class="etapa__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M14 24 L24 14 L40 14 L40 34 L24 34 L14 24 Z"/>
               <path d="M14 24 H8 V36 H14"/>
@@ -1780,23 +1636,11 @@
               <path d="M28 24 V27"/>
             </svg>
             <div class="etapa__name">
-              <h4>Preventa y entrega</h4>
-              <p>Comercialización y escrituración.</p>
-            </div>
-            <div class="etapa__bar">
-              <div class="etapa__track" role="img" aria-label="Duración de la etapa: 3–6 meses">
-                <span class="etapa__range" style="width:25.00%"></span>
-                <span class="etapa__min" style="width:12.50%"></span>
-              </div>
-              <span class="etapa__time">3–6 meses</span>
+              <h4>Entrega</h4>
+              <p>Cerramos la etapa y documentamos el resultado.</p>
             </div>
           </li>
           </ol>
-          <p class="etapas__foot">
-            <span class="etapas__key"><span class="etapas__swatch etapas__swatch--min" aria-hidden="true"></span> Duración mínima</span>
-            <span class="etapas__key"><span class="etapas__swatch etapas__swatch--max" aria-hidden="true"></span> Hasta el máximo del rango</span>
-            <span class="etapas__key">Escala: meses · las etapas no son consecutivas</span>
-          </p>
         </div>
       </div>
     </section>
@@ -1814,7 +1658,7 @@
           <article class="aplican aplican--si">
             <h3>Sí trabajamos con predios que</h3>
             <ul>
-              <li>Estén en zonas donde Grupo CISA opera (CDMX, EdoMex, QRO, QROO, GDL, MID, CUN).</li>
+              <li>Estén en zonas donde Grupo CISA opera (CDMX, EdoMex, QRO, QROO).</li>
               <li>Tengan al menos la superficie mínima que el proyecto requiere.</li>
               <li>Cuenten con uso de suelo que permita usos habitacionales o mixtos.</li>
               <li>Tengan situación jurídica clara o regularizable.</li>
@@ -1940,7 +1784,7 @@
             <summary class="faq__question">¿Cuánto tiempo tengo que esperar para recibir algo?
               <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </summary>
-            <div class="faq__answer">Un desarrollo se mide en años. Desde la factibilidad le damos el calendario estimado por etapa y el avance queda documentado con fecha.</div>
+            <div class="faq__answer">Depende de cada proyecto: ubicación, permisos y tamaño de la obra. En todo momento sabe en cuál de las ocho etapas está su proyecto y el avance queda documentado con fecha.</div>
           </details>
         </div>
       </div>
@@ -2121,5 +1965,6 @@
 
 <link rel="stylesheet" href="/assets/agent-cisa-fab.css">
 <script src="/assets/agent-cisa-fab.js" defer></script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>

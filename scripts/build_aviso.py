@@ -24,14 +24,14 @@ DEK = ("Cómo Grupo CISA recaba, usa y protege los datos personales que usted "
 # Datos verificados contra el propio sitio (contacto.html).
 # Los que faltan van con la convencion [DATO FALTANTE: ...] que ya usa el proyecto.
 RAZON_SOCIAL = "[DATO FALTANTE: denominación o razón social completa de Grupo CISA]"
-DOMICILIO = ("[DATO FALTANTE: calle y número] Ciudad Satélite, Naucalpan, "
-             "Estado de México, C.P. 53100")
+DOMICILIO = ("Circuito Circunvalación Poniente No. 16, Local V-W, Ciudad Satélite, "
+             "Naucalpan, Estado de México, C.P. 53100")
 CORREO = "contacto@grupocisa.mx"
-TELEFONO = "55 5361 3771"
+TELEFONO = "55 5361 3771, ext. 251 o 237"
 WHATSAPP = "55 1796 4940"
 
 CUERPO = """
-<p><em>Última actualización: 7 de septiembre de 2026.</em></p>
+<p><em>Última actualización: 8 de octubre de 2026.</em></p>
 
 <p>Este aviso describe el tratamiento que Grupo CISA da a los datos personales
 recabados a través de este sitio web, en cumplimiento de la Ley Federal de
@@ -136,7 +136,7 @@ Información y Protección de Datos Personales (INAI),
 <h2>10. Contacto</h2>
 <p>Grupo CISA<br />
 {domicilio}<br />
-Teléfono: {telefono}<br />
+Teléfono: {whatsapp} y {telefono}<br />
 WhatsApp: {whatsapp}<br />
 Correo: <a href="mailto:{correo}">{correo}</a></p>
 """.format(

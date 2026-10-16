@@ -446,6 +446,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css" />
 </head>
 <body>
 
@@ -456,7 +457,7 @@
       <a href="../index.html" class="site-header__brand" aria-label="Grupo CISA · Inicio">
         <img src="../assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
-      <nav class="site-header__nav" aria-label="Navegación principal">
+      <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <a href="../su-terreno.html">Modalidades</a>
         <a href="../nosotros.html#metodo">Método</a>
         <a href="../desarrollos.html">Obra</a>
@@ -465,6 +466,9 @@
       <div class="site-header__actions">
         <a href="../su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
+      <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
@@ -602,5 +606,6 @@ __ARTICLE_BODY__
     </svg>
   </a>
 
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>

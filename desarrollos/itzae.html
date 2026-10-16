@@ -93,8 +93,9 @@
     .dev-hero__image{width:100%;aspect-ratio:16/9;background:var(--bg-dark);position:relative;overflow:hidden;}
     .dev-hero__image img{width:100%;height:100%;object-fit:cover;display:block;}
     .dev-hero__image-tag{position:absolute;top:24px;left:24px;display:flex;gap:8px;flex-wrap:wrap;}
+    .dev-hero__image-tag .dev-card__chip{background:rgba(255,255,255,0.95);}
     @media (max-width:767px){.dev-hero__image-tag{top:88px;left:16px;}}
-    .dev-hero__body{padding:48px 0 32px;}
+    .dev-hero__body{padding-top:48px;padding-bottom:32px;}
     .dev-hero__back{display:inline-flex;align-items:center;gap:6px;font:600 14px/1 var(--font-mono);color:var(--ink-500);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:24px;}
     .dev-hero__back:hover{color:var(--brand-green-dark);}
     .dev-hero__top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px;}
@@ -379,13 +380,14 @@
 
     @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important;}}
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css" />
 </head>
 <body>
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
   <header class="site-header" role="banner">
     <div class="container site-header__inner">
       <a href="../index.html" class="site-header__brand" aria-label="Grupo CISA · Inicio"><img src="../assets/logo-grupo-cisa.svg" alt="Grupo CISA" /></a>
-      <nav class="site-header__nav" aria-label="Navegación principal">
+      <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <a href="../su-terreno.html">Modalidades</a>
         <a href="../desarrollos.html" aria-current="page">Obra</a>
         <a href="../contenido.html">Contenido</a>
@@ -395,6 +397,9 @@
       <div class="site-header__actions">
         <a href="../su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
+      <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
@@ -404,24 +409,20 @@
       <div class="dev-hero__image">
         <img src="../assets/desarrollos/itzae/hero-render.webp" alt="Fachada del desarrollo Itzae en La Veleta, Tulum. Render arquitectónico." />
         <div class="dev-hero__image-tag">
-          <span class="dev-card__chip dev-card__chip--info">
-            <span class="dev-card__dot"></span> En preventa
-          </span>
           <span class="dev-card__chip" style="background:rgba(255,255,255,0.95);color:var(--ink-700);">Inversión</span>
         </div>
       </div>
       <div class="container dev-hero__body">
         <a href="../desarrollos.html" class="dev-hero__back">← Obra</a>
         <div class="dev-hero__top">
-          <span class="dev-card__chip" style="background:var(--brand-green-tint);color:var(--brand-green-dark);">La Veleta · Tulum</span>
+          <span class="dev-card__chip" style="background:var(--brand-green-tint);color:var(--brand-green-dark);">La Veleta · Tulum, Quintana Roo</span>
           <span class="dev-card__chip" style="background:var(--ink-100);color:var(--ink-700);">QROO-001</span>
         </div>
         <h1 id="dev-title" class="dev-hero__title">Itzae</h1>
         <p class="dev-hero__sub">Dieciséis departamentos verticales en La Veleta, Tulum. Cinco tipologías, alberca y áreas verdes para un modelo de rentas vacacionales.</p>
         <div class="dev-hero__meta">
-          <span>QROO · TUL · RNT</span>
-          <span>16 unidades</span>
-          <span>Actualizado 2026-Q3</span>
+          <span>QROO · Tulum · Rentas vacacionales</span>
+          <span>16 departamentos</span>
         </div>
         <div class="dev-state-banner dev-state-banner--info">
           <strong>Estado actual:</strong> Preventa abierta. Los precios por unidad se entregan en una llamada con un ejecutivo, junto con el calendario de entrega y la mecánica de pago. Toda la información financiera está sujeta al contrato firmado.
@@ -859,5 +860,6 @@
   show(0);
 })();
 </script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>

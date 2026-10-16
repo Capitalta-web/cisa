@@ -10,9 +10,9 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Panorama · Colonia Algarín · Grupo CISA</title>
-  <meta name="description" content="Panorama: proyecto de Grupo CISA en Enrique F Granados 60, colonia Algarín, Ciudad de México. En proceso. Grupo CISA evalúa factibilidad, cabida y producto antes de publicar preventa." />
+  <meta name="description" content="Panorama: proyecto de Grupo CISA en Enrique F. Granados 60, colonia Algarín, Cuauhtémoc, Ciudad de México. En estudio. Grupo CISA evalúa factibilidad, cabida y producto antes de publicar preventa." />
   <meta property="og:title" content="Panorama · Colonia Algarín · Grupo CISA" />
-  <meta property="og:description" content="Proyecto de Grupo CISA en Enrique F Granados 60, colonia Algarín, Cuauhtémoc. En proceso." />
+  <meta property="og:description" content="Proyecto de Grupo CISA en Enrique F. Granados 60, colonia Algarín, Cuauhtémoc, Ciudad de México. En estudio." />
   <meta name="theme-color" content="#1F4D2A" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F4D2A'/%3E%3Cpath d='M10 16 L22 16' stroke='%238BC34A' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M16 10 L16 22' stroke='%238BC34A' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,8 +93,9 @@
     .dev-hero__image{width:100%;aspect-ratio:16/9;background:var(--bg-dark);position:relative;overflow:hidden;}
     .dev-hero__image img{width:100%;height:100%;object-fit:cover;display:block;}
     .dev-hero__image-tag{position:absolute;top:24px;left:24px;display:flex;gap:8px;flex-wrap:wrap;}
+    .dev-hero__image-tag .dev-card__chip{background:rgba(255,255,255,0.95);}
     @media (max-width:767px){.dev-hero__image-tag{top:88px;left:16px;}}
-    .dev-hero__body{padding:48px 0 32px;}
+    .dev-hero__body{padding-top:48px;padding-bottom:32px;}
     .dev-hero__back{display:inline-flex;align-items:center;gap:6px;font:600 14px/1 var(--font-mono);color:var(--ink-500);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:24px;}
     .dev-hero__back:hover{color:var(--brand-green-dark);}
     .dev-hero__top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px;}
@@ -128,6 +129,7 @@
     .dev-ubicacion h2{color:#fff;}
     .dev-ubicacion__grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:32px;position:relative;}
     @media (max-width:768px){.dev-ubicacion__grid{grid-template-columns:1fr;}}
+    .dev-ubicacion__grid--single{grid-template-columns:1fr;max-width:760px;}
     .dev-ubicacion__list{list-style:none;padding:0;margin:0;}
     .dev-ubicacion__list li{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.15);display:flex;gap:10px;font-size:15px;color:rgba(255,255,255,0.85);}
     .dev-ubicacion__list li::before{content:'→';color:var(--brand-green-light);font-weight:700;}
@@ -194,13 +196,14 @@
 
     @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important;}}
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css" />
 </head>
 <body>
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
   <header class="site-header" role="banner">
     <div class="container site-header__inner">
       <a href="../index.html" class="site-header__brand" aria-label="Grupo CISA · Inicio"><img src="../assets/logo-grupo-cisa.svg" alt="Grupo CISA" /></a>
-      <nav class="site-header__nav" aria-label="Navegación principal">
+      <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <a href="../su-terreno.html">Modalidades</a>
         <a href="../desarrollos.html" aria-current="page">Obra</a>
         <a href="../contenido.html">Contenido</a>
@@ -210,6 +213,9 @@
       <div class="site-header__actions">
         <a href="../su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
+      <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
@@ -217,7 +223,7 @@
 
     <section class="dev-hero" aria-labelledby="dev-title">
       <div class="dev-hero__image">
-        <img src="../assets/desarrollos/panorama/hero-fachada.webp" alt="Render de fachada del desarrollo Panorama en Enrique F Granados 60, colonia Algarín, Cuauhtémoc." />
+        <img src="../assets/desarrollos/panorama/hero-fachada.webp" alt="Render de fachada del desarrollo Panorama en Enrique F. Granados 60, colonia Algarín, Cuauhtémoc, Ciudad de México." />
         <div class="dev-hero__image-tag">
           <span class="dev-card__chip dev-card__chip--info">
             <span class="dev-card__dot"></span> En estudio
@@ -228,18 +234,17 @@
       <div class="container dev-hero__body">
         <a href="../desarrollos.html" class="dev-hero__back">← Obra</a>
         <div class="dev-hero__top">
-          <span class="dev-card__chip" style="background:var(--brand-green-tint);color:var(--brand-green-dark);">Panorama · Colonia Algarín</span>
+          <span class="dev-card__chip" style="background:var(--brand-green-tint);color:var(--brand-green-dark);">Colonia Algarín · Cuauhtémoc, CDMX</span>
           <span class="dev-card__chip" style="background:var(--ink-100);color:var(--ink-700);">CDMX-004</span>
         </div>
         <h1 id="dev-title" class="dev-hero__title">Panorama</h1>
-        <p class="dev-hero__sub">Un predio en Enrique F Granados 60, colonia Algarín, Cuauhtémoc, Ciudad de México. Grupo CISA está estudiando el desarrollo.</p>
+        <p class="dev-hero__sub">Un predio en Enrique F. Granados 60, colonia Algarín, Cuauhtémoc, Ciudad de México. Grupo CISA está estudiando el desarrollo.</p>
         <div class="dev-hero__meta">
-          <span>CDMX · ALG · MIX</span>
-          <span>En proceso</span>
-          <span>Actualizado 2026-Q3</span>
+          <span>CDMX · Algarín · Mixto</span>
+          <span>En estudio</span>
         </div>
         <div class="dev-state-banner dev-state-banner--info">
-          <strong>Estado actual:</strong> En proceso. Grupo CISA está trabajando en la factibilidad, permisos y proyecto arquitectónico del desarrollo. La información pública se actualiza cuando hay algo verificable que mostrar.
+          <strong>Estado actual:</strong> En estudio. Grupo CISA está trabajando en la factibilidad, permisos y proyecto arquitectónico del desarrollo. La información pública se actualiza cuando hay algo verificable que mostrar.
         </div>
       </div>
     </section>
@@ -248,7 +253,7 @@
     <section class="dev-summary" aria-labelledby="resumen-title">
       <div class="container">
         <h2 id="resumen-title">Sobre el predio</h2>
-        <p class="dev-summary__lede" style="margin-top:20px;">Panorama es un proyecto de Grupo CISA en Enrique F Granados 60, colonia Algarín, Cuauhtémoc. Está en proceso de evaluación. Esta página mostrará los renders y datos del proyecto cuando se confirme el inicio del desarrollo.</p>
+        <p class="dev-summary__lede" style="margin-top:20px;">Panorama es un proyecto de Grupo CISA en Enrique F. Granados 60, colonia Algarín, Cuauhtémoc, Ciudad de México. Está en estudio. Los datos del proyecto se publican en esta página conforme se confirman.</p>
       </div>
     </section>
 
@@ -257,11 +262,9 @@
       <div class="container">
         <h2 id="ficha-title">Ficha técnica</h2>
         <dl class="dev-ficha__grid">
-          <div class="dev-ficha__cell"><dt>Producto</dt><dd>En evaluación</dd></div>
-          <div class="dev-ficha__cell"><dt>Tipologías</dt><dd>[Por confirmar]</dd></div>
-          <div class="dev-ficha__cell"><dt>Ubicación</dt><dd>Avenida Panorama · Colonia Algarín</dd></div>
+          <div class="dev-ficha__cell"><dt>Producto</dt><dd>En estudio</dd></div>
+          <div class="dev-ficha__cell"><dt>Ubicación</dt><dd>Enrique F. Granados 60 · Colonia Algarín, Cuauhtémoc, Ciudad de México</dd></div>
           <div class="dev-ficha__cell"><dt>Modelo</dt><dd>Uso mixto (vivienda + comercio PB)</dd></div>
-          <div class="dev-ficha__cell"><dt>Amenidades</dt><dd>[Por confirmar]</dd></div>
           <div class="dev-ficha__cell dev-ficha__cell--pending"><dt>Entrega estimada</dt><dd>Aún no hay fecha. Se publica cuando el proyecto arquitectónico esté aprobado por la autoridad.</dd></div>
         </dl>
       </div>
@@ -274,17 +277,14 @@
         <p class="section-header">No hay tipologías publicadas todavía. La hipótesis inicial es vivienda con comercio en planta baja, pero la mezcla final se define al cierre de la factibilidad y con el visto bueno del uso de suelo.</p>
         <div class="dev-tipologias__grid">
           <article class="dev-tipologia">
-            <span class="dev-tipologia__badge">[POR DEFINIR]</span>
             <h4>Mezcla de unidades</h4>
             <p class="dev-tipologia__pending">Departamentos de 1, 2 y 3 recámaras son la hipótesis inicial. Se confirma al cierre del proyecto arquitectónico.</p>
           </article>
           <article class="dev-tipologia">
-            <span class="dev-tipologia__badge">[POR DEFINIR]</span>
-            <h4>Metrajes por confirmar</h4>
+            <h4>Metrajes</h4>
             <p class="dev-tipologia__pending">Los rangos de superficie se calculan con la cabida aprobada por la autoridad y el programa del arquitecto.</p>
           </article>
           <article class="dev-tipologia">
-            <span class="dev-tipologia__badge">[POR DEFINIR]</span>
             <h4>Locales comerciales</h4>
             <p class="dev-tipologia__pending">La cantidad de locales en planta baja se define con la cabida y la estrategia comercial del equipo de CISA.</p>
           </article>
@@ -311,7 +311,7 @@
     <section class="dev-ubicacion" aria-labelledby="ubic-title">
       <div class="container">
         <h2 id="ubic-title">Ubicación y contexto</h2>
-        <div class="dev-ubicacion__grid">
+        <div class="dev-ubicacion__grid dev-ubicacion__grid--single">
           <div>
             <p class="dev-ubicacion__intro">Sobre la colonia Algarín, Cuauhtémoc. Lo que conviene saber del contexto antes de invertir:</p>
             <ul class="dev-ubicacion__list">
@@ -320,12 +320,7 @@
               <li>Zona con comercio consolidado a la redonda</li>
               <li>Mezcla de uso habitacional, comercial y de servicios</li>
               <li>Acceso rápido al Aeropuerto Internacional de la CDMX</li>
-              <li>Dirección exacta por confirmar al cierre del estudio</li>
             </ul>
-          </div>
-          <div class="dev-ubicacion__map">
-            [DATO FALTANTE: mapa embebido]<br>
-            Coordenadas y/o iframe de Google Maps
           </div>
         </div>
       </div>
@@ -335,7 +330,7 @@
     <section class="dev-galeria" aria-labelledby="galeria-title">
       <div class="container">
         <h2 id="galeria-title">El proyecto en imágenes</h2>
-        <p class="section-header" style="color:var(--ink-700);font-size:18px;margin-top:12px;">Renders del partido arquitectónico en evaluación. Tres fachadas y tres vistas interiores de un departamento tipo. El mapa, la cabida y los planos ejecutivos se publican al cierre del estudio de factibilidad.</p>
+        <p class="section-header" style="color:var(--ink-700);font-size:18px;margin-top:12px;">Renders del partido arquitectónico en estudio. Tres fachadas y tres vistas interiores de un departamento tipo. El mapa, la cabida y los planos ejecutivos se publican al cierre del estudio de factibilidad.</p>
         <div class="dev-galeria__grid">
           <figure class="dev-galeria__item">
             <img src="../assets/desarrollos/panorama/hero-fachada.webp" alt="Fachada principal del desarrollo Panorama, vista frontal con transeúntes." loading="lazy" decoding="async" />
@@ -369,15 +364,16 @@
     <section class="dev-proceso" aria-labelledby="proceso-title">
       <div class="container">
         <h2 id="proceso-title">Etapas para que esto deje de ser un terreno y sea un desarrollo</h2>
-        <p class="section-header" style="color:rgba(255,255,255,0.78);font-size:18px;margin-top:12px;">El proceso de Grupo CISA aplicado a un predio en evaluación. Cada paso tiene un entregable verificable y una duración estimada.</p>
+        <p class="section-header" style="color:rgba(255,255,255,0.78);font-size:18px;margin-top:12px;">El proceso de Grupo CISA aplicado a un predio en estudio. Cada paso tiene un entregable verificable.</p>
         <ol class="dev-proceso__steps">
-          <li><div><strong>Identificación del predio</strong>Terreno localizado por el equipo de originación, con base en conectividad, aforo y perfil de zona.</div></li>
-          <li><div><strong>Estudio de mercado</strong>Análisis de oferta y demanda de vivienda y comercio en la colonia Algarín.</div></li>
-          <li><div><strong>Estudio de factibilidad</strong>Análisis de uso de suelo, cabida, costos estimados y producto posible.</div></li>
-          <li><div><strong>Verificación jurídica</strong>Dictamen de propiedad, gravámenes, situación registral y libertad de venta.</div></li>
-          <li><div><strong>Decisión de invertir</strong>Si las validaciones cierran, el comité de CISA aprueba iniciar el proyecto.</div></li>
-          <li><div><strong>Proyecto arquitectónico</strong>Se desarrolla el proyecto y se somete a la autoridad para licencias.</div></li>
-          <li><div><strong>Esquema financiero y preventa</strong>Se publica la preventa con precios, tipologías y calendario.</div></li>
+          <li><div><strong>Entrevista inicial</strong>Conocemos su propiedad, objetivo y contexto.</div></li>
+          <li><div><strong>Presentación</strong>Revisamos el potencial de desarrollo de su propiedad.</div></li>
+          <li><div><strong>Factibilidad</strong>Analizamos variables técnicas, jurídicas y financieras.</div></li>
+          <li><div><strong>Decisión estratégica</strong>Se evalúa aportar el terreno o venderlo.</div></li>
+          <li><div><strong>Plan de trabajo</strong>Definimos alcance, responsables y siguientes pasos.</div></li>
+          <li><div><strong>Primera fase</strong>Trámites, permisos, planos finales y estimaciones.</div></li>
+          <li><div><strong>Construcción</strong>Seguimiento de obra conforme al proyecto aprobado.</div></li>
+          <li><div><strong>Entrega</strong>Cerramos la etapa y documentamos el resultado.</div></li>
         </ol>
       </div>
     </section>
@@ -388,7 +384,7 @@
         <h2 id="avance-title">Avance del proyecto</h2>
         <div class="dev-avance__bar"><div class="dev-avance__bar-fill" style="width:10%;"></div></div>
         <p class="dev-avance__caption">10% · Etapa de estudio de mercado y factibilidad</p>
-        <p style="margin-top:24px;color:var(--ink-500);font-size:14px;max-width:640px;">El avance corresponde a la fase previa a la preventa. No hay obra física en el terreno. Esta página se actualiza cuando se cierre la evaluación.</p>
+        <p style="margin-top:24px;color:var(--ink-500);font-size:14px;max-width:640px;">El avance corresponde a la fase previa a la preventa. No hay obra física en el terreno. Esta página se actualiza cuando se cierre el estudio.</p>
       </div>
     </section>
 
@@ -471,5 +467,6 @@
 
 <link rel="stylesheet" href="/assets/agent-cisa-fab.css">
 <script src="/assets/agent-cisa-fab.js" defer></script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>

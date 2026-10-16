@@ -12,7 +12,7 @@
   <title>Desarrollos | Grupo CISA · Proyectos vigentes en CDMX, EdoMex y Quintana Roo</title>
   <meta name="description" content="Residencial Fraile (EdoMex), Itzaé (Tulum), Panorama (CDMX) y Summit (CDMX). Estatus actualizado, ficha con unidades, niveles y fecha de entrega." />
   <meta property="og:title" content="Desarrollos vigentes · Grupo CISA" />
-  <meta property="og:description" content="Tres proyectos en distintas etapas. Estatus real, fecha de actualización, preventa y entrega." />
+  <meta property="og:description" content="Cuatro proyectos en distintas etapas. Estatus real, datos clave y entrega." />
   <meta name="theme-color" content="#1F4D2A" />
   <meta name="color-scheme" content="light" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F4D2A'/%3E%3Cpath d='M10 16 L22 16' stroke='%238BC34A' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M16 10 L16 22' stroke='%238BC34A' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
@@ -462,7 +462,7 @@
        ================================================================ */
     .revelation {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 48px;
       align-items: start;
       margin-top: 32px;
@@ -1119,7 +1119,7 @@
       gap: 24px;
       margin-top: 56px;
     }
-    @media (min-width: 768px) { .closing__grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 768px) { .closing__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
     .closing__col {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.10);
@@ -1130,7 +1130,7 @@
     }
     .closing__col:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.20); }
     .closing__col h4 { color: white; font-size: 15px; margin-bottom: 20px; }
-    .closing__col .btn { width: 100%; }
+    .closing__col .btn { width: 100%; white-space: normal; }
     .closing__contact {
       display: grid;
       gap: 32px;
@@ -1204,6 +1204,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css" />
 </head>
 <body>
 
@@ -1215,7 +1216,7 @@
       <a href="/" class="site-header__brand" aria-label="Grupo CISA · Inicio">
         <img src="assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
-      <nav class="site-header__nav" aria-label="Navegación principal">
+      <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <a href="su-terreno.html">Modalidades</a>
         <a href="nosotros.html#metodo">Método</a>
         <a href="desarrollos.html">Obra</a>
@@ -1225,6 +1226,9 @@
       <div class="site-header__actions">
         <a href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
+      <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
@@ -1251,7 +1255,7 @@
               Desarrollos en marcha, en distintas <span class="underline accent">etapas</span>.
             </h1>
             <p class="hero__bajada">
-              Cada proyecto en una fase distinta: en trámite, terminado y en preventa. El estatus se publica con la fecha de actualización para que pueda revisarlo antes de cualquier conversación.
+              Cada proyecto en una fase distinta: en trámite, terminado y en preventa. El estatus de cada uno se publica para que pueda revisarlo antes de cualquier conversación.
             </p>
             <div class="hero__ctas">
               <a href="#proyectos" class="btn btn--primary btn--lg">Ver proyectos vigentes</a>
@@ -1324,8 +1328,8 @@
           <!-- Proyecto 1: Residencial Fraile -->
           <article class="dev-card" id="residencial-fraile">
             <div class="dev-card__media" aria-hidden="true">
-              <span class="dev-card__chip dev-card__chip--warning">
-                <span class="dev-card__dot"></span> En evaluación
+              <span class="dev-card__chip dev-card__chip--success">
+                <span class="dev-card__dot"></span> Entregado 2025
               </span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
               <span class="dev-card__loc">EDOMEX · JILOTZINGO</span>
@@ -1333,29 +1337,27 @@
             <div class="dev-card__body">
               <div class="dev-card__meta">
                 <span class="mono">EDOMEX-002</span>
-                <span class="mono">·</span>
-                <span class="mono">2026-Q3</span>
               </div>
               <h3>Residencial Fraile</h3>
               <p class="dev-card__loc-name">Jilotzingo · Estado de México</p>
-              <p class="dev-card__desc">Terreno en análisis. Grupo CISA evalúa factibilidad, uso de suelo y situación jurídica antes de decidir si avanza como proyecto habitacional.</p>
+              <p class="dev-card__desc">Conjunto residencial vertical de 28 departamentos en Jilotzingo. Entregado en 2025 y vendido.</p>
 
               <dl class="dev-card__stats">
                 <div>
                   <dt>Producto</dt>
-                  <dd>Por confirmar</dd>
+                  <dd>Conjunto residencial vertical</dd>
                 </div>
                 <div>
                   <dt>Etapa</dt>
-                  <dd>Factibilidad</dd>
+                  <dd>Terminado y vendido</dd>
                 </div>
                 <div>
                   <dt>Entrega</dt>
-                  <dd>Por definir</dd>
+                  <dd>2025</dd>
                 </div>
                 <div>
                   <dt>Unidades</dt>
-                  <dd>Por confirmar</dd>
+                  <dd>28</dd>
                 </div>
               </dl>
 
@@ -1369,17 +1371,12 @@
           <!-- Proyecto 2: Itzaé -->
           <article class="dev-card" id="itzae">
             <div class="dev-card__media" aria-hidden="true">
-              <span class="dev-card__chip dev-card__chip--info">
-                <span class="dev-card__dot"></span> Preventa
-              </span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
               <span class="dev-card__loc">QROO · TULUM</span>
             </div>
             <div class="dev-card__body">
               <div class="dev-card__meta">
                 <span class="mono">QROO-003</span>
-                <span class="mono">·</span>
-                <span class="mono">2026-Q2</span>
               </div>
               <h3>Itzaé</h3>
               <p class="dev-card__loc-name">Tulum · Quintana Roo</p>
@@ -1398,10 +1395,6 @@
                   <dt>Entrega estimada</dt>
                   <dd>2027 · Q4</dd>
                 </div>
-                <div>
-                  <dt>Unidades</dt>
-                  <dd>Preventa abierta</dd>
-                </div>
               </dl>
 
               <div class="dev-card__cta">
@@ -1415,7 +1408,7 @@
           <article class="dev-card" id="panorama">
             <div class="dev-card__media" aria-hidden="true">
               <span class="dev-card__chip dev-card__chip--info">
-                <span class="dev-card__dot"></span> En proceso
+                <span class="dev-card__dot"></span> En estudio
               </span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
               <span class="dev-card__loc">CDMX · ALGARÍN</span>
@@ -1423,16 +1416,14 @@
             <div class="dev-card__body">
               <div class="dev-card__meta">
                 <span class="mono">CDMX-004</span>
-                <span class="mono">·</span>
-                <span class="mono">2026-Q3</span>
               </div>
               <h3>Panorama</h3>
-              <p class="dev-card__loc-name">Enrique F Granados 60 · Colonia Algarín, Cuauhtémoc</p>
-              <p class="dev-card__desc">Proyecto en proceso en colonia Algarín. Grupo CISA está trabajando en factibilidad, permisos y partido arquitectónico.</p>
+              <p class="dev-card__loc-name">Enrique F. Granados 60 · Colonia Algarín, Cuauhtémoc</p>
+              <p class="dev-card__desc">Proyecto en estudio en colonia Algarín. Grupo CISA está trabajando en factibilidad, permisos y partido arquitectónico.</p>
               <dl class="dev-card__stats">
                 <div>
                   <dt>Producto</dt>
-                  <dd>En evaluación</dd>
+                  <dd>En estudio</dd>
                 </div>
                 <div>
                   <dt>Etapa</dt>
@@ -1459,7 +1450,7 @@
           <article class="dev-card" id="summit">
             <div class="dev-card__media" aria-hidden="true">
               <span class="dev-card__chip dev-card__chip--info">
-                <span class="dev-card__dot"></span> En proceso
+                <span class="dev-card__dot"></span> En estudio
               </span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
               <span class="dev-card__loc">CDMX · OBRERA</span>
@@ -1467,24 +1458,18 @@
             <div class="dev-card__body">
               <div class="dev-card__meta">
                 <span class="mono">CDMX-005</span>
-                <span class="mono">·</span>
-                <span class="mono">2026-Q3</span>
               </div>
               <h3>Summit</h3>
               <p class="dev-card__loc-name">Colonia Obrera · Cuauhtémoc, Ciudad de México</p>
-              <p class="dev-card__desc">Proyecto en proceso en colonia Obrera. Grupo CISA está trabajando en factibilidad, permisos y partido arquitectónico.</p>
+              <p class="dev-card__desc">Proyecto en estudio en colonia Obrera. Grupo CISA está trabajando en factibilidad, permisos y partido arquitectónico.</p>
               <dl class="dev-card__stats">
                 <div>
                   <dt>Producto</dt>
-                  <dd>En evaluación</dd>
+                  <dd>En estudio</dd>
                 </div>
                 <div>
                   <dt>Etapa</dt>
                   <dd>Factibilidad</dd>
-                </div>
-                <div>
-                  <dt>Entrega</dt>
-                  <dd>Por definir</dd>
                 </div>
                 <div>
                   <dt>Unidades</dt>
@@ -1704,5 +1689,6 @@
 
 <link rel="stylesheet" href="/assets/agent-cisa-fab.css">
 <script src="/assets/agent-cisa-fab.js" defer></script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>

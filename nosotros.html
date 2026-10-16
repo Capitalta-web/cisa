@@ -462,7 +462,7 @@
        ================================================================ */
     .revelation {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 48px;
       align-items: start;
       margin-top: 32px;
@@ -535,14 +535,6 @@
     .step__body { flex: 1; }
     .step h4 { font-size: 16px; margin-bottom: 4px; }
     .step p { font-size: 14px; color: var(--ink-500); line-height: 1.5; }
-    .step__time {
-      display: inline-block;
-      font-family: var(--font-mono);
-      font-size: 10px; font-weight: 600;
-      color: var(--brand-green);
-      text-transform: uppercase; letter-spacing: 0.10em;
-      margin-top: 8px;
-    }
 
     /* ================================================================
        BLOQUES ESPECÍFICOS DE /su-terreno
@@ -949,7 +941,7 @@
       gap: 24px;
       margin-top: 56px;
     }
-    @media (min-width: 768px) { .closing__grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 768px) { .closing__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
     .closing__col {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.10);
@@ -960,7 +952,7 @@
     }
     .closing__col:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.20); }
     .closing__col h4 { color: white; font-size: 15px; margin-bottom: 20px; }
-    .closing__col .btn { width: 100%; }
+    .closing__col .btn { width: 100%; white-space: normal; }
     .closing__contact {
       display: grid;
       gap: 32px;
@@ -1124,6 +1116,7 @@
     }
 
   </style>
+  <link rel="stylesheet" href="/assets/site-nav.css" />
 </head>
 <body>
 
@@ -1135,7 +1128,7 @@
       <a href="/" class="site-header__brand" aria-label="Grupo CISA · Inicio">
         <img src="assets/logo-grupo-cisa.svg" alt="Grupo CISA" />
       </a>
-      <nav class="site-header__nav" aria-label="Navegación principal">
+      <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <a href="su-terreno.html">Modalidades</a>
         <a href="nosotros.html#metodo">Método</a>
         <a href="desarrollos.html">Obra</a>
@@ -1145,6 +1138,9 @@
       <div class="site-header__actions">
         <a href="su-terreno.html#precalificar" class="btn btn--primary">Precalificar mi terreno</a>
       </div>
+      <button type="button" class="site-header__toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
@@ -1160,9 +1156,6 @@
             <span class="hero__crumb-dot"></span>
             GRUPO CISA
           </span>
-          <span class="hero__crumb">
-            DESDE 1994
-          </span>
         </div>
 
         <div class="hero__main hero__main--centered">
@@ -1171,7 +1164,7 @@
               Una empresa mexicana de <span class="underline accent">desarrollo e inversión inmobiliaria</span>.
             </h1>
             <p class="hero__bajada">
-              Reunimos análisis, diseño, gestión, construcción y comercialización en un mismo proceso. Operamos en CDMX, Estado de México, Querétaro, Quintana Roo, Guadalajara, Mérida y Cancún.
+              Reunimos análisis, diseño, gestión, construcción y comercialización en un mismo proceso. Operamos en CDMX, Estado de México, Querétaro y Quintana Roo.
             </p>
             <div class="hero__ctas">
               <a href="#metodo" class="btn btn--primary btn--lg">Conocer el proceso</a>
@@ -1234,7 +1227,7 @@
     <section class="section section--alt" id="metodo" aria-labelledby="method-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="method-title">El método abierto. Ocho etapas, con tiempo y entregable.</h2>
+          <h2 id="method-title">El método abierto. Ocho etapas, cada una con su entregable.</h2>
           <p>Publicamos el proceso completo porque es la parte que casi nadie explica, y es justo donde nacen todas las dudas.</p>
         </header>
         <ol class="timeline" role="list">
@@ -1243,7 +1236,6 @@
             <div class="step__body">
               <h4>Entrevista inicial</h4>
               <p>Conocemos su propiedad, objetivo y contexto.</p>
-              <span class="step__time">1–2 SEMANAS</span>
             </div>
           </li>
           <li class="step">
@@ -1251,7 +1243,6 @@
             <div class="step__body">
               <h4>Presentación</h4>
               <p>Revisamos el potencial de desarrollo de su propiedad.</p>
-              <span class="step__time">2–4 SEMANAS</span>
             </div>
           </li>
           <li class="step">
@@ -1259,7 +1250,6 @@
             <div class="step__body">
               <h4>Factibilidad</h4>
               <p>Analizamos variables técnicas, jurídicas y financieras.</p>
-              <span class="step__time">4–8 SEMANAS</span>
             </div>
           </li>
           <li class="step">
@@ -1267,7 +1257,6 @@
             <div class="step__body">
               <h4>Decisión estratégica</h4>
               <p>Se evalúa aportar el terreno o venderlo.</p>
-              <span class="step__time">2–3 SEMANAS</span>
             </div>
           </li>
           <li class="step">
@@ -1275,7 +1264,6 @@
             <div class="step__body">
               <h4>Plan de trabajo</h4>
               <p>Definimos alcance, responsables y siguientes pasos.</p>
-              <span class="step__time">3–4 SEMANAS</span>
             </div>
           </li>
           <li class="step">
@@ -1283,7 +1271,6 @@
             <div class="step__body">
               <h4>Primera fase</h4>
               <p>Trámites, permisos, planos finales y estimaciones.</p>
-              <span class="step__time">3–6 MESES</span>
             </div>
           </li>
           <li class="step">
@@ -1291,7 +1278,6 @@
             <div class="step__body">
               <h4>Construcción</h4>
               <p>Seguimiento de obra conforme al proyecto aprobado.</p>
-              <span class="step__time">12–24 MESES</span>
             </div>
           </li>
           <li class="step">
@@ -1299,7 +1285,6 @@
             <div class="step__body">
               <h4>Entrega</h4>
               <p>Cerramos la etapa y documentamos el resultado.</p>
-              <span class="step__time">2–3 MESES</span>
             </div>
           </li>
         </ol>
@@ -1479,5 +1464,6 @@
 
 <link rel="stylesheet" href="/assets/agent-cisa-fab.css">
 <script src="/assets/agent-cisa-fab.js" defer></script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>
